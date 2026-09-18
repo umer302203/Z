@@ -63,6 +63,7 @@ def cam_make():
     cd.lens = LENS
     cd.clip_end = 3000
     cam = _link(bpy.data.objects.new('Cam', cd))
+    cam.rotation_mode = 'QUATERNION'   # slerp between shots — no euler flips
     bpy.context.scene.camera = cam
     return cam
 
@@ -175,18 +176,26 @@ def look_at(ob, target):
     d = Vector(target) - ob.location
     if d.length < 1e-6:
         return
-    ob.rotation_euler = d.to_track_quat('-Z', 'Y').to_euler()
+    q = d.to_track_quat('-Z', 'Y')
+    ob.rotation_quaternion = q          # authoritative when mode=QUATERNION
+    ob.rotation_euler = q.to_euler()    # keep euler channel in sync
 
 def shot(cam, f0, f1, p0, p1, t0, t1):
-    """one contiguous camera move; jump-cut safe (keys coincide at f1==f0')."""
+    """one contiguous camera move; quaternion slerp between ends."""
     cam.location = Vector(p0)
     look_at(cam, t0)
-    cam.keyframe_insert('location', frame=f0)
-    cam.keyframe_insert('rotation_euler', frame=f0)
+    q0 = cam.rotation_quaternion.copy()
     cam.location = Vector(p1)
     look_at(cam, t1)
+    q1 = cam.rotation_quaternion.copy()
+    cam.location = Vector(p0)
+    cam.rotation_quaternion = q0
+    cam.keyframe_insert('location', frame=f0)
+    cam.keyframe_insert('rotation_quaternion', frame=f0)
+    cam.location = Vector(p1)
+    cam.rotation_quaternion = q1
     cam.keyframe_insert('location', frame=f1)
-    cam.keyframe_insert('rotation_euler', frame=f1)
+    cam.keyframe_insert('rotation_quaternion', frame=f1)
 
 def orbit_pos(ang, r, z):
     return (math.sin(ang) * r, math.cos(ang) * r, z)
