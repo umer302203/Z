@@ -293,5 +293,6 @@ SEQ = [
          anchors=("stack", "layer", "combin", "integrat"), build=b_s18),
     dict(id='s19', title="One Mind?",
          anchors=("unify", "whole", "together", "single"), build=b_s19),
-    dict(id='s20', title="Open Question", anchors=(), build=b_s20),
+    dict(id='s20', title="Open Question",
+         anchors=("question",), last=True, build=b_s20),
 ]

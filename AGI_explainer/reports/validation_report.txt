@@ -1,10 +1,10 @@
-# SCENE VALIDATION (v3)
+# SCENE VALIDATION (v3.1)
 
 AUDIO: PASS — strip frames=20108
-TIMELINE: FAIL — 20 windows cover 1..20110
+TIMELINE: PASS — 20 windows cover 1..20110
 OBJECTS: PASS — 168 objects, 160 animated
 CAMERA: PASS — 80 shots baked
 TEXT: PASS — 37/37 strings <= 3 words
 RENDER: PASS — Workbench 1280x720@24
 
-HAS FAILURES
+ALL PASS

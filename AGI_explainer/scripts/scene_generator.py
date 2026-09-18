@@ -1,8 +1,8 @@
-"""scene_generator.py — v3 orchestrator (recreated after reset #3).
-Run: blender -b -P scripts/scene_generator.py
-wav duration probe -> transcript anchors -> 20 windows -> build specs ->
-80-shot camera bake -> VSE narration -> validation report -> save blend ->
-preview stills."""
+"""scene_generator.py — v3.1 orchestrator.
+wav duration probe -> transcript anchor ORDERING (narration topic order) ->
+monotonic 20 windows -> build specs -> 80-shot camera bake -> VSE narration ->
+validation report -> save blend -> preview stills.
+Run: blender -b -P scripts/scene_generator.py"""
 import json
 import math
 import os
@@ -12,7 +12,7 @@ import wave
 import bpy
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.dirname(HERE)                     # .../agi_video
+ROOT = os.path.dirname(HERE)                     # .../AGI_explainer
 AUDIO = os.path.join(ROOT, 'audio',
                      'narration_AGI_locked_837s.wav')
 TRANS = os.path.join(ROOT, 'reports', 'transcript_timestamps.json')
@@ -49,52 +49,80 @@ def load_words():
     return words
 
 
-def anchor_time(stems, words):
+def anchor_time(stems, words, mode='first'):
+    seq = words if mode == 'first' else reversed(words)
     for stem in stems:
-        for w, t in words:
+        for w, t in seq:
             if w.startswith(stem):
                 return t
     return None
 
 
-def compute_windows(total_f, words):
+def spec_time(spec, words):
+    """anchor time for ordering/windows (s20 uses LAST occurrence)."""
+    if not spec['anchors']:
+        return None
+    mode = 'last' if spec.get('last') else 'first'
+    return anchor_time(spec['anchors'], words, mode)
+
+
+def order_sequences(words):
+    """Reorder inner sequences to follow the narration's topic order.
+    s01 stays first, s20 last, unanchored mids inserted evenly."""
     n = len(SEQ)
+    first, last = SEQ[0], SEQ[-1]
+    mids = SEQ[1:n - 1]
+    timed, flex = [], []
+    for idx, spec in enumerate(mids):
+        t = spec_time(spec, words)
+        if t is None:
+            flex.append(spec)
+        else:
+            timed.append((t, idx, spec))
+    timed.sort(key=lambda p: (p[0], p[1]))
+    ordered_mids = [s for _, _, s in timed]
+    # spread flexible sequences evenly through the ordered list
+    total = len(ordered_mids) + len(flex)
+    for j, spec in enumerate(flex):
+        pos = max(1, min(len(ordered_mids),
+                         round((j + 1) * len(ordered_mids) / (len(flex) + 1))))
+        ordered_mids.insert(pos + j, spec)       # keep prior inserts stable
+    return [first] + ordered_mids + [last]
+
+
+def compute_windows(total_f, words, ordered):
+    """Monotonic windows: anchor bounds clamped forward to keep >= MIN_WIN_F;
+    unanchored mids interpolated between neighbours."""
+    n = len(ordered)
+    MINF = MIN_WIN_F
     b = [None] * (n + 1)
     b[0], b[n] = 1, total_f
-    raw_anchored = 0
-    for i, spec in enumerate(SEQ[1:n], start=1):
-        t = anchor_time(spec['anchors'], words)
+    for i in range(1, n):
+        t = spec_time(ordered[i], words)
         if t is not None:
-            b[i] = max(2, int(t * FPS) + 1)
-            raw_anchored += 1
-    # fill unknowns by linear interpolation between known boundaries
+            f = int(t * FPS) + 1
+            f = max(f, b[i - 1] + MINF if b[i - 1] else f)
+            f = min(f, total_f - MINF * (n - i))  # leave room for the tail
+            b[i] = max(f, 2)
     known = [i for i, v in enumerate(b) if v is not None]
     for k in range(len(known) - 1):
         i0, i1 = known[k], known[k + 1]
         v0, v1 = b[i0], b[i1]
         for j in range(i0 + 1, i1):
             b[j] = int(v0 + (v1 - v0) * (j - i0) / (i1 - i0))
-    # enforce minimum window (steal from the largest neighbour)
-    for _ in range(40):
-        widths = [b[i + 1] - b[i] for i in range(n)]
-        wi = min(range(n), key=lambda i: widths[i])
-        if widths[wi] >= MIN_WIN_F:
-            break
-        gi = max(range(n), key=lambda i: widths[i])
-        take = min(MIN_WIN_F - widths[wi], widths[gi] - MIN_WIN_F)
-        if take <= 0:
-            break
-        lo, hi = min(wi, gi), max(wi, gi)
-        b[lo + 1] -= take if hi == wi + 1 or lo == wi else 0
-        if b[lo + 1] - b[lo] < MIN_WIN_F or b[hi + 1] - b[hi] < MIN_WIN_F:
-            b[lo + 1] += take                     # revert unsafe steal
-            break
-    anchored = raw_anchored
+    # backward safety: strictly increasing
+    for i in range(n - 1, 0, -1):
+        if b[i] >= b[i + 1]:
+            b[i] = b[i + 1] - MINF
+    for i in range(1, n + 1):
+        if b[i] <= b[i - 1]:
+            b[i] = b[i - 1] + 2
+    anchored = sum(1 for i in range(1, n) if spec_time(ordered[i], words))
     return b, anchored
 
 
 def bake_camera(cam, windows, total_f):
-    n = len(SEQ)
+    n = len(windows) - 1
     total_dur = sum(windows[i + 1] - windows[i] for i in range(n))
     counts = [max(2, round(SHOTS_TOTAL *
                            (windows[i + 1] - windows[i]) / total_dur))
@@ -151,11 +179,10 @@ def validate(sc, windows, n_shots, snd, total_f):
     objs = list(bpy.data.objects)
     anim = sum(1 for o in objs if o.animation_data)
     texts = [o for o in objs if o.get('text_body')]
-    words_ok = 0
     import re
+    words_ok = 0
     for o in texts:
-        body = o['text_body']
-        toks = re.findall(r"[A-Za-z0-9]+", body)
+        toks = re.findall(r"[A-Za-z0-9]+", o['text_body'])
         words_ok += 1 if len(toks) <= 3 else 0
     gates = []
     ok_audio = snd is not None and snd.frame_duration > 1
@@ -173,7 +200,7 @@ def validate(sc, windows, n_shots, snd, total_f):
     gates.append(('RENDER', sc.render.engine == 'BLENDER_WORKBENCH'
                   and sc.render.resolution_x == 1280,
                   'Workbench 1280x720@24'))
-    lines = ['# SCENE VALIDATION (v3)', '']
+    lines = ['# SCENE VALIDATION (v3.1)', '']
     allpass = True
     for name, ok, detail in gates:
         allpass &= ok
@@ -193,12 +220,16 @@ def main():
     print(f'AUDIO {dur:.2f}s -> {total_f} frames @ {FPS}fps')
     words = load_words()
     print(f'transcript words: {len(words)}')
-    windows, anchored = compute_windows(total_f, words)
-    print(f'windows anchored: {anchored}/19')
+    ordered = order_sequences(words)
+    print('sequence order (narration topic order):')
+    for i, spec in enumerate(ordered):
+        print(f'  {i + 1:2d}. {spec["id"]} {spec["title"]}')
+    windows, anchored = compute_windows(total_f, words, ordered)
+    print(f'anchor-driven bounds: {anchored}/18')
 
     L.scene_setup(total_f)
     cam = L.cam_make()
-    for i, spec in enumerate(SEQ):
+    for i, spec in enumerate(ordered):
         spec['build'](windows[i], windows[i + 1])
 
     n_shots = bake_camera(cam, windows, total_f)
@@ -206,8 +237,8 @@ def main():
     validate(bpy.context.scene, windows, n_shots, snd, total_f)
 
     with open(WINJ, 'w', encoding='utf-8') as f:
-        json.dump({SEQ[i]['id']: [windows[i], windows[i + 1]]
-                   for i in range(len(SEQ))}, f, indent=1)
+        json.dump([[ordered[i]['id'], windows[i], windows[i + 1]]
+                   for i in range(len(ordered))], f, indent=1)
 
     os.makedirs(PREV, exist_ok=True)
     bpy.ops.wm.save_as_mainfile(filepath=BLEND)
@@ -221,7 +252,7 @@ def main():
         bpy.ops.render.render(write_still=True)
     print('PREVIEWS DONE')
     print(f'GENERATOR OK: {total_f} frames, {n_shots} shots, '
-          f'{len(SEQ)} sequences')
+          f'{len(ordered)} sequences')
 
 
 main()
