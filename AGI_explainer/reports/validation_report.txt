@@ -2,7 +2,7 @@
 
 AUDIO: PASS — strip frames=20108
 TIMELINE: PASS — 20 windows cover 1..20110
-OBJECTS: PASS — 168 objects, 160 animated
+OBJECTS: PASS — 168 objects, 167 animated
 CAMERA: PASS — 80 shots baked
 TEXT: PASS — 37/37 strings <= 3 words
 RENDER: PASS — Workbench 1280x720@24

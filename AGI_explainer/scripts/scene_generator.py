@@ -240,7 +240,23 @@ def main():
     L.scene_setup(total_f)
     cam = L.cam_make()
     for i, spec in enumerate(ordered):
-        spec['build'](windows[i], windows[i + 1])
+        f0, f1 = windows[i], windows[i + 1]
+        before = set(bpy.data.objects)
+        spec['build'](f0, f1)
+        # sequence isolation: objects visible ONLY inside their window
+        for ob in set(bpy.data.objects) - before:
+            ob.hide_viewport = True
+            ob.keyframe_insert('hide_viewport', frame=1)
+            ob.hide_render = True
+            ob.keyframe_insert('hide_render', frame=1)
+            ob.hide_viewport = False
+            ob.keyframe_insert('hide_viewport', frame=max(1, f0 - 1))
+            ob.hide_render = False
+            ob.keyframe_insert('hide_render', frame=max(1, f0 - 1))
+            ob.hide_viewport = True
+            ob.keyframe_insert('hide_viewport', frame=f1 + 1)
+            ob.hide_render = True
+            ob.keyframe_insert('hide_render', frame=f1 + 1)
 
     n_shots = bake_camera(cam, windows, total_f)
     snd = add_audio(bpy.context.scene)

@@ -216,7 +216,8 @@ def b_s17(f0, f1):
     for i in range(12):
         c = box(f'tok{i}', (-7.5 + i * 1.3, 0, 1.6),
                 (0.42, 0.42, 0.42), cols[i % 4])
-        move(c, f0 + i * 6, f1, (c.location.x + 9.0, 0, 1.6))
+        scale_in(c, f0 + 20 + i * 30, f0 + 60 + i * 30)
+        spin(c, f0 + 120, f1, 1.0)
 
 
 def b_s18(f0, f1):
