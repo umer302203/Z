@@ -1,8 +1,8 @@
 #!/bin/bash
-# setup_env.sh v3 — full environment rebuild after server reset #3 (2026-09-18)
-# Blender 4.5.3 LTS + trixie mesa (PROVEN — sid 26.2.3 broke EGL) + faster-whisper + ffmpeg + transcribe
+# setup_env.sh v3.1 — env rebuild + transcribe (venv-based, PEP-668 safe)
+# Blender 4.5.3 LTS + trixie mesa (PROVEN — sid 26.2.3 broke EGL) + faster-whisper
 set -e
-LOG=/home/z/my-project/setup_env.log
+LOG=/home/z/my-project/AGI_explainer/reports/setup_env.log
 mkdir -p /home/z/my-project/agivideo_tmp
 exec > >(tee -a $LOG) 2>&1
 
@@ -37,15 +37,17 @@ fi
 ls extract/usr/lib/x86_64-linux-gnu/ | wc -l
 echo "MESA OK"
 
-echo "=== [3/5] faster-whisper ==="
-pip install --quiet faster-whisper 2>&1 | tail -1 || true
-python3 -c "import faster_whisper; print('faster-whisper OK')"
+echo "=== [3/5] faster-whisper (venv) ==="
+cd /home/z/my-project/agivideo_tmp
+if [ ! -x venv/bin/python3 ]; then python3 -m venv venv; fi
+./venv/bin/pip install --quiet faster-whisper
+./venv/bin/python3 -c "import faster_whisper; print('faster-whisper OK')"
 
 echo "=== [4/5] ffmpeg ==="
 which ffmpeg && ffmpeg -version | head -1
 
 echo "=== [5/5] transcribe LOCKED AGI narration ==="
-python3 /home/z/my-project/agi_video/scripts/transcribe.py \
-  /home/z/my-project/agi_video/audio/narration_AGI_locked_837s.wav \
-  /home/z/my-project/agi_video/reports/transcript_timestamps.json
+./venv/bin/python3 /home/z/my-project/AGI_explainer/scripts/transcribe.py \
+  /home/z/my-project/AGI_explainer/audio/narration_AGI_locked_837s.wav \
+  /home/z/my-project/AGI_explainer/reports/transcript_timestamps.json
 echo "SETUP COMPLETE"
