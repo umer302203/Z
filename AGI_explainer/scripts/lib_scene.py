@@ -102,7 +102,8 @@ def torus(name, loc, R, r, color, rot=(0, 0, 0)):
     return ob
 
 def text3d(name, body, loc, size=1.0, color=C_INK,
-           rot=(math.radians(90), 0, 0)):
+           rot=(math.radians(90), 0, math.radians(180))):
+    """front face toward +Y (camera side); reads correctly from +Y."""
     cu = bpy.data.curves.new(name, type='FONT')
     cu.body = body
     cu.align_x = 'CENTER'
