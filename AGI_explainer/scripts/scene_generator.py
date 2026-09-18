@@ -196,6 +196,11 @@ def bake_camera(cam, windows, total_f):
                 t1 = (t0[0], 0, t0[2] + 1.2)
             L.shot(cam, k0, k1, p0, p1, t0, t1)
             shots += 1
+    # CRITICAL: default BEZIER overshoots orbit paths (location dips inside
+    # the stage; quaternion components swing wildly). Linear = true glide.
+    for fc in cam.animation_data.action.fcurves:
+        for kp in fc.keyframe_points:
+            kp.interpolation = 'LINEAR'
     return shots
 
 
