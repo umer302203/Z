@@ -140,26 +140,36 @@ def bake_camera(cam, windows, total_f):
             k0 = int(f0 + k * step)
             k1 = int(f0 + (k + 1) * step) if k < counts[i] - 1 else f1
             a = rng.uniform(-2.6, 2.6)
-            r = rng.uniform(11.5, 17.5)
-            z = rng.uniform(3.0, 7.5)
-            kind = rng.choice(['push', 'pull', 'orbL', 'orbR', 'pan', 'low'])
-            p0 = L.orbit_pos(a, r, z)
-            t0 = (rng.uniform(-1.5, 1.5), 0, rng.uniform(1.5, 3.2))
-            if kind == 'push':
-                p1, t1 = L.orbit_pos(a, r * 0.72, z * 0.85), t0
+            r = rng.uniform(15.0, 26.0)
+            z = rng.uniform(3.5, 9.0)
+            kind = 'wide' if k == 0 else rng.choice(
+                ['push', 'pull', 'orbL', 'orbR', 'pan', 'low', 'wide'])
+            t0 = (rng.uniform(-1.0, 1.0), 0, rng.uniform(1.8, 3.4))
+            if kind == 'wide':
+                r = rng.uniform(23.0, 28.0)
+                p0 = L.orbit_pos(a, r, z * 0.9)
+                p1 = L.orbit_pos(a + rng.uniform(-0.18, 0.18), r * 1.02, z)
+                t1 = t0
+            elif kind == 'push':
+                p0 = L.orbit_pos(a, r, z)
+                p1, t1 = L.orbit_pos(a, r * 0.62, z * 0.8), t0
             elif kind == 'pull':
-                p0, p1 = L.orbit_pos(a, r * 0.72, z * 0.85), L.orbit_pos(a, r * 1.2, z)
+                p0 = L.orbit_pos(a, r * 0.62, z * 0.8)
+                p1 = L.orbit_pos(a, r * 1.15, z)
                 t1 = t0
             elif kind == 'orbL':
+                p0 = L.orbit_pos(a, r, z)
                 p1, t1 = L.orbit_pos(a + 0.55, r, z), t0
             elif kind == 'orbR':
+                p0 = L.orbit_pos(a, r, z)
                 p1, t1 = L.orbit_pos(a - 0.55, r, z), t0
             elif kind == 'pan':
+                p0 = L.orbit_pos(a, r, z)
                 p1 = p0
                 t1 = (t0[0] + rng.uniform(-3, 3), t0[1], t0[2])
             else:
-                p0 = L.orbit_pos(a, r * 1.1, 1.8)
-                p1 = L.orbit_pos(a + 0.2, r * 1.02, 2.1)
+                p0 = L.orbit_pos(a, r * 1.05, 2.4)
+                p1 = L.orbit_pos(a + 0.2, r * 1.0, 2.7)
                 t1 = (t0[0], 0, t0[2] + 1.2)
             L.shot(cam, k0, k1, p0, p1, t0, t1)
             shots += 1
