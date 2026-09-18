@@ -61,10 +61,12 @@ def compute_windows(total_f, words):
     n = len(SEQ)
     b = [None] * (n + 1)
     b[0], b[n] = 1, total_f
+    raw_anchored = 0
     for i, spec in enumerate(SEQ[1:n], start=1):
         t = anchor_time(spec['anchors'], words)
         if t is not None:
             b[i] = max(2, int(t * FPS) + 1)
+            raw_anchored += 1
     # fill unknowns by linear interpolation between known boundaries
     known = [i for i, v in enumerate(b) if v is not None]
     for k in range(len(known) - 1):
@@ -87,7 +89,7 @@ def compute_windows(total_f, words):
         if b[lo + 1] - b[lo] < MIN_WIN_F or b[hi + 1] - b[hi] < MIN_WIN_F:
             b[lo + 1] += take                     # revert unsafe steal
             break
-    anchored = sum(1 for i in range(1, n) if b[i] is not None)
+    anchored = raw_anchored
     return b, anchored
 
 
@@ -139,9 +141,9 @@ def bake_camera(cam, windows, total_f):
 def add_audio(sc):
     se = sc.sequence_editor_create()
     try:
-        snd = se.strips.new_sound('narration', 1, 1, AUDIO)
+        snd = se.strips.new_sound('narration', AUDIO, 1, 1)
     except AttributeError:
-        snd = se.sequences.new_sound('narration', 1, 1, AUDIO)
+        snd = se.sequences.new_sound('narration', AUDIO, 1, 1)
     return snd
 
 
