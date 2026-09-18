@@ -180,14 +180,19 @@ def look_at(ob, target):
     ob.rotation_quaternion = q          # authoritative when mode=QUATERNION
     ob.rotation_euler = q.to_euler()    # keep euler channel in sync
 
-def shot(cam, f0, f1, p0, p1, t0, t1):
-    """one contiguous camera move; quaternion slerp between ends."""
+def shot(cam, f0, f1, p0, p1, t0, t1, align=None):
+    """one contiguous camera move; quaternion keys on the SHORT arc.
+    align = previous key's quat: if dot<0, negate (double-cover fix)."""
     cam.location = Vector(p0)
     look_at(cam, t0)
     q0 = cam.rotation_quaternion.copy()
+    if align is not None and q0.dot(align) < 0:
+        q0.negate()
     cam.location = Vector(p1)
     look_at(cam, t1)
     q1 = cam.rotation_quaternion.copy()
+    if q1.dot(q0) < 0:
+        q1.negate()
     cam.location = Vector(p0)
     cam.rotation_quaternion = q0
     cam.keyframe_insert('location', frame=f0)
@@ -196,6 +201,7 @@ def shot(cam, f0, f1, p0, p1, t0, t1):
     cam.rotation_quaternion = q1
     cam.keyframe_insert('location', frame=f1)
     cam.keyframe_insert('rotation_quaternion', frame=f1)
+    return q1
 
 def orbit_pos(ang, r, z):
     return (math.sin(ang) * r, math.cos(ang) * r, z)
