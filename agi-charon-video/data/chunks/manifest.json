@@ -1,0 +1,119 @@
+[
+ {
+  "idx": 0,
+  "path": "/home/z/my-project/data/chunks/chunk_00.wav",
+  "global_offset": 0.0,
+  "core_start": 0.0,
+  "core_end": 64.449,
+  "file_start": 0.0,
+  "file_end": 65.449
+ },
+ {
+  "idx": 1,
+  "path": "/home/z/my-project/data/chunks/chunk_01.wav",
+  "global_offset": 63.449,
+  "core_start": 64.449,
+  "core_end": 128.898,
+  "file_start": 63.449,
+  "file_end": 129.898
+ },
+ {
+  "idx": 2,
+  "path": "/home/z/my-project/data/chunks/chunk_02.wav",
+  "global_offset": 127.898,
+  "core_start": 128.898,
+  "core_end": 192.635,
+  "file_start": 127.898,
+  "file_end": 193.635
+ },
+ {
+  "idx": 3,
+  "path": "/home/z/my-project/data/chunks/chunk_03.wav",
+  "global_offset": 191.635,
+  "core_start": 192.635,
+  "core_end": 256.766,
+  "file_start": 191.635,
+  "file_end": 257.766
+ },
+ {
+  "idx": 4,
+  "path": "/home/z/my-project/data/chunks/chunk_04.wav",
+  "global_offset": 255.766,
+  "core_start": 256.766,
+  "core_end": 322.246,
+  "file_start": 255.766,
+  "file_end": 323.246
+ },
+ {
+  "idx": 5,
+  "path": "/home/z/my-project/data/chunks/chunk_05.wav",
+  "global_offset": 321.246,
+  "core_start": 322.246,
+  "core_end": 386.834,
+  "file_start": 321.246,
+  "file_end": 387.834
+ },
+ {
+  "idx": 6,
+  "path": "/home/z/my-project/data/chunks/chunk_06.wav",
+  "global_offset": 385.834,
+  "core_start": 386.834,
+  "core_end": 451.145,
+  "file_start": 385.834,
+  "file_end": 452.145
+ },
+ {
+  "idx": 7,
+  "path": "/home/z/my-project/data/chunks/chunk_07.wav",
+  "global_offset": 450.145,
+  "core_start": 451.145,
+  "core_end": 514.657,
+  "file_start": 450.145,
+  "file_end": 515.657
+ },
+ {
+  "idx": 8,
+  "path": "/home/z/my-project/data/chunks/chunk_08.wav",
+  "global_offset": 513.657,
+  "core_start": 514.657,
+  "core_end": 581.209,
+  "file_start": 513.657,
+  "file_end": 582.209
+ },
+ {
+  "idx": 9,
+  "path": "/home/z/my-project/data/chunks/chunk_09.wav",
+  "global_offset": 580.209,
+  "core_start": 581.209,
+  "core_end": 644.492,
+  "file_start": 580.209,
+  "file_end": 645.492
+ },
+ {
+  "idx": 10,
+  "path": "/home/z/my-project/data/chunks/chunk_10.wav",
+  "global_offset": 643.492,
+  "core_start": 644.492,
+  "core_end": 708.942,
+  "file_start": 643.492,
+  "file_end": 709.942
+ },
+ {
+  "idx": 11,
+  "path": "/home/z/my-project/data/chunks/chunk_11.wav",
+  "global_offset": 707.942,
+  "core_start": 708.942,
+  "core_end": 772.028,
+  "file_start": 707.942,
+  "file_end": 773.028
+ },
+ {
+  "idx": 12,
+  "path": "/home/z/my-project/data/chunks/chunk_12.wav",
+  "global_offset": 771.028,
+  "core_start": 772.028,
+  "core_end": 837.84,
+  "file_start": 771.028,
+  "file_end": 837.84
+ }
+]

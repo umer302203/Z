@@ -1,0 +1,10 @@
+skills/
+node_modules/
+software/
+data/*.log
+render/
+*.wav
+!upload/*.wav
+*.mp4
+*.mkv
+__pycache__/
