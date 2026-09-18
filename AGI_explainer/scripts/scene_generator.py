@@ -161,8 +161,14 @@ def bake_camera(cam, windows, total_f):
         rng = random.Random(f0 * 7 + i)
         step = (f1 - f0) / counts[i]
         for k in range(counts[i]):
-            k0 = int(f0 + k * step)
-            k1 = int(f0 + (k + 1) * step) if k < counts[i] - 1 else f1
+            # jump-cut keying: shot k owns [a0, b0]; next shot starts b0+1
+            a0 = int(f0 + k * step) + (1 if k > 0 else 0)
+            if k < counts[i] - 1:
+                b0 = int(f0 + (k + 1) * step)
+            else:
+                b0 = f1 - 1 if i < n - 1 else f1
+            if b0 <= a0:
+                b0 = a0 + 1
             a = rng.uniform(-2.6, 2.6)
             r = rng.uniform(15.0, 26.0)
             z = rng.uniform(3.5, 9.0)
@@ -195,7 +201,7 @@ def bake_camera(cam, windows, total_f):
                 p0 = L.orbit_pos(a, r * 1.05, 2.4)
                 p1 = L.orbit_pos(a + 0.2, r * 1.0, 2.7)
                 t1 = (t0[0], 0, t0[2] + 1.2)
-            prev_q = L.shot(cam, k0, k1, p0, p1, t0, t1, align=prev_q)
+            prev_q = L.shot(cam, a0, b0, p0, p1, t0, t1, align=prev_q)
             shots += 1
     # CRITICAL: default BEZIER overshoots orbit paths (location dips inside
     # the stage; quaternion components swing wildly). Linear = true glide.
