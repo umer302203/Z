@@ -49,21 +49,44 @@ def load_words():
     return words
 
 
-def anchor_time(stems, words, mode='first'):
-    seq = words if mode == 'first' else reversed(words)
-    for stem in stems:
-        for w, t in seq:
-            if w.startswith(stem):
-                return t
-    return None
+MIN_ANCHOR_T = 33.0   # skip opening surgeon analogy — module words cluster there
 
 
 def spec_time(spec, words):
-    """anchor time for ordering/windows (s20 uses LAST occurrence)."""
+    """Anchor time >= MIN_ANCHOR_T (real discussion, not the analogy).
+    mode 'first' -> earliest eligible stem hit; 'last' -> latest."""
     if not spec['anchors']:
         return None
     mode = 'last' if spec.get('last') else 'first'
-    return anchor_time(spec['anchors'], words, mode)
+    seq = words if mode == 'first' else reversed(words)
+    best = None
+    for stem in spec['anchors']:
+        for w, t in seq:
+            if w.startswith(stem) and t >= MIN_ANCHOR_T:
+                if best is None:
+                    best = t
+                elif mode == 'first':
+                    best = min(best, t)
+                else:
+                    best = max(best, t)
+                break
+    return best
+
+
+def vis_keys(ob, f0, f1):
+    """hold-style visibility keys (prevents linear bool interpolation leaks)."""
+    for prop in ('hide_render', 'hide_viewport'):
+        def kf(fr, val):
+            setattr(ob, prop, val)
+            ob.keyframe_insert(prop, frame=fr)
+        if f0 <= 2:
+            kf(1, False)
+        else:
+            kf(1, True)
+            kf(f0 - 1, True)
+            kf(f0, False)
+        kf(f1, False)
+        kf(f1 + 1, True)
 
 
 def order_sequences(words):
@@ -245,18 +268,7 @@ def main():
         spec['build'](f0, f1)
         # sequence isolation: objects visible ONLY inside their window
         for ob in set(bpy.data.objects) - before:
-            ob.hide_viewport = True
-            ob.keyframe_insert('hide_viewport', frame=1)
-            ob.hide_render = True
-            ob.keyframe_insert('hide_render', frame=1)
-            ob.hide_viewport = False
-            ob.keyframe_insert('hide_viewport', frame=max(1, f0 - 1))
-            ob.hide_render = False
-            ob.keyframe_insert('hide_render', frame=max(1, f0 - 1))
-            ob.hide_viewport = True
-            ob.keyframe_insert('hide_viewport', frame=f1 + 1)
-            ob.hide_render = True
-            ob.keyframe_insert('hide_render', frame=f1 + 1)
+            vis_keys(ob, f0, f1)
 
     n_shots = bake_camera(cam, windows, total_f)
     snd = add_audio(bpy.context.scene)

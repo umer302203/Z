@@ -215,7 +215,7 @@ def b_s17(f0, f1):
     cols = [C_CYAN, C_AMBER, C_GREEN, C_PURPLE]
     for i in range(12):
         c = box(f'tok{i}', (-7.5 + i * 1.3, 0, 1.6),
-                (0.42, 0.42, 0.42), cols[i % 4])
+                (0.8, 0.8, 0.8), cols[i % 4])
         scale_in(c, f0 + 20 + i * 30, f0 + 60 + i * 30)
         spin(c, f0 + 120, f1, 1.0)
 
@@ -287,7 +287,7 @@ SEQ = [
     dict(id='s15', title="Goals",
          anchors=("goal", "objective", "target"), build=b_s15),
     dict(id='s16', title="Compute",
-         anchors=("comput", "gpu", "power", "hardware"), build=b_s16),
+         anchors=("comput", "gpu", "chip", "hardware"), build=b_s16),
     dict(id='s17', title="Data",
          anchors=("data", "dataset", "token"), build=b_s17),
     dict(id='s18', title="The Stack",
