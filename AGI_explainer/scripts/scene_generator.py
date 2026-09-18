@@ -169,7 +169,7 @@ def bake_camera(cam, windows, total_f):
                 b0 = f1 - 1 if i < n - 1 else f1
             if b0 <= a0:
                 b0 = a0 + 1
-            a = rng.uniform(-2.6, 2.6)
+            a = rng.uniform(-1.05, 1.05)   # front arc — text stays readable
             r = rng.uniform(15.0, 26.0)
             z = rng.uniform(3.5, 9.0)
             kind = 'wide' if k == 0 else rng.choice(

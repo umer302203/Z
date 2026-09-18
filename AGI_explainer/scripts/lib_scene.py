@@ -160,8 +160,9 @@ def rise(ob, f0, f1, h):
     kf_loc(ob, f1, (p.x, p.y, p.z + h))
 
 def scale_in(ob, f0, f1):
+    target = ob.scale.copy()      # capture BEFORE zeroing (order matters!)
     kf_scale(ob, f0, 0.001)
-    kf_scale(ob, f1, ob.scale.copy())
+    kf_scale(ob, f1, target)
 
 def spin(ob, f0, f1, turns=1.0, axis='Z'):
     r0 = ob.rotation_euler.copy()
