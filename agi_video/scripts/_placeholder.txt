@@ -1,0 +1,3 @@
+#!/bin/bash
+# transcribe.py caller — faster-whisper small/int8, word timestamps -> JSON.
+# Usage: python3 transcribe.py <audio.wav> <out.json>
