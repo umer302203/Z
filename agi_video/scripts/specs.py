@@ -37,7 +37,7 @@ def _grid(xs, z, y=-1.2):
 
 def b_s01(f0, f1):
     m = (f0 + f1) // 2
-    t = text3d("AGI Architecture", (0, -4.5, 3.4), 1.5, "T01", "white")
+    t = text3d("AGI Architecture", (0, -8.0, 3.2), 1.25, "T01", "white")
     scale_in(t, f0 + 5, f0 + 25, (1.5, 1.5, 1.5))
     a = box((-4.5, -1.2, 0.4), (2.4, 2.4, 2.4), "Core", "cyan")
     b = box((0, -1.2, 0.4), (2.4, 2.4, 2.4), "Mind", "purple")
@@ -48,7 +48,7 @@ def b_s01(f0, f1):
     spin(c, m, f1, 0.5)
 
 def b_s02(f0, f1):
-    t = text3d("Key Question", (0, -4.5, 3.6), 1.4, "T02", "cyan")
+    t = text3d("Key Question", (0, -8.0, 3.2), 1.25, "T02", "cyan")
     scale_in(t, f0 + 5, f0 + 25, (1.4, 1.4, 1.4))
     q = torus((0, -1.2, 1.2), 2.2, 0.4, "Qmark", "yellow")
     scale_in(q, f0 + 30, f0 + 60)
@@ -59,7 +59,7 @@ def b_s02(f0, f1):
     scale_in(n2, f0 + 120, f0 + 140)
 
 def b_s03(f0, f1):
-    t = text3d("Bigger Model", (0, -4.5, 3.6), 1.4, "T03", "orange")
+    t = text3d("Bigger Model", (0, -8.0, 3.2), 1.25, "T03", "orange")
     scale_in(t, f0 + 5, f0 + 25, (1.4, 1.4, 1.4))
     sizes = [0.9, 1.4, 2.0, 2.7]
     for i, s in enumerate(sizes):
@@ -68,7 +68,7 @@ def b_s03(f0, f1):
         scale_in(ob, f, f + 25)
 
 def b_s04(f0, f1):
-    t = text3d("Transformer = AGI?", (0, -4.5, 3.6), 1.3, "T04", "purple")
+    t = text3d("Transformer = AGI?", (0, -8.0, 3.2), 1.25, "T04", "purple")
     scale_in(t, f0 + 5, f0 + 25, (1.3, 1.3, 1.3))
     for i in range(4):
         c = chip((-4.8 + i * 3.2, -1.2, 1.6), f"Attn{i}", ["cyan", "purple", "cyan", "purple"][i], (2.2, 2.2, 0.6))
@@ -78,7 +78,7 @@ def b_s04(f0, f1):
     scale_in(q, f1 - 60, f1 - 40, (1.0, 1.0, 1.0))
 
 def b_s05(f0, f1):
-    t = text3d("Reasoning Core", (0, -4.5, 3.6), 1.4, "T05", "green")
+    t = text3d("Reasoning Core", (0, -8.0, 3.2), 1.25, "T05", "green")
     scale_in(t, f0 + 5, f0 + 25, (1.4, 1.4, 1.4))
     steps = [(-4.8, 0), (-1.6, 1.1), (1.6, 0), (4.8, 1.1)]
     for i, (x, z) in enumerate(steps):
@@ -101,7 +101,7 @@ def b_s06(f0, f1):
     spin(m, f0 + 70, f0 + 105, 0.6)
 
 def b_s07(f0, f1):
-    t = text3d("Hallucination", (0, -4.5, 3.6), 1.4, "T07", "red")
+    t = text3d("Hallucination", (0, -8.0, 3.2), 1.25, "T07", "red")
     scale_in(t, f0 + 5, f0 + 25, (1.4, 1.4, 1.4))
     b = sphere((0, -1.2, 0.6), 1.4, "Brain", "purple")
     scale_in(b, f0 + 30, f0 + 55)
@@ -115,7 +115,7 @@ def b_s07(f0, f1):
     scale_in(x, f1 - 50, f1 - 30, (1.1, 1.1, 1.1))
 
 def b_s08(f0, f1):
-    t = text3d("World Model", (0, -4.5, 3.6), 1.4, "T08", "cyan")
+    t = text3d("World Model", (0, -8.0, 3.2), 1.25, "T08", "cyan")
     scale_in(t, f0 + 5, f0 + 25, (1.4, 1.4, 1.4))
     pl = sphere((0, -1.2, 0.2), 1.9, "Earth", "cyan")
     scale_in(pl, f0 + 30, f0 + 60)
@@ -127,7 +127,7 @@ def b_s08(f0, f1):
     scale_in(m, f0 + 130, f0 + 150)
 
 def b_s09(f0, f1):
-    t = text3d("Planning", (0, -4.5, 3.6), 1.4, "T09", "orange")
+    t = text3d("Planning", (0, -8.0, 3.2), 1.25, "T09", "orange")
     scale_in(t, f0 + 5, f0 + 25, (1.4, 1.4, 1.4))
     for i in range(4):
         c = chip((-4.5 + i * 3.0, -1.2, 0.6), f"P{i+1}", "orange", (2.0, 2.0, 0.55))
@@ -137,7 +137,7 @@ def b_s09(f0, f1):
     scale_in(g, f0 + 210, f0 + 230)
 
 def b_s10(f0, f1):
-    t = text3d("Agents", (0, -4.5, 3.6), 1.4, "T10", "purple")
+    t = text3d("Agents", (0, -8.0, 3.2), 1.25, "T10", "purple")
     scale_in(t, f0 + 5, f0 + 25, (1.4, 1.4, 1.4))
     for i in range(3):
         a = box((-4.2 + i * 4.2, -1.2, 0.4), (1.8, 1.8, 1.8), f"Ag{i}", ["purple", "cyan", "green"][i])
@@ -145,7 +145,7 @@ def b_s10(f0, f1):
         spin(a, f0 + 80 + i * 50, f0 + 140 + i * 50, 0.5)
 
 def b_s11(f0, f1):
-    t = text3d("Tools", (0, -4.5, 3.6), 1.4, "T11", "green")
+    t = text3d("Tools", (0, -8.0, 3.2), 1.25, "T11", "green")
     scale_in(t, f0 + 5, f0 + 25, (1.4, 1.4, 1.4))
     h = box((-5.2, -1.2, 0.4), (1.8, 1.8, 1.8), "Hand", "white")
     scale_in(h, f0 + 30, f0 + 50)
@@ -154,7 +154,7 @@ def b_s11(f0, f1):
         scale_in(tl, f0 + 70 + i * 45, f0 + 95 + i * 45)
 
 def b_s12(f0, f1):
-    t = text3d("Self Update", (0, -4.5, 3.6), 1.4, "T12", "cyan")
+    t = text3d("Self Update", (0, -8.0, 3.2), 1.25, "T12", "cyan")
     scale_in(t, f0 + 5, f0 + 25, (1.4, 1.4, 1.4))
     loop = torus((0, -1.2, 1.0), 2.3, 0.3, "Loop", "cyan")
     scale_in(loop, f0 + 30, f0 + 55)
@@ -167,7 +167,7 @@ def b_s12(f0, f1):
         scale_in(d, f0i, f0i + 8, (1, 1, 1))
 
 def b_s13(f0, f1):
-    t = text3d("Grounding", (0, -4.5, 3.6), 1.4, "T13", "green")
+    t = text3d("Grounding", (0, -8.0, 3.2), 1.25, "T13", "green")
     scale_in(t, f0 + 5, f0 + 25, (1.4, 1.4, 1.4))
     g = box((0, -1.2, -1.5), (12, 3, 0.6), "Real", "green")
     scale_in(g, f0 + 30, f0 + 50)
@@ -176,7 +176,7 @@ def b_s13(f0, f1):
         scale_in(p, f0 + 70 + i * 35, f0 + 90 + i * 35)
 
 def b_s14(f0, f1):
-    t = text3d("Safety Layer", (0, -4.5, 3.6), 1.4, "T14", "red")
+    t = text3d("Safety Layer", (0, -8.0, 3.2), 1.25, "T14", "red")
     scale_in(t, f0 + 5, f0 + 25, (1.4, 1.4, 1.4))
     sh = box((0, -1.2, 1.6), (7.4, 7.4, 0.4), "Shield", "red")
     sh.rotation_euler = (math.radians(70), 0, 0)
@@ -185,7 +185,7 @@ def b_s14(f0, f1):
     scale_in(core, f0 + 80, f0 + 100)
 
 def b_s15(f0, f1):
-    t = text3d("Goals", (0, -4.5, 3.6), 1.4, "T15", "yellow")
+    t = text3d("Goals", (0, -8.0, 3.2), 1.25, "T15", "yellow")
     scale_in(t, f0 + 5, f0 + 25, (1.4, 1.4, 1.4))
     for i in range(3):
         n, _ = sticky_note((-3.8 + i * 3.8, -1.0, 0.6), ["Aim", "Plan", "Do"][i],
@@ -193,7 +193,7 @@ def b_s15(f0, f1):
         scale_in(n, f0 + 35 + i * 45, f0 + 60 + i * 45)
 
 def b_s16(f0, f1):
-    t = text3d("Compute", (0, -4.5, 3.6), 1.4, "T16", "orange")
+    t = text3d("Compute", (0, -8.0, 3.2), 1.25, "T16", "orange")
     scale_in(t, f0 + 5, f0 + 25, (1.4, 1.4, 1.4))
     for r in range(2):
         for c in range(4):
@@ -202,7 +202,7 @@ def b_s16(f0, f1):
             scale_in(ch, f0 + 35 + (r * 4 + c) * 22, f0 + 52 + (r * 4 + c) * 22)
 
 def b_s17(f0, f1):
-    t = text3d("Data", (0, -4.5, 3.6), 1.4, "T17", "cyan")
+    t = text3d("Data", (0, -8.0, 3.2), 1.25, "T17", "cyan")
     scale_in(t, f0 + 5, f0 + 25, (1.4, 1.4, 1.4))
     for i in range(3):
         cr = crate((-3.6 + i * 3.6, -1.2, 0.0), 1.5, f"Cr{i}", ["cyan", "purple", "green"][i])
@@ -211,7 +211,7 @@ def b_s17(f0, f1):
     scale_in(q, f1 - 70, f1 - 45, (0.95, 0.95, 0.95))
 
 def b_s18(f0, f1):
-    t = text3d("The Stack", (0, -4.5, 3.6), 1.4, "T18", "white")
+    t = text3d("The Stack", (0, -8.0, 3.2), 1.25, "T18", "white")
     scale_in(t, f0 + 5, f0 + 25, (1.4, 1.4, 1.4))
     layers = [("Reason", "green"), ("Memory", "yellow"), ("Agent", "purple"), ("Tools", "cyan"), ("Safety", "red")]
     for i, (nm, col) in enumerate(layers):
@@ -219,7 +219,7 @@ def b_s18(f0, f1):
         scale_in(L, f0 + 35 + i * 35, f0 + 60 + i * 35)
 
 def b_s19(f0, f1):
-    t = text3d("One Mind?", (0, -4.5, 3.6), 1.4, "T19", "purple")
+    t = text3d("One Mind?", (0, -8.0, 3.2), 1.25, "T19", "purple")
     scale_in(t, f0 + 5, f0 + 25, (1.4, 1.4, 1.4))
     one = sphere((0, -1.2, 0.8), 1.7, "One", "purple")
     scale_in(one, f0 + 30, f0 + 60)
@@ -228,7 +228,7 @@ def b_s19(f0, f1):
     scale_in(q, f1 - 60, f1 - 35, (1.0, 1.0, 1.0))
 
 def b_s20(f0, f1):
-    t = text3d("Open Question", (0, -4.5, 3.4), 1.5, "T20", "cyan")
+    t = text3d("Open Question", (0, -8.0, 3.2), 1.25, "T20", "cyan")
     scale_in(t, f0 + 5, f0 + 25, (1.5, 1.5, 1.5))
     m = (f0 + f1) // 2
     orb = torus((0, -1.2, 0.8), 2.6, 0.28, "O20", "cyan")
@@ -239,5 +239,5 @@ def b_s20(f0, f1):
     end = text3d("→ Future", (0, -1.0, -1.3), 1.1, "T20b", "orange")
     scale_in(end, m + 40, m + 65, (1.1, 1.1, 1.1))
 
-BUILDERS = {f"b_s{i:02d}": fn for i, fn in list(globals().items())
-            if i.startswith("b_s") and callable(fn)}
+BUILDERS = {n: fn for n, fn in list(globals().items())
+            if n.startswith("b_s") and callable(fn)}

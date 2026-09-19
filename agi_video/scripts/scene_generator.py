@@ -12,7 +12,7 @@ if HERE not in sys.path:
 import lib_scene as L
 import specs as S
 
-ROOT = os.path.dirname(HERE)
+ROOT = os.path.dirname(os.path.dirname(HERE))
 WAV = os.path.join(ROOT, "agi_video", "audio", "narration_AGI_locked_837s.wav")
 TRANSCRIPT = os.path.join(ROOT, "agi_video", "reports", "transcript_timestamps.json")
 REPORTS = os.path.join(ROOT, "agi_video", "reports")
@@ -35,6 +35,8 @@ def load_words():
     return d.get("words") or []
 
 def anchor_time(stems, words, after_t):
+    if not stems:
+        return None
     for wd in words:
         t = wd["start"]
         if t <= after_t + 1e-6:
@@ -63,7 +65,7 @@ def compute_windows(total_dur, words):
             prev_k = max([k for k in known if k < i], default=0)
             next_k = min([k for k in known if k > i], default=n)
             t0 = times[prev_k] if times[prev_k] is not None else 0.0
-            t1 = times[next_k] if times[next_k] is not None else total_dur
+            t1 = times[next_k] if next_k < len(times) and times[next_k] is not None else total_dur
             span = max(1, next_k - prev_k)
             times[i] = t0 + (t1 - t0) * (i - prev_k) / span
     times.append(total_dur)
@@ -88,7 +90,7 @@ def compute_windows(total_dur, words):
                 fr[i] = max(1, fr[i + 1] - MIN_WIN_F)
     wins = []
     for i, sq in enumerate(S.SEQ):
-        wins.append({"id": sq["id"], "title": sq["title"],
+        wins.append({"id": sq["id"], "title": sq["title"], "builder": sq.get("builder"),
                      "f0": fr[i], "f1": fr[i + 1],
                      "t0": round((fr[i] - 1) / L.FPS, 2),
                      "t1": round((fr[i + 1] - 1) / L.FPS, 2)})
@@ -125,8 +127,8 @@ def bake_camera(cam, wins):
     for idx, (sid, kind, f0, f1, rng) in enumerate(shots):
         ang0 = rng.uniform(-0.55, 0.55)
         ang1 = ang0 + (0.5 if "L" in kind and kind == "orbL" else -0.5 if kind == "orbR" else rng.uniform(-0.25, 0.25))
-        r0 = rng.uniform(11.5, 14.5); r1 = rng.uniform(9.0, 11.0)
-        z0 = rng.uniform(4.0, 6.5);   z1 = rng.uniform(3.4, 5.6)
+        r0 = rng.uniform(14.0, 18.0); r1 = rng.uniform(12.5, 15.5)
+        z0 = rng.uniform(5.0, 7.5);   z1 = rng.uniform(4.8, 6.8)
         if kind == "push":
             p0, p1 = L.orbit_pos(ang0, r0, z0), L.orbit_pos(ang0 + ang1 * 0.3, r1, z1)
         elif kind == "pull":
@@ -136,8 +138,8 @@ def bake_camera(cam, wins):
         elif kind == "pan":
             p0, p1 = L.orbit_pos(-0.5, r0, z0), L.orbit_pos(0.5, r0, z1)
         else:  # low
-            p0, p1 = L.orbit_pos(ang0, r0, 1.6), L.orbit_pos(ang0 + 0.2, r1, 2.6)
-        tgt = (0.0, -1.2, rng.uniform(0.5, 1.1))
+            p0, p1 = L.orbit_pos(ang0, r0, 2.4), L.orbit_pos(ang0 + 0.2, r1, 3.4)
+        tgt = (0.0, -1.2, rng.uniform(0.3, 0.9))
         cam.location = p0
         L.look_at(cam, tgt)
         cam.keyframe_insert("location", frame=f0)
@@ -216,6 +218,26 @@ def previews(times):
         outs.append(sc.render.filepath)
     return outs
 
+# ---------------- per-seq visibility ----------------
+def apply_visibility(seq_objs, wins, total_f):
+    for w in wins:
+        appear = max(1, w["f0"] - 6)
+        gone = min(total_f, w["f1"] + 6)
+        for ob in seq_objs.get(w["id"], []):
+            if ob.type == 'CAMERA':
+                continue
+            for dp in ("hide_viewport", "hide_render"):
+                try:
+                    setattr(ob, dp, True)
+                    ob.keyframe_insert(dp, frame=1)
+                    setattr(ob, dp, False)
+                    ob.keyframe_insert(dp, frame=appear)
+                    setattr(ob, dp, True)
+                    ob.keyframe_insert(dp, frame=gone)
+                except Exception as e:
+                    print("vis fail", ob.name, dp, e)
+    print("VISIBILITY: applied to", sum(len(v) for v in seq_objs.values()), "objects")
+
 # ---------------- main ----------------
 def main():
     os.makedirs(REPORTS, exist_ok=True)
@@ -227,11 +249,15 @@ def main():
     wins = compute_windows(dur, words)
     for w in wins:
         print(f'{w["id"]} {w["title"]}: f{w["f0"]}-{w["f1"]} ({w["t0"]}-{w["t1"]}s)')
+    seq_objs = {}
     for i, w in enumerate(wins):
         fn = getattr(S, w.get("builder") or f"b_{w['id']}", None)
         if fn is None:
             raise RuntimeError(f"missing builder b_{w['id']}")
+        before = {o.name for o in bpy.data.objects}
         fn(w["f0"], w["f1"])
+        seq_objs[w["id"]] = [o for o in bpy.data.objects if o.name not in before]
+    apply_visibility(seq_objs, wins, total_f)
     cam = L.cam_make()
     shots = bake_camera(cam, wins)
     L.add_audio(WAV, total_f)

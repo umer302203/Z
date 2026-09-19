@@ -4,7 +4,7 @@ from mathutils import Vector
 
 FPS = 24
 RES_X, RES_Y = 1280, 720
-LENS = 44.0
+LENS = 40.0
 
 # Palette (hex)
 PAL = {
@@ -34,6 +34,10 @@ def scene_setup(total_frames):
     sc.render.engine = 'BLENDER_WORKBENCH'
     sc.display.shading.light = 'STUDIO'
     sc.display.shading.color_type = 'OBJECT'
+    try:
+        sc.display.shading.background_type = 'WORLD'
+    except Exception:
+        pass
     sc.render.resolution_x = RES_X
     sc.render.resolution_y = RES_Y
     sc.render.resolution_percentage = 100
