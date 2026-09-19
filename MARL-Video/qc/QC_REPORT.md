@@ -39,3 +39,27 @@ Engine: custom numpy/PIL renderer (see src/), deterministic frame dispatch by ab
   all clean, no overlaps, recap phases intact.
 - Deliverable: `download/MARL_explainer_final.mp4`; repo copies in `final/`
   (split parts + 720p preview).
+
+## Strict rules audit round 2 (user-requested full VIDEO_RULES compliance pass)
+
+**Methods:** spelling sweep over all 285 screen-text strings (pyspellchecker + domain
+whitelist, `src/` tooling), dense 2s-interval frame sampling of the full muxed video
+(390 frames → 13 contact sheets), 22 scene-boundary before/after pairs, full-res zooms
+on every suspect tile.
+
+**Issues found and fixed (all re-rendered):**
+
+| # | Where | Issue | Rule | Fix |
+|---|-------|-------|------|-----|
+| 1 | t≈65s | "OBSERVATION" chip overlapped incoming "POLICY = RULE..." card | §6/§8 | chip now exits (fade 64.7–65.1) before card enters at 65.16 |
+| 2 | t≈143s | legend "COOP + COMP" (non-standard abbreviation) | §3/§2 | two proper labels: "COOPERATION" / "COMPETITION" beside their dots |
+| 3 | t=373–414s | topic numbers "1./2./3./4." on limitation chips | §2 (no topic numbers) | prefixes removed → SAMPLE EFFICIENCY / SCALABILITY / REWARD DESIGN / EXPLAINABILITY |
+| 4 | t≈612s | red X marks drawn on top of "SENSOR 1/2/3" words | §21 (marks never cover letters) | X moved beside each chip |
+| 5 | t≈627s | "WRONG" X strike covered the word | §21 | X moved above the box |
+| 6 | t≈627–634s | "WRONG DATA DISTURBS POLICY" collided with "TRUST + VERIFY + COST" chip | §6 | red chip moved up (y 740→660), 46px clearance |
+| 7 | t≈752s | "WRONG GOAL = EFFICIENTLY WRONG" chip sat on the healthcare "+" icon | §6 | chip moved up (y 460→395), ~25px margins both sides |
+
+**Clean after fixes:** dense smoke test re-run (3118 positions, 0 errors); all boundary
+pairs show full old-scene removal before new-scene entry; spelling sweep clean (only
+domain terms whitelisted); no fake logos; English-only labels; no subtitles/progress
+bars/topic numbers; text stays supporting-role (~10%) vs visual storytelling (~90%).

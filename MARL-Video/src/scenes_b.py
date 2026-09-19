@@ -62,7 +62,7 @@ def sc_limits(f, t, A):
     # 1. sample efficiency 373.3
     if t < 391.48:
         a = ramp(t, 373.3, 0.6)
-        chip(f, "1. SAMPLE EFFICIENCY", 960, 260, t, 373.3, ORANGE, 28)
+        chip(f, "SAMPLE EFFICIENCY", 960, 260, t, 373.3, ORANGE, 28)
         # trials accumulate
         n = int(clamp01((t-373.8)/6.0) * 42)
         rng = np.random.default_rng(11)
@@ -93,7 +93,7 @@ def sc_limits(f, t, A):
     # 2. scalability 392.14
     elif t < 402.76:
         a = ramp(t, 392.14, 0.6)
-        chip(f, "2. SCALABILITY", 960, 260, t, 392.14, ORANGE, 28)
+        chip(f, "SCALABILITY", 960, 260, t, 392.14, ORANGE, 28)
         # agents multiply
         n_agents = [2, 4, 8]
         centers = [(640, 600), (960, 600), (1280, 600)]
@@ -120,7 +120,7 @@ def sc_limits(f, t, A):
     # 3. reward design 403.58
     elif t < 412.52:
         a = ramp(t, 403.58, 0.6)
-        chip(f, "3. REWARD DESIGN", 960, 260, t, 403.58, ORANGE, 28)
+        chip(f, "REWARD DESIGN", 960, 260, t, 403.58, ORANGE, 28)
         # delivery robot speed dial
         robot_icon(f, 700, 620, t, 404.0, BLUE, 16, dirx=1)
         meter(f, 560, 740, 400, "SPEED REWARD", 0.95, t, 404.6, ORANGE, 22)
@@ -143,7 +143,7 @@ def sc_limits(f, t, A):
     # 4. explainability 413.28
     else:
         a = ramp(t, 413.28, 0.6)
-        chip(f, "4. EXPLAINABILITY", 960, 260, t, 413.28, ORANGE, 28)
+        chip(f, "EXPLAINABILITY", 960, 260, t, 413.28, ORANGE, 28)
         # black box
         if t > 413.8:
             a2 = ramp(t, 413.8, 0.6, "back")
@@ -464,7 +464,7 @@ def sc_comm(f, t, A):
             a2 = 1 - ramp(t, 611.0, 0.4)
             for i, txt in enumerate(["SENSOR 1", "SENSOR 2", "SENSOR 3"]):
                 chip(f, txt, 660, 600+i*56, t, 610.76, GREY, 18)
-                if t > 611.2: cross(f, 660, 600+i*56, 12, t, 611.3+i*0.1, RED, 3)
+                if t > 611.2: cross(f, 728, 600+i*56, 12, t, 611.3+i*0.1, RED, 3)
         # one packet moves
         p = ((t-609.2)*0.7) % 1.0
         if t > 609.2 and t < 612.5:
@@ -489,8 +489,8 @@ def sc_comm(f, t, A):
         a = ramp(t, 626.82, 0.4)
         draw_rect(f, 700, 720, 800, 760, RED, 0.4*a, width=2, radius=6)
         draw_text(f, "WRONG", 750, 740, 16, RED, 0.9*a)
-        if t > 627.2: cross(f, 750, 740, 16, t, 627.3, RED, 4)
-        chip(f, "WRONG DATA DISTURBS POLICY", 1240, 740, t, 626.9, RED, 20)
+        if t > 627.2: cross(f, 750, 686, 12, t, 627.3, RED, 4)
+        chip(f, "WRONG DATA DISTURBS POLICY", 1240, 660, t, 626.9, RED, 20)
     if t > 630.3:
         a = ramp(t, 630.3, 0.5)
         shield_icon(f, 960, 640, 36, t, 630.3, GREEN)
@@ -684,7 +684,7 @@ def sc_future(f, t, A):
             p = ((t-748.6)*0.7+k/3) % 1.0
             px = 900 - 400*p
             draw_arrow(f, (px+30, 560), (px, 560), RED, 3, 0.7*a, head=10)
-        chip(f, "WRONG GOAL = EFFICIENTLY WRONG", 960, 460, t, 750.5, RED, 26)
+        chip(f, "WRONG GOAL = EFFICIENTLY WRONG", 960, 395, t, 750.5, RED, 26)
     # better goals 755.68
     if 755.68 < t < 760.5:
         a = ramp(t, 755.68, 0.5) * (1 - ramp(t, 759.6, 0.9))

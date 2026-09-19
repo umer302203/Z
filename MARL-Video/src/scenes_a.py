@@ -258,7 +258,10 @@ def sc_marl(f, t, A):
         if t > 60.06:
             ang = np.arctan2(600-(y+dy), 960-(x+dx))
             view_cone(f, x+dx, y+dy, ang, 0.9, 150, t, 60.06+i*0.1, c)
-    if t > 60.06: chip(f, "OBSERVATION", 960, 970, t, 60.1, BLUE, 26)
+    if t > 60.06:
+        # exit before policy rule card enters at 65.16 (no overlap, clean lifecycle)
+        ca = 1.0 - ramp(t, 64.7, 0.4) if t > 64.7 else 1.0
+        chip(f, "OBSERVATION", 960, 970, t, 60.1, BLUE, 26, alpha=ca)
     # policy chips 62.44
     if t > 62.44:
         for i, (x, y, c) in enumerate(agents):
@@ -429,7 +432,8 @@ def sc_nonstat(f, t, A):
         a = ramp(t, 142.72, 0.5)
         glow(f, 330, 950, 16, GREEN, 0.5*a); draw_circle(f, 330, 950, 13, GREEN, 0.9*a)
         glow(f, 330, 950-52, 16, RED, 0.5*a); draw_circle(f, 330, 898, 13, RED, 0.9*a)
-        draw_text(f, "COOP + COMP", 360, 950, 22, WHITE, 0.9*a, anchor="lm")
+        draw_text(f, "COMPETITION", 360, 898, 22, WHITE, 0.9*a, anchor="lm")
+        draw_text(f, "COOPERATION", 360, 950, 22, WHITE, 0.9*a, anchor="lm")
 
 # ============ SCENE 9: CREDIT ASSIGNMENT (149.5 - 200.9) ============
 def sc_credit(f, t, A):
