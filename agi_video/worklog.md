@@ -52,4 +52,7 @@
 - [v4] blender 4.5.3 + trixie mesa extracted; EGL test render PASS
 - [v4] mesa_fetch.sh bugs fixed (relative Filename URLs; PAT inner ^$ anchors)
 - [v4] faster-whisper installed via python3 -m pip (venv 3.12, NOT system pip 3.13)
-- [v4] transcription daemon running; next: scene build → validate → render 2 lanes
+- [v4] transcript DONE (hi, 837.84s, 1854 words); anchors v2 hindi+latin 18/19 monotonic
+- [v4] ROOT CAUSE fixed: compute_windows missing builder field → wrong seq mapping; contact sheets verify all 20 windows
+- [v4] RENDER LIVE: 2 daemon lanes, ~92 frames/min, ETA ~3.5h; autocommit pushing PROGRESS.md every 5min
+- [v4] remaining: render 20110 → gap check → ffmpeg mux → download/AGI_explainer_final.mp4
