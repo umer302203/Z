@@ -55,4 +55,7 @@
 - [v4] transcript DONE (hi, 837.84s, 1854 words); anchors v2 hindi+latin 18/19 monotonic
 - [v4] ROOT CAUSE fixed: compute_windows missing builder field → wrong seq mapping; contact sheets verify all 20 windows
 - [v4] RENDER LIVE: 2 daemon lanes, ~92 frames/min, ETA ~3.5h; autocommit pushing PROGRESS.md every 5min
-- [v4] remaining: render 20110 → gap check → ffmpeg mux → download/AGI_explainer_final.mp4
+- [v4] RENDER COMPLETE: 20110/20110, ZERO gaps, 6.5h wall
+- [v4] FINAL: download/AGI_explainer_final.mp4 (95MB, 13:57.84 = narration exact, 1280x720@24, h264+aac)
+- [v4] VERIFIED: stills at 30s/400s/800s match windows (Key Question/Hallucination/Data); TEXT RULE 0 violations
+- [v4] PROJECT COMPLETE ✓
