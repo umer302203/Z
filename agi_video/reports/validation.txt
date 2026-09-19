@@ -1,0 +1,9 @@
+AUDIO: PASS
+TIMELINE: PASS
+OBJECTS: PASS
+CAMERA: PASS
+TEXT: PASS
+RENDER: PASS
+ALL: PASS
+objects=107 text_objects=30 bad_text=[]
+shots=80 cam_kf=486 frame_end=20110
