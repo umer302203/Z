@@ -63,3 +63,37 @@ on every suspect tile.
 pairs show full old-scene removal before new-scene entry; spelling sweep clean (only
 domain terms whitelisted); no fake logos; English-only labels; no subtitles/progress
 bars/topic numbers; text stays supporting-role (~10%) vs visual storytelling (~90%).
+
+## Strict rules audit round 3 — engine anchor bug + final full re-render
+
+**New issue found post round 2 QC (frame t=143.5):** `engine.draw_text` pasted cached
+text sprites centered regardless of anchor, so every `anchor="lm"/"rm"` label was
+shifted LEFT by ~half its width (legend dots touched their labels; credit-scene
+left-aligned labels off-position). Root cause in engine, not scene code.
+
+**Fix:** sprite paste offset now compensates per anchor (`ox = ±(half_w + 8)` for
+lm/rm). Blast radius audited: 14 lm/rm usages across seg1/2/4/5/6; seg3/seg7 contain
+none. Single-frame tests at t=143 (legend) and t=165 (credits) verified the fix before
+committing to a full re-render.
+
+**Re-render:** all five affected segments re-rendered at 60fps (seg1/2/4/5/6, 7200
+frames each; seg7 reused from round-2 fix build, seg3 pixel-identical). Segment
+replacement script verifies frame counts BEFORE any move — this also closed the
+round-2 process bug where `seg7_r3.mp4` was never moved over `seg7.mp4`, so the
+t=752 fix was missing from that mux.
+
+**Final mux verification (8/8 frames PASS, extracted from the shipped file):**
+
+| Time | Check | Result |
+|------|-------|--------|
+| t=23.8 | title/chip regression (pixel-compare vs verified frame) | PASS — identical |
+| t=65.4 | OBSERVATION chip exits before formula card | PASS |
+| t=143.5 | legend "● COMPETITION / ● COOPERATION" anchored correctly | PASS |
+| t=165 | credit-scene A/B/C/D labels centered | PASS |
+| t=175.5 | CLEAR PATH left of ?-boxes | PASS |
+| t=343.4 | SEARCH AREA vs COORDINATED COVERAGE separated | PASS |
+| t=634 | comm scene: red chip clear, SENSOR X-marks beside chips, WRONG X above box | PASS |
+| t=752.5 | "WRONG GOAL = EFFICIENTLY WRONG" fully above "+" icon (now in mux) | PASS |
+
+ffprobe: h264 1920x1080 60fps + aac, 779.350s, 110,183,722 bytes.
+Verification frames: `qc/fixcheck_r4/t*.png`.
