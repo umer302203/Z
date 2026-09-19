@@ -494,7 +494,7 @@ def sc_comm(f, t, A):
     if t > 630.3:
         a = ramp(t, 630.3, 0.5)
         shield_icon(f, 960, 640, 36, t, 630.3, GREEN)
-        chip(f, "TRUST + VERIFY + COST", 960, 740, t, 630.5, GREEN, 24)
+        chip(f, "TRUST + VERIFY + COST", 990, 740, t, 630.5, GREEN, 24)
 
 # ============ SCENE 19: EXPLORATION (634.5 - 676) ============
 def sc_explore(f, t, A):

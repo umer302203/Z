@@ -247,7 +247,10 @@ def draw_text(frame, text, x, y, size=40, color=WHITE, alpha=1.0, anchor="mm", g
         if len(_text_cache) > 400:
             _text_cache.clear()
         _text_cache[key] = spr
-    ox = {"mm": 0, "lm": 8, "rm": -8, "ma": 0}.get(anchor, 0)
+    # paste() centers the sprite; for lm/rm anchors shift by half width so the
+    # text's actual left/right edge lands at x (plus a small 8px padding).
+    half_w = spr.shape[1] / 2.0
+    ox = {"mm": 0, "lm": half_w + 8, "rm": -(half_w + 8), "ma": 0}.get(anchor, 0)
     oy = {"mm": 0, "lm": 0, "rm": 0, "ma": 8}.get(anchor, 0)
     spr2 = spr
     if alpha < 1:
