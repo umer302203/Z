@@ -1,0 +1,10 @@
+{
+ "duration_s": 779.357,
+ "sfx_events": 234,
+ "speech_regions_pct": 97.6,
+ "rms_during_speech": 0.1719,
+ "rms_in_pauses": 0.1593,
+ "duck_floor": 0.24,
+ "peak": 0.95,
+ "clipping": false
+}

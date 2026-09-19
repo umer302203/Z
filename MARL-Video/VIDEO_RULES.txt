@@ -1,0 +1,588 @@
+MASTER VIDEO PRODUCTION RULES
+
+These rules apply to every video, every visual plan, every scene, every animation engine and every production agent. Read this entire file before starting any video task.
+
+==================================================
+1. MASTER AUDIO TIMELINE AND WORD-LEVEL SYNC
+==================================================
+
+The supplied narration/audio is the master timeline. Never create visuals first and force the audio to fit afterward.
+
+Important visual events must be synchronized at word level or phrase level. When the narrator says “reasoning,” the reasoning visual must appear at that spoken word. When the narrator says “planning,” the planning visual must appear at that spoken word. When the narrator says “thinking,” the thinking visual must appear at that spoken word. It must not appear noticeably before or after the spoken event.
+
+The same rule applies to objects and actions. If the narrator says “book,” show the book at that spoken moment. If the narrator says “student,” show the student at that spoken moment. If the narrator says “rocket,” show the rocket at that spoken moment. If the narrator says “robot,” show the robot at that spoken moment.
+
+Create an internal word-level event map from the final audio before animation. For every important word or phrase, record the intended visual, start frame, end condition and sync status. The user does not need to see this technical timing map, but the production workflow must use it.
+
+The narration must always remain the clearest and highest-priority audio layer.
+
+==================================================
+2. SCREEN TEXT RULES
+==================================================
+
+Do not add subtitles, captions, transcript lines or full-sentence explanations to the screen unless the user explicitly requests them.
+
+Use text for only approximately 10% of the visual communication. Use visual storytelling for approximately 90%.
+
+Show the idea instead of writing the idea. If the narration mentions a student, show a clear student visual. If it mentions a book, show a book. If it mentions a rocket, show a rocket. If it mentions memory, show a visual memory system. Do not replace the visual with a sentence.
+
+All on-screen text must be in English only. Do not use Urdu, Roman Urdu, Hindi, Arabic or any other language in screen text unless the user explicitly requests it.
+
+Use only short words or very short labels when they genuinely improve understanding. Appropriate examples include:
+
+REASONING
+PLANNING
+THINKING
+MEMORY
+TOOLS
+FEEDBACK
+VERIFY
+SAFETY
+CAMERA
+BATTERY
+SOURCE
+
+Do not show long text blocks, paragraphs, definitions, narration transcripts or unnecessary title cards.
+
+Do not add a progress bar at the bottom.
+
+Do not add an automatic topic number, chapter number or topic name in the top-right corner.
+
+Do not add decorative text merely to fill empty space.
+
+==================================================
+3. TYPOGRAPHY, SPELLING AND READABILITY
+==================================================
+
+Every visible English word must be spelled correctly and checked before rendering.
+
+Never split a word incorrectly across spaces or text boxes. For example, never render “REASONING” as “REA SONING.” Render it as one correctly spelled word: “REASONING.”
+
+Do not allow text to overflow its own box. Do not allow text to touch, cross or escape the boundaries of its panel.
+
+Before rendering, run a text quality check for:
+
+- Correct spelling.
+- Correct capitalization.
+- Correct word spacing.
+- Correct punctuation when punctuation is necessary.
+- No accidental line breaks.
+- No clipped letters.
+- No text outside its safe area.
+- No overlap with another label, object, image, line, logo or particle.
+
+Use a consistent English font family, size hierarchy, weight and color system throughout the video.
+
+==================================================
+4. REAL OBJECTS AND REAL ICONS
+==================================================
+
+When a real object, product, company, institution or technology is shown, use an accurate visual representation.
+
+If a real object has a recognizable official icon or logo, use the correct official asset whenever it improves clarity. For example:
+
+- A book can use a realistic book cover or a clean book object.
+- ChatGPT/OpenAI can use the correct official logo only when ChatGPT/OpenAI is actually being discussed.
+- A rocket can use an accurate rocket silhouette or relevant official mission asset.
+- A real company, research institution or product can use its official logo or official screenshot when factual evidence is needed.
+
+Do not invent, distort, stretch, recolor, redraw or hallucinate official logos. Do not use a fake ChatGPT interface. Do not imply sponsorship, endorsement or partnership without evidence.
+
+If an official logo cannot be sourced reliably, use a neutral accurate object or the organization’s correctly spelled English name instead.
+
+A logo or icon may be created as a clean SVG only when it accurately preserves the real design. Keep the icon small, transparent when appropriate and visually separate from the main object. Do not place a logo directly over a busy particle field or inside another object.
+
+Every logo must have its own safe area and clear margin.
+
+==================================================
+5. VISUAL-FIRST STORYTELLING
+==================================================
+
+The final video must communicate through objects, actions, environments, diagrams, camera movement, lighting, real evidence and meaningful animation.
+
+Use 2D when a relationship, mathematical process, chart or architecture diagram is clearest in flat space.
+
+Use 3D when depth, physical interaction, spatial relationships, objects, environments, cameras, robots, vehicles, particles or mechanical movement improve understanding.
+
+Use Manim for mathematical clarity, vectors, equations, graphs, neural-network relationships, probability, geometry and scientific transformations.
+
+Use Three.js/WebGL for professional 3D objects, machines, robots, environments, sensor fields, world models, spatial networks and meaningful particles.
+
+Use SVG/D3/Canvas for accurate flowcharts, diagrams, charts, labels and clean 2D comparisons.
+
+Use real images, official screenshots and source footage for evidence, current events, real companies, real people, research papers, historical events, factories, laboratories and missions.
+
+Do not use one engine for every scene merely for convenience. Choose the best visual treatment for the spoken idea.
+
+==================================================
+6. ZERO COLLISION AND ZERO ACCIDENTAL OVERLAP
+==================================================
+
+There must be no unintended collision or overlap in the final video.
+
+This applies to:
+
+- 3D meshes.
+- Robot parts.
+- Tables and structures.
+- Images.
+- Logos.
+- Icons.
+- Text boxes.
+- Labels.
+- Charts.
+- Arrows.
+- Particles.
+- Shadows.
+- Camera layers.
+- Old scene elements.
+
+No element may enter another element’s box or reserved area. A corner touch is also considered an overlap. A one-pixel collision is a failure unless the contact is intentionally part of the visual concept.
+
+Every important 2D object must have a safe bounding box. Every important 3D object must have a checked bounding volume or mesh-collision state.
+
+Run overlap checks on the actual final 2D camera frame, not only inside the source code or 3D editor.
+
+Keep generous empty space between unrelated elements. Never fill the frame with unnecessary objects.
+
+==================================================
+7. TEXT BOX AND PANEL RULES
+==================================================
+
+Every text box, card, panel, image and diagram must remain inside its own area.
+
+A text element must never:
+
+- Overflow its box.
+- Touch another box.
+- Cover a logo.
+- Cover an important object.
+- Cross a connector line.
+- Be clipped by the screen edge.
+- Be hidden behind another element.
+- Move into another element’s reserved area.
+
+Panels must have clear gaps between them. Do not let borders touch at corners. Do not place multiple images on top of one another unless the overlap is an intentional, clearly designed transition.
+
+When two things are compared, use separate zones with an obvious divider and independent safe margins.
+
+==================================================
+8. SCENE LIFECYCLE AND CLEAN TRANSITIONS
+==================================================
+
+Every element must follow:
+
+CREATE → ENTER → ACTIVE → EXIT → REMOVE
+
+The previous visual must fully disappear, move away, fade, shrink or transform before a new unrelated visual occupies the same area.
+
+Before introducing a new scene, remove:
+
+- Previous objects.
+- Previous text.
+- Previous logos.
+- Previous images.
+- Previous particles.
+- Previous arrows.
+- Previous shadows.
+- Previous masks.
+- Previous camera overlays.
+- Previous z-index/layer states.
+
+Never place the next visual on top of an old visual just to hide it. Old elements must actually be removed from the scene and render tree.
+
+Do not allow an old object to remain for even a small corner while the new object appears in its place.
+
+==================================================
+9. 3D MODEL AND SHAPE QUALITY
+==================================================
+
+Important 3D objects must be coherent and physically believable.
+
+A robot must have connected body parts, realistic joints, believable proportions, correct pivots, clean silhouettes and no floating limbs or disconnected boxes.
+
+A table must have a coherent tabletop, believable legs or supports, consistent thickness, proper floor contact and no random internal rows or broken strips. Do not build a table from unrelated boxes that visually intersect or appear detached.
+
+A book must have a readable cover, pages or spine and believable contact with the surface.
+
+A rocket must have a coherent body, fins, engine/nozzle area and stable proportions.
+
+A student, person or character must have a readable silhouette, correct body structure and clear separation from the background.
+
+A cup, apple, vehicle, drone or other object must have believable scale and contact with its environment. Do not let objects float, sink into surfaces or intersect without an intentional action.
+
+Before animation, inspect every important 3D model from front, side and three-quarter views under neutral lighting. If the model looks broken without glow, fog or particles, rebuild or replace it.
+
+Do not hide bad geometry with bloom, darkness, fog, motion blur or particles.
+
+==================================================
+10. AUDIO-SYNC IMPLEMENTATION
+==================================================
+
+Use the final audio waveform and transcript to create word-level timing events.
+
+Important spoken concepts must trigger the matching visual at the spoken word:
+
+- “Reasoning” triggers the reasoning visual.
+- “Planning” triggers the planning visual.
+- “Thinking” triggers the thinking visual.
+- “Book” triggers the book visual.
+- “Rocket” triggers the rocket visual.
+- “Memory” triggers the memory visual.
+- “Tools” triggers the tools visual.
+- “Feedback” triggers the feedback visual.
+
+Review the result at normal speed and reduced speed. Compare the transcript, waveform and visual event frames.
+
+If a visual begins late, retime it. If it appears too early, retime it. If a spoken sequence is “reasoning, planning, thinking,” show the same sequence in the same order.
+
+Do not show planning before reasoning if the narration has not introduced planning yet.
+
+==================================================
+11. SOUND EFFECTS AND AUDIO MIXING
+==================================================
+
+Add relevant sound effects that match visible actions and transitions.
+
+Possible effects include:
+
+- Soft whoosh for a meaningful camera transition.
+- Light click for a tool activation.
+- Subtle scan tone for a sensor or verification scan.
+- Gentle mechanical sound for a robot movement.
+- Soft page movement for a document.
+- Controlled confirmation tone for a verified result.
+- Restrained warning tone for an unsafe state.
+- Light data pulse for meaningful information flow.
+
+Do not add random whooshes, loud glitches, explosions or effects that have no visible reason.
+
+The narration is the master audio and must remain clearly understandable.
+
+Sound effects and music must be lower than the narrator. Use dynamic ducking while the narrator speaks. If a sound effect covers even one spoken word, lower it, shorten it, retime it or remove it.
+
+Check the mix on headphones, laptop speakers and phone speakers.
+
+==================================================
+12. BACKGROUND AND VISUAL ATMOSPHERE
+==================================================
+
+Use a visually pleasing background appropriate to the topic. A dark background with controlled glow, subtle depth, soft gradients or restrained atmosphere may be used.
+
+The background must support the main visual and never compete with it.
+
+Do not use an overly bright, noisy, flat or empty background. Avoid excessive glow that makes edges unclear.
+
+Keep the main object readable at 1080p. Background particles, lights and gradients must remain secondary.
+
+==================================================
+13. OUTPUT REQUIREMENTS
+==================================================
+
+Render the final video at:
+
+- 1920 × 1080 resolution.
+- 16:9 aspect ratio.
+- 60 frames per second.
+- MP4 format.
+- Consistent frame rate from start to finish.
+- Clear narration with balanced music and sound effects.
+
+All important objects and text must remain readable in the actual 1080p output.
+
+==================================================
+14. FRAME-BY-FRAME QUALITY CHECKS
+==================================================
+
+The production agent must check the rendered video frame by frame for technical issues.
+
+Every frame should be checked for:
+
+- Collision.
+- Overlap.
+- Text overflow.
+- Incorrect spelling.
+- Clipped text.
+- Broken geometry.
+- Unintended object appearance.
+- Old elements remaining after a transition.
+- Image or logo distortion.
+- Camera clipping.
+- Object clipping.
+- Particle interference.
+- Safe margins.
+- Sudden visual jumps.
+- Incorrect word-level timing.
+
+The agent should use automated checks where possible and visual inspection for the final rendered frames. If checking every frame computationally is practical, do it. If a full visual frame-by-frame review is impractical for a long video, use automated frame sampling plus dense checks around every transition, word-triggered event, object interaction and scene change, followed by a complete final playback review.
+
+Do not claim that a frame has been checked if it was not actually checked.
+
+==================================================
+15. COMPLETE VIDEO FINAL REVIEW
+==================================================
+
+At the end, review the complete rendered video at least ten times using different quality checks:
+
+1. Full normal-speed review for overall storytelling.
+2. Word-level sync review against the transcript.
+3. Collision and overlap review.
+4. Text spelling and overflow review.
+5. 3D model and geometry review.
+6. Scene cleanup and transition review.
+7. 1080p readability review.
+8. Audio clarity and sound-effect ducking review.
+9. Logo, icon and real-source accuracy review.
+10. Final playback and export integrity review.
+
+These ten reviews are mandatory production passes, not optional suggestions. Any discovered issue must be corrected and the affected review repeated.
+
+==================================================
+16. MULTI-AGENT PRODUCTION WORKFLOW
+==================================================
+
+Use specialized agents rather than forcing one agent to do everything.
+
+Recommended agent roles:
+
+- Audio analysis agent: creates transcript and word-level event map.
+- Visual director agent: converts narration into actual visual scenes.
+- Research agent: finds reliable source pages, official logos and real evidence.
+- Manim agent: creates mathematical and scientific 2D/3D animation.
+- Three.js/WebGL agent: creates coherent 3D objects, environments and particles.
+- SVG/D3 agent: creates precise diagrams, charts and flow systems.
+- Motion-design agent: creates transitions, camera rhythm and composition.
+- Sound-design agent: adds relevant effects and voice ducking.
+- Sync agent: aligns visuals exactly to the audio.
+- Quality-control agent: checks frames, spelling, overlap, geometry, audio and export.
+
+All agents must follow this file and share the same color palette, typography, audio timeline, resolution and visual style.
+
+The quality-control agent has authority to reject a scene with bad geometry, overlap, incorrect spelling, late/early visuals or unclear composition.
+
+==================================================
+17. BACKUP AND PROJECT STORAGE
+==================================================
+
+Keep all project files inside one dedicated project folder. Do not scatter files throughout the repository.
+
+The project folder name must be based on the project title, for example:
+
+AI-Hallucination-Video
+
+Inside the project folder, keep:
+
+- Audio.
+- Transcript.
+- Visual plan.
+- Source images.
+- Official logo assets.
+- Manim files.
+- Three.js/WebGL files.
+- SVG/D3 files.
+- Rendered previews.
+- Sound effects.
+- Final video.
+- Quality-control reports.
+- A copy of this VIDEO_RULES.txt file.
+- A README explaining the project structure.
+
+Do not place project files randomly in the repository root. Do not overwrite another agent’s project folder. Each project must have its own isolated folder.
+
+Use the user’s GitHub repository only after secure authentication is configured. Never put a GitHub token inside source code, the visual plan, README, logs, screenshots or committed files. Use a secure credential manager, environment variable or GitHub CLI authentication.
+
+Never expose a token in chat. If a token is exposed, revoke it immediately and create a new least-privilege token.
+
+For backup, commit only the dedicated project folder and related required files. Do not commit unrelated files or other agents’ folders.
+
+==================================================
+18. FINAL PASS/FAIL STANDARD
+==================================================
+
+The video passes only when:
+
+- Audio is the master timeline.
+- Important visual events are synchronized at word or phrase level.
+- Text is approximately 10% of communication and visuals are approximately 90%.
+- All screen text is correct English and correctly spelled.
+- No subtitles or unnecessary full sentences appear.
+- Objects are shown instead of explained only through text.
+- Real icons and official logos are accurate when used.
+- No unintended collision or overlap exists.
+- No text overflows its box.
+- No image covers another image accidentally.
+- No old visual remains under a new scene.
+- 3D models are coherent and structurally believable.
+- Particles are meaningful and controlled.
+- Sound effects are relevant and quieter than narration.
+- Background supports rather than distracts.
+- Final output is 1920 × 1080 at 60 fps.
+- Ten complete final quality passes are performed.
+- The dedicated project folder is backed up securely without exposing credentials.
+
+FINAL PRINCIPLE:
+
+Show the idea instead of writing the idea. Keep the audio as the master timeline. Use precise English labels only when needed. Keep every object inside its own safe area. Remove every old element before introducing a new one. Build believable shapes. Check every frame and review the complete video ten times before delivery.
+
+
+==================================================
+19. STORY FLOW — NO ARTIFICIAL SECTIONS
+==================================================
+
+The video must flow like one well-edited story, not like a collection of disconnected sections, slides or unrelated topic cards.
+
+Do not divide the video into visible sections unless the narration itself requires a clear change of subject. Do not add section headings, chapter cards, topic numbers or repeated title screens.
+
+Use natural visual transitions based on the story:
+
+- An object can transform into the next object.
+- A camera movement can reveal the next idea.
+- A data path can lead into the next scene.
+- A real image can transition into a 2D diagram.
+- A 2D diagram can expand into a 3D environment.
+- A character or object can remain as a visual bridge between ideas.
+- A result can naturally create the next question.
+
+The audience should feel that one idea is leading to the next, not that the video has suddenly jumped to a new section.
+
+Do not stop the story repeatedly to show a large title, a full-screen text card or a new visual template. Keep the rhythm cinematic and continuous.
+
+Every scene must answer one of these story questions:
+
+- What is happening?
+- Why is it happening?
+- What caused it?
+- What changes next?
+- What problem appears?
+- How is the problem solved or verified?
+
+Use visual cause-and-effect. If the narration says that one event creates another, show the first event leading visibly to the second event.
+
+==================================================
+20. SHOW AS MUCH AS POSSIBLE
+==================================================
+
+The video must communicate primarily through visuals. Do not write an idea when it can be shown with an object, character, action, diagram, camera movement, real image, 2D animation or 3D environment.
+
+If the narration mentions:
+
+- A student: show a believable student learning or working.
+- A book: show a readable book object or real source cover.
+- A rocket: show a coherent rocket with an appropriate environment.
+- A robot: show a structurally correct robot performing an action.
+- Memory: show information being stored, retrieved or connected.
+- Reasoning: show a decision path, comparison or transformation.
+- Planning: show a goal becoming ordered steps.
+- Failure: show the action failing and the consequence appearing.
+- Verification: show the original source being checked.
+
+Do not display a long sentence saying what the audience could already see.
+
+Text is supporting information only. Visual action, object design, camera movement and composition must carry the explanation.
+
+Use real images, real source documents, accurate icons, Manim diagrams, 2D illustrations, 3D scenes and meaningful particles wherever they improve understanding.
+
+==================================================
+21. TEXT BOX CLEARANCE AND SAFE AREAS
+==================================================
+
+Every text box must have a reserved safe area around it. No other object, text box, image, logo, arrow, particle, shadow or border may enter that area.
+
+A text box must never:
+
+- Sit on top of another text box.
+- Touch another text box at a corner.
+- Touch another panel border.
+- Extend beyond its own box.
+- Be covered by an image.
+- Be covered by a 3D object.
+- Be crossed by an arrow.
+- Be crossed by a particle trail.
+- Be hidden behind a shadow or glow.
+- Move into another element’s reserved area during animation.
+
+The safe area must be checked during the complete movement of the element, not only at its first and last positions.
+
+If a text box moves, calculate or visually inspect its entire path. It must not collide with another box while travelling between positions.
+
+If a heading is necessary, keep it short and place it in a reserved area before the scene begins. Do not introduce a heading on top of an active object.
+
+==================================================
+22. ARROW, CONNECTOR AND LABEL RULES
+==================================================
+
+Arrows and connector lines must connect to the outside edge of the intended object or text box. They must never enter the text, image or object unless the connection is intentionally designed as part of the visual.
+
+For every arrow or connector:
+
+- Start from a clearly defined source point.
+- End at a clearly defined target point.
+- Stop at the target’s outer boundary.
+- Keep the arrowhead outside the text area.
+- Keep a visible gap between the arrowhead and the letters.
+- Keep the line away from corners unless the corner connection is deliberately designed.
+- Do not route the line through another box, label, logo or object.
+- Do not let the arrow pass behind a panel and reappear unpredictably.
+- Do not let multiple arrows merge into an unreadable knot.
+
+When an arrow points to a text box, it should point to the box border or to a dedicated connection port, never into the word itself.
+
+When an arrow points to a 3D object, it should terminate at a clean outer point or callout marker, not penetrate the mesh.
+
+Use curved routes or orthogonal routes to avoid other elements. Recalculate arrow paths whenever a box moves.
+
+Arrowheads must not touch, overlap or cover labels. Leave a visible clearance gap.
+
+==================================================
+23. VISUAL STORY EDITING RULE
+==================================================
+
+Edit the video as a visual story rather than assembling isolated assets.
+
+Every visual should have a reason to enter, a clear active moment and a reason to leave. Do not place an object on screen just because the narration mentions a keyword; show what the object is doing in the story.
+
+Prefer this structure:
+
+SETUP → ACTION → CONSEQUENCE → DISCOVERY → EXPLANATION → RESOLUTION
+
+For example, when explaining AI hallucination:
+
+- Setup: a person asks a question.
+- Action: AI generates a smooth answer.
+- Consequence: the source cannot be found.
+- Discovery: confidence and evidence are different.
+- Explanation: token probability creates fluent continuation.
+- Resolution: verification, tools and human review reduce risk.
+
+Use visual continuity between these stages. Do not reset the screen to an empty title card after every stage.
+
+The story should feel deliberate, paced and edited by a professional visual storyteller.
+
+==================================================
+24. FINAL COMPOSITION CHECK FOR BOXES AND ARROWS
+==================================================
+
+Before rendering every important scene, perform a composition check in the actual camera view:
+
+- Render all text boxes with their safe margins.
+- Render all arrows and connector lines.
+- Render all images, logos and 3D objects.
+- Check every corner and border.
+- Check the complete arrow path, not just its endpoint.
+- Check the full animation, not just one frame.
+- Check that no arrow enters a word or panel.
+- Check that no box moves into another box’s area.
+- Check that no heading appears over an active object.
+- Check that no old label remains under the new visual.
+
+If any arrow, text box or panel touches another element accidentally, the scene fails and must be corrected before final rendering.
+
+==================================================
+25. FINAL STORY PRINCIPLE
+==================================================
+
+The audience should understand the video by watching a clear visual story. Write less, show more, connect each idea naturally, and keep the frame clean.
+
+No unnecessary sections. No disconnected cards. No long text. No accidental overlap. No arrows inside text boxes. No boxes touching at corners. No old element remaining behind a new one.
+
+The final video must feel like a continuous, cinematic explanation in which every object, movement, transition, arrow and word has a clear purpose.
