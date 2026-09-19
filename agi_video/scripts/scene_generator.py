@@ -228,7 +228,7 @@ def main():
     for w in wins:
         print(f'{w["id"]} {w["title"]}: f{w["f0"]}-{w["f1"]} ({w["t0"]}-{w["t1"]}s)')
     for i, w in enumerate(wins):
-        fn = getattr(S, f"b_{w['id']}", None)
+        fn = getattr(S, w.get("builder") or f"b_{w['id']}", None)
         if fn is None:
             raise RuntimeError(f"missing builder b_{w['id']}")
         fn(w["f0"], w["f1"])
