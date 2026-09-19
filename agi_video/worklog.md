@@ -48,4 +48,8 @@
 - Camera bake: seeded RNG random.Random(f0*7+i), counts ∝ window length
 
 ## Status Log
-- [v4] 2026-09-19: token OK, wav pushed to Z, code rebuild in progress
+- [v4] 2026-09-19: token OK, wav pushed to Z, all code written+pushed GITHUB-FIRST
+- [v4] blender 4.5.3 + trixie mesa extracted; EGL test render PASS
+- [v4] mesa_fetch.sh bugs fixed (relative Filename URLs; PAT inner ^$ anchors)
+- [v4] faster-whisper installed via python3 -m pip (venv 3.12, NOT system pip 3.13)
+- [v4] transcription daemon running; next: scene build → validate → render 2 lanes
