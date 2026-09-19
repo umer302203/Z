@@ -22,30 +22,11 @@ else echo "blender cached"; fi
 
 echo "== [2/5] mesa (TRIXIE!) =="
 if [ ! -f "$TMP/gllibs/.done" ]; then
-  mkdir -p gllibs/extract && cd gllibs/extract
-  for suite in trixie sid; do
-    echo "-- index $suite --"
-    for m in main main-all; do
-      curl -s "https://deb.debian.org/debian/dists/$suite/$m/binary-amd64/Packages.gz" | gzip -d > "P_$suite_$m.txt" 2>/dev/null || true
-    done
-    cat P_*.txt > all.txt || true
-    # extract only the .deb urls we need
-    rg -o 'https://[^ ]*\.deb' all.txt | rg -i 'mesa|libgl1|libegl|libgbm|libdrm|libx11|libxcb|libxext|libxfixes|libwayland|libxxf86|libxdamage|libsensors|libicu|libxml2|libzstd|liblzma|libllvm|libedit|libz3|libelf|libexpat|libglapi|libxshmfence|libva|libvdpau|libnuma|libudev|libpciaccess|libcrypt|libbsd|libmd|libunwind|libcurl|libbrotli|libnghttp|librtmp|libssh|libpsl|libldap|libb2|libkrb5|libkeyutils|libcom-err|libk5crypto|libgssapi|libtinfo|libmd4c|libdouble-conversion|libpcre2' | sort -u > debs.txt || true
-    while read -r u; do
-      f=$(basename "$u")
-      [ -f "$f" ] || curl -sL -o "$f" "$u" || true
-    done < debs.txt
-    for d in *.deb; do
-      [ -e "$d" ] && dpkg-deb -x "$d" ../ 2>/dev/null || true
-    done
-    [ -f ../usr/lib/x86_64-linux-gnu/libEGL.so.1 ] && echo "mesa from $suite OK" && break
-  done
-  touch ../.done
-  cd "$TMP"
+  bash "$AGI/scripts/mesa_fetch.sh"
 else echo "mesa cached"; fi
 
 echo "== [3/5] faster-whisper =="
-python3 -c "import faster_whisper" 2>/dev/null || pip install --quiet faster-whisper
+python3 -c "import faster_whisper" 2>/dev/null || python3 -m pip install --quiet faster-whisper
 
 echo "== [4/5] ffmpeg =="
 command -v ffmpeg >/dev/null || (apt-get install -y ffmpeg 2>/dev/null || pip install --quiet imageio-ffmpeg)
