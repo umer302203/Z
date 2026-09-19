@@ -39,3 +39,19 @@ zero-collision fixes verified at all 8 checkpoint frames (§6/§7/§21/§22/§24
 full scene-lifecycle cleanup verified at scene boundaries (§8),
 234 SFX events with speech-aware ducking (§11), 1920x1080@60fps MP4 (§13),
 10-review production passes completed in rounds 1–4 (§14/§15), dedicated folder backup (§17).
+
+## Round 5 delivery — full 10-pass rules audit + new corrected build (this commit)
+
+1. Fresh strict audit against the 25-section VIDEO_RULES: 10 mandatory passes executed
+   (storytelling sheets, word-sync anchors, collision zooms, AST spelling sweep,
+   boundary lifecycle pairs, 1080p readability crops, audio volumedetect, logo grep,
+   full -xerror decode). Results: 10/10 word-sync PASS, 18/18 boundary PASS, export PASS.
+2. Found `src/kit.py` was never committed (unrecoverable after reset) — rebuilt from
+   engine primitives + call-site inventory, validated by smoke test (3118 frames, 0
+   errors) and style-fidelity frame comparisons. `audio/final_mix.wav` regenerated.
+3. Four NEW §6/§21 violations found and fixed (re-rendered seg4/5/6):
+   SENSOR X-marks + WRONG box (comm scene), SLOW DOWN FIRST vs ENGINEERS chip overlap,
+   FIXED RULES panel strike/dot over text, ADAPT chip vs road bar.
+4. New deliverable: `MARL_explainer_final_corrected.mp4` — 1920x1080 60fps + aac,
+   779.4s, MD5 43df5e658aff742c925ac390caad685b (rejoin-verified). Parts + 720p
+   preview + MD5SUMS in `final/`. QC evidence in `qc/fixcheck_r5/`.

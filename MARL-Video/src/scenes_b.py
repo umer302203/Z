@@ -171,7 +171,7 @@ def sc_limits(f, t, A):
             r1x = L(t, 440.4, 1.4, 680, 1240); r2x = L(t, 440.6, 1.4, 1240, 680)
             robot_icon(f, r1x, 590, t, 440.4, BLUE, 12, dirx=1)
             robot_icon(f, r2x, 610, t, 440.6, TEAL, 12, dirx=-1)
-            chip(f, "SLOW DOWN FIRST", 960, 800, t, 442.0, GREEN, 24)
+            chip(f, "SLOW DOWN FIRST", 960, 755, t, 442.0, GREEN, 24)
 
 # ============ SCENE 15: RECAP (451.5 - 506.2) ============
 def sc_recap(f, t, A):
@@ -369,7 +369,7 @@ def sc_stability(f, t, A):
         draw_text(f, "AGENT A POLICY", 420, 420, 22, BLUE, 0.9, anchor="lm")
         if t > 554.56:
             draw_polyline(f, pts2, TEAL, 4.5, 0.95)
-            draw_text(f, "AGENT B POLICY (ALSO UPDATING)", 820, 560, 22, TEAL, 0.9, anchor="lm")
+            draw_text(f, "AGENT B POLICY (ALSO UPDATING)", 820, 573, 22, TEAL, 0.9, anchor="lm")
     if t > 558.9:
         a = ramp(t, 558.9, 0.4)
         cross(f, 1420, 470, 18, t, 558.9, RED, 5)
@@ -404,10 +404,10 @@ def sc_stability(f, t, A):
             chip(f, "TRAFFIC PATTERN CHANGES AGAIN", 960, 1020, t, 568.9, ORANGE, 24)
     if t > 576.18:
         a = ramp(t, 576.18, 0.5)
-        draw_rect(f, 300, 560, 560, 640, (24, 30, 42), 0.9*a, width=2, radius=10)
-        draw_text(f, "FIXED RULES", 430, 585, 22, GREY, 0.9*a)
-        draw_line(f, (330, 610), (530, 590), RED, 4, a)
-        cross(f, 430, 600, 14, t, 576.5, RED, 4)
+        draw_rect(f, 230, 585, 455, 660, (24, 30, 42), 0.9*a, width=2, radius=10)
+        draw_text(f, "FIXED RULES", 342, 610, 22, GREY, 0.9*a)
+        draw_line(f, (255, 634), (450, 630), RED, 4, a)
+        cross(f, 440, 610, 11, t, 576.5, RED, 4)
     if t > 580.38:
         a = ramp(t, 580.38, 0.5)
         # uncertainty fog
@@ -417,8 +417,8 @@ def sc_stability(f, t, A):
         chip(f, "UNCERTAINTY", 1120, 620, t, 580.5, GREY, 24)
     if t > 583.02:
         a = ramp(t, 583.02, 0.5)
-        chip(f, "ADAPT", 960, 500, t, 583.02, GREEN, 26)
-        draw_arrow(f, (900, 540), (1020, 540), GREEN, 4, a, head=16)
+        chip(f, "ADAPT", 330, 530, t, 583.02, GREEN, 26)
+        draw_arrow(f, (270, 570), (390, 570), GREEN, 4, a, head=16)
     if t > 584.84:
         a = ramp(t, 584.84, 0.4)
         chip(f, "OPPONENT MODELING", 960, 950, t, 584.84, PURPLE, 24)
@@ -464,7 +464,7 @@ def sc_comm(f, t, A):
             a2 = 1 - ramp(t, 611.0, 0.4)
             for i, txt in enumerate(["SENSOR 1", "SENSOR 2", "SENSOR 3"]):
                 chip(f, txt, 660, 600+i*56, t, 610.76, GREY, 18)
-                if t > 611.2: cross(f, 728, 600+i*56, 12, t, 611.3+i*0.1, RED, 3)
+                if t > 611.2: cross(f, 748, 600+i*56, 12, t, 611.3+i*0.1, RED, 3)
         # one packet moves
         p = ((t-609.2)*0.7) % 1.0
         if t > 609.2 and t < 612.5:
@@ -487,9 +487,9 @@ def sc_comm(f, t, A):
         chip(f, "LATE = MISSED DECISION", 960, 1020, t, 624.3, RED, 22)
     if t > 626.82:
         a = ramp(t, 626.82, 0.4)
-        draw_rect(f, 700, 720, 800, 760, RED, 0.4*a, width=2, radius=6)
-        draw_text(f, "WRONG", 750, 740, 16, RED, 0.9*a)
-        if t > 627.2: cross(f, 750, 686, 12, t, 627.3, RED, 4)
+        draw_rect(f, 570, 760, 670, 800, RED, 0.4*a, width=2, radius=6)
+        draw_text(f, "WRONG", 620, 780, 16, RED, 0.9*a)
+        if t > 627.2: cross(f, 543, 780, 12, t, 627.3, RED, 4)
         chip(f, "WRONG DATA DISTURBS POLICY", 1240, 660, t, 626.9, RED, 20)
     if t > 630.3:
         a = ramp(t, 630.3, 0.5)

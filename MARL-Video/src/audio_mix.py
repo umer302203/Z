@@ -10,7 +10,7 @@ DUR = 779.357
 N = int(DUR * SR)
 
 # ---------- narration ----------
-w = wave.open(f"{VID}/../../download/drive_folder_1/multi_agent_reinforcement_learning_charon_final.wav")
+w = wave.open(f"{VID}/audio/narration.wav")
 narr = np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32) / 32767.0
 w.close()
 narr = np.interp(np.linspace(0, len(narr)/24000.0, N, dtype=np.float32), (np.arange(len(narr))/24000.0).astype(np.float32), narr).astype(np.float32)

@@ -97,3 +97,40 @@ t=752 fix was missing from that mux.
 
 ffprobe: h264 1920x1080 60fps + aac, 779.350s, 110,183,722 bytes.
 Verification frames: `qc/fixcheck_r4/t*.png`.
+
+## Full rules audit round 4 — 10 mandatory passes (§15) + workspace recovery
+
+**Recovery:** container workspace was reset to an older snapshot; the project was
+restored from the GitHub backup (sparse clone of MARL-Video/ only). The rejoined
+deliverable was bit-exact (MD5 6b7b7e86…). Recovery exposed that `src/kit.py` had
+never been committed — it was rebuilt from the engine primitives + call-site
+inventory and validated (smoke test 3118 positions / 0 errors, style-fidelity
+frames vs shipped mux). `audio/final_mix.wav` was regenerated; mix report identical.
+
+**Ten passes executed on the corrected build:**
+
+| # | Pass (§15) | Method | Result |
+|---|------------|--------|--------|
+| 1 | Storytelling flow | 7 contact sheets @5s over full 779s | PASS — continuous story, no section cards |
+| 2 | Word-level sync | 10 anchors across timeline, before/onset composites | PASS — 10/10 exact at spoken word |
+| 3 | Collision/overlap | sheets + full-res zooms on suspects | 4 violations found → fixed (below) |
+| 4 | Spelling/overflow | AST sweep of 197 screen-text strings | PASS (SUBGOALS/SIM whitelisted domain terms) |
+| 5 | Geometry coherence | 2D vector engine; shapes reviewed in sheets | PASS — no broken/floating shapes |
+| 6 | Scene cleanup | 18 boundary before/after pairs | PASS — old scene fully gone in every pair |
+| 7 | 1080p readability | 2x zoom crops (legend/credits/sensors/panel) | PASS after fixes |
+| 8 | Audio clarity/ducking | volumedetect + mix report | PASS — peak 0.95 WAV (0.0dB AAC overshoot ≈0.01% samples, benign); duck floor 0.24 |
+| 9 | Logo/icon accuracy | source grep + visual | PASS — zero external logos; neutral glyphs only |
+| 10 | Export integrity | full decode (-xerror) + ffprobe | PASS — 0 decode errors, h264 1080p60 + aac |
+
+**Violations found and fixed (§6/§21/§22 — re-rendered seg4/5/6):**
+
+| # | Where | Issue | Fix |
+|---|-------|-------|-----|
+| 1 | t≈612–634 | SENSOR X-marks touched chip borders; SENSOR-3 X hit WRONG box corner | X-marks → x=748 (22px gap); WRONG box → (570–670, 760–800); X beside box |
+| 2 | t≈442–451 | "SLOW DOWN FIRST" chip (y=800) overlapped "ENGINEERS NEED THE WHY" (y=820) | chip → (960, 755), 16px/26px clearances |
+| 3 | t≈576–583 | driver dot + strike-X crossed "FIXED RULES" text | panel → (230–455, 585–660); strike below text; X beside text |
+| 4 | t≈583–590 | "ADAPT" chip touched road bar; earlier reposition hit policy curve | chip → (330, 530) + arrow (270,570)–(390,570), verified against curve math |
+
+**Final mux verification (15 frames):** 4 segment seams (360/480/600/720 ±0.2s — no
+pop, style continuous), fix positions (443/587/628.5/634), regressions (23.8/143.5/752.5)
+— all PASS. ffprobe: h264 1920×1080 60fps + aac, 779.4s.
