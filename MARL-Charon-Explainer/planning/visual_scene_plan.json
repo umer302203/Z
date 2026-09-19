@@ -1,0 +1,1649 @@
+{
+  "source_audio": {
+    "original_filename": "multi_agent_reinforcement_learning_charon_final.wav",
+    "source_location": "https://drive.google.com/drive/folders/11c_Ij3zX1Vz14luQtL719eaGmDv9GSin",
+    "original_format": "wav (pcm_s16le, 24000 Hz, mono)",
+    "duration": 779.36,
+    "preserved_copy": "input/original_audio.wav",
+    "processing_copy": "input/working_audio_16k.wav"
+  },
+  "fps": 60,
+  "total_duration": 779.3666666666667,
+  "scenes": [
+    {
+      "id": 1,
+      "file": "scene_001.py",
+      "class_name": "Scene001",
+      "start": 0.0,
+      "end": 19.5,
+      "duration": 19.5,
+      "title": "Football Analogy",
+      "concept": "Many decision-makers share one field",
+      "narration": "So this is a football match. The ground is one, the rules are the same. But there are 20 players on the ground. Every player has to take the decision to look at their position, teammates and opponents' moves. If players understand each other, pass, cover positions and attack at the right time, then the entire team's result can be better.",
+      "events": [
+        {
+          "t_abs": 0.0,
+          "t_rel": 0.0,
+          "word": "football match",
+          "visual": "Pitch fades in, center line + circle draw, chip ONE GROUND"
+        },
+        {
+          "t_abs": 1.82,
+          "t_rel": 1.82,
+          "word": "rules are the same",
+          "visual": "Chip RULES SAME pulses"
+        },
+        {
+          "t_abs": 4.18,
+          "t_rel": 4.18,
+          "word": "20 players",
+          "visual": "10 blue + 10 orange player dots pop in around formation"
+        },
+        {
+          "t_abs": 6.2,
+          "t_rel": 6.2,
+          "word": "decision",
+          "visual": "Focus player highlighted, chip DECISION above"
+        },
+        {
+          "t_abs": 8.06,
+          "t_rel": 8.06,
+          "word": "teammates and opponents",
+          "visual": "Dashed sight-lines to 2 teammates (blue) and 2 opponents (orange)"
+        },
+        {
+          "t_abs": 11.26,
+          "t_rel": 11.26,
+          "word": "pass",
+          "visual": "Ball dot travels blue-to-blue along pass arrow"
+        },
+        {
+          "t_abs": 14.14,
+          "t_rel": 14.14,
+          "word": "cover positions",
+          "visual": "Cover arc lines appear behind focus pair"
+        },
+        {
+          "t_abs": 17.04,
+          "t_rel": 17.04,
+          "word": "team result",
+          "visual": "Score chip TEAM RESULT +1 with rising arrow"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "file": "scene_002.py",
+      "class_name": "Scene002",
+      "start": 19.5,
+      "end": 25.833333333333332,
+      "duration": 6.333333,
+      "title": "Players Become Programs",
+      "concept": "Bridge from football to MARL",
+      "narration": "Now imagine that these are the players' computer programs. With this idea, multi-agent reinforcement learning begins.",
+      "events": [
+        {
+          "t_abs": 19.5,
+          "t_rel": 0.0,
+          "word": "imagine",
+          "visual": "Small pitch icon on left"
+        },
+        {
+          "t_abs": 21.2,
+          "t_rel": 1.7,
+          "word": "computer programs",
+          "visual": "Pitch icon morphs into terminal panel with AGENT code lines"
+        },
+        {
+          "t_abs": 22.64,
+          "t_rel": 3.14,
+          "word": "multi-agent reinforcement learning begins",
+          "visual": "Big label MARL writes in with accent underline"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "file": "scene_003.py",
+      "class_name": "Scene003",
+      "start": 25.833333333333332,
+      "end": 46.21666666666667,
+      "duration": 20.383333,
+      "title": "Reinforcement Learning Loop",
+      "concept": "Agent-environment action-reward cycle",
+      "narration": "With this idea, multi-agent reinforcement learning begins. In reinforcement learning, an agent is the system that takes action in the environment. The environment is the world or the situation where the agent is working. The agent gets information, then he chooses action. After action, he gets reward or penalty. Gradually, the agent learns which action is useful in which situation.",
+      "events": [
+        {
+          "t_abs": 25.84,
+          "t_rel": 0.007,
+          "word": "agent",
+          "visual": "AGENT panel top, ENVIRONMENT panel bottom"
+        },
+        {
+          "t_abs": 31.4,
+          "t_rel": 5.567,
+          "word": "environment",
+          "visual": "Environment panel fills with grid + obstacle dots"
+        },
+        {
+          "t_abs": 35.74,
+          "t_rel": 9.907,
+          "word": "information",
+          "visual": "Arrow env-to-agent labeled OBSERVATION"
+        },
+        {
+          "t_abs": 37.2,
+          "t_rel": 11.367,
+          "word": "chooses action",
+          "visual": "Arrow agent-to-env labeled ACTION fires"
+        },
+        {
+          "t_abs": 39.32,
+          "t_rel": 13.487,
+          "word": "reward or penalty",
+          "visual": "Green +R token and red -R token fly back along feedback path"
+        },
+        {
+          "t_abs": 42.1,
+          "t_rel": 16.267,
+          "word": "gradually learns",
+          "visual": "Loop arrows pulse, chip LEARNING loops at right"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "file": "scene_004.py",
+      "class_name": "Scene004",
+      "start": 46.21666666666667,
+      "end": 58.9,
+      "duration": 12.683333,
+      "title": "Maze to Many Agents",
+      "concept": "From single agent to MARL",
+      "narration": "A robot is in the maze. If he goes near the exit, he gets reward and if he hits the wall, then penalty. Now, place a lot of agents instead of an agent. From here, multi-agent reinforcement learning or killing comes.",
+      "events": [
+        {
+          "t_abs": 46.22,
+          "t_rel": 0.003,
+          "word": "robot is in the maze",
+          "visual": "5x5 maze grid left, robot dot enters"
+        },
+        {
+          "t_abs": 48.5,
+          "t_rel": 2.283,
+          "word": "reward",
+          "visual": "Path approaches exit flag, +1 bubble"
+        },
+        {
+          "t_abs": 50.5,
+          "t_rel": 4.283,
+          "word": "penalty",
+          "visual": "Wall hit flash red, -1 bubble"
+        },
+        {
+          "t_abs": 52.08,
+          "t_rel": 5.863,
+          "word": "lot of agents",
+          "visual": "Two more robot dots spawn in maze"
+        },
+        {
+          "t_abs": 55.08,
+          "t_rel": 8.863,
+          "word": "multi-agent reinforcement learning",
+          "visual": "Chip MARL ties robots together with links"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "file": "scene_005.py",
+      "class_name": "Scene005",
+      "start": 58.9,
+      "end": 81.83333333333333,
+      "duration": 22.933333,
+      "title": "Policy and Shared World",
+      "concept": "Observations, policy, other agents",
+      "narration": "Every agent understands the world from their observations and takes action according to their policy. Policy is a rule or strategy that tells what I should do in this situation. In the multi-agent system, other agents are also taking actions. That is why the environment is changing every time. Agent is not only giving the response of walls, roads or rewards. He is also giving the response of other intelligent agents' decisions. The response of agents is also giving.",
+      "events": [
+        {
+          "t_abs": 58.9,
+          "t_rel": 0.0,
+          "word": "observations",
+          "visual": "Three agent nodes around env panel, eye icons feed in"
+        },
+        {
+          "t_abs": 61.5,
+          "t_rel": 2.6,
+          "word": "takes action according to their policy",
+          "visual": "Action arrows out of each agent"
+        },
+        {
+          "t_abs": 64.32,
+          "t_rel": 5.42,
+          "word": "policy",
+          "visual": "Card POLICY with mini rule IF s THEN a"
+        },
+        {
+          "t_abs": 69.18,
+          "t_rel": 10.28,
+          "word": "other agents are also taking actions",
+          "visual": "Neighbor agent arrows fire, env contents shuffle"
+        },
+        {
+          "t_abs": 72.3,
+          "t_rel": 13.4,
+          "word": "environment is changing",
+          "visual": "Env panel dots rearrange"
+        },
+        {
+          "t_abs": 78.58,
+          "t_rel": 19.68,
+          "word": "other intelligent agents",
+          "visual": "Purple arrow from neighbor agent into focus agent"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "file": "scene_006.py",
+      "class_name": "Scene006",
+      "start": 81.83333333333333,
+      "end": 100.13333333333334,
+      "duration": 18.3,
+      "title": "Shared Space",
+      "concept": "Space, resources, rules",
+      "narration": "Shared environment means that agents share only space, resources or rules. In the warehouse, robots use only one isle. Cars walk on the same roads in traffic. If two robots want to go to the same charging station, then competition is born. If both choose different routes and complete deliveries, then cooperation is seen.",
+      "events": [
+        {
+          "t_abs": 81.84,
+          "t_rel": 0.007,
+          "word": "space, resources or rules",
+          "visual": "Two mini panels: warehouse, road"
+        },
+        {
+          "t_abs": 86.64,
+          "t_rel": 4.807,
+          "word": "warehouse",
+          "visual": "Warehouse aisle with racks, one shared aisle highlighted"
+        },
+        {
+          "t_abs": 89.62,
+          "t_rel": 7.787,
+          "word": "same roads",
+          "visual": "Road strip with two cars nose-to-tail"
+        },
+        {
+          "t_abs": 91.68,
+          "t_rel": 9.847,
+          "word": "same charging station",
+          "visual": "Two robot paths converge on bolt icon"
+        },
+        {
+          "t_abs": 94.4,
+          "t_rel": 12.567,
+          "word": "competition",
+          "visual": "Red spark, chip COMPETITION"
+        },
+        {
+          "t_abs": 95.88,
+          "t_rel": 14.047,
+          "word": "different routes",
+          "visual": "Paths split to two packages"
+        },
+        {
+          "t_abs": 98.52,
+          "t_rel": 16.687,
+          "word": "cooperation",
+          "visual": "Green check, chip COOPERATION"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "file": "scene_007.py",
+      "class_name": "Scene007",
+      "start": 100.13333333333334,
+      "end": 118.83333333333333,
+      "duration": 18.7,
+      "title": "Cooperation vs Competition",
+      "concept": "Common goal vs opposite goals",
+      "narration": "In cooperation, agents have a common goal. The goal of rescue drones can be covered by more areas. Every drone chooses its own route, but the final objective is of the team. In competition, the goal of agents is often the opposite. In chess, one player wins and the other loses. In strategy games, two teams compete for the same resources and territory.",
+      "events": [
+        {
+          "t_abs": 100.14,
+          "t_rel": 0.007,
+          "word": "cooperation",
+          "visual": "Left panel COOPERATION with shared target ring"
+        },
+        {
+          "t_abs": 102.6,
+          "t_rel": 2.467,
+          "word": "rescue drones",
+          "visual": "Three drone icons fan over map regions"
+        },
+        {
+          "t_abs": 105.4,
+          "t_rel": 5.267,
+          "word": "own route",
+          "visual": "Each drone gets dashed route"
+        },
+        {
+          "t_abs": 107.12,
+          "t_rel": 6.987,
+          "word": "team objective",
+          "visual": "One team ring around all routes"
+        },
+        {
+          "t_abs": 108.46,
+          "t_rel": 8.327,
+          "word": "competition",
+          "visual": "Right panel COMPETITION"
+        },
+        {
+          "t_abs": 111.76,
+          "t_rel": 11.627,
+          "word": "chess",
+          "visual": "Mini chess board, pieces clash, W and L tags"
+        },
+        {
+          "t_abs": 114.4,
+          "t_rel": 14.267,
+          "word": "same resources",
+          "visual": "Two bases linked to one contested resource hex"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "file": "scene_008.py",
+      "class_name": "Scene008",
+      "start": 118.83333333333333,
+      "end": 141.88333333333333,
+      "duration": 23.05,
+      "title": "Non-Stationarity",
+      "concept": "Environment changes as others learn",
+      "narration": "The competition agent teaches to predict the behavior of the opponent. If you only learn your best moves and ignore the opponent, then the policy can fail quickly. In multi-agent setting, the environment looks non-stationary. This means that the strategy against which the agent was learning is also changing. If one player improves defense, the other will change attack. Every agent makes others better. In some problems, cooperation and competition are both the same.",
+      "events": [
+        {
+          "t_abs": 118.84,
+          "t_rel": 0.007,
+          "word": "predict the opponent",
+          "visual": "Two policy cards face off, eye arrow between"
+        },
+        {
+          "t_abs": 122.5,
+          "t_rel": 3.667,
+          "word": "policy can fail",
+          "visual": "Red crack across left card"
+        },
+        {
+          "t_abs": 127.9,
+          "t_rel": 9.067,
+          "word": "non-stationary",
+          "visual": "Background grid starts sliding, chip NON-STATIONARY"
+        },
+        {
+          "t_abs": 131.22,
+          "t_rel": 12.387,
+          "word": "also changing",
+          "visual": "Cards flip DEFENSE v1 to v2, ATTACK v1 to v2"
+        },
+        {
+          "t_abs": 135.54,
+          "t_rel": 16.707,
+          "word": "changes attack",
+          "visual": "Right card morphs again"
+        },
+        {
+          "t_abs": 139.64,
+          "t_rel": 20.807,
+          "word": "makes others better",
+          "visual": "Mutual level-up arrows loop between cards"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "file": "scene_009.py",
+      "class_name": "Scene009",
+      "start": 141.88333333333333,
+      "end": 149.01666666666668,
+      "duration": 7.133333,
+      "title": "Mixed Motives",
+      "concept": "Cooperate and compete at once",
+      "narration": "In some problems, cooperation and competition are both the same. Team mates cooperate in the game and compete against opposing team.",
+      "events": [
+        {
+          "t_abs": 141.88,
+          "t_rel": -0.003,
+          "word": "both",
+          "visual": "Two blue dots and two orange dots"
+        },
+        {
+          "t_abs": 145.26,
+          "t_rel": 3.377,
+          "word": "teammates cooperate",
+          "visual": "Green link between blue pair"
+        },
+        {
+          "t_abs": 146.6,
+          "t_rel": 4.717,
+          "word": "compete against opposing team",
+          "visual": "Red cross-links between teams"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "file": "scene_010.py",
+      "class_name": "Scene010",
+      "start": 149.01666666666668,
+      "end": 173.33333333333334,
+      "duration": 24.316667,
+      "title": "Credit Assignment",
+      "concept": "Who contributed to the team reward?",
+      "narration": "Now let's come to the credit assignment. The question of credit assignment is, did the team get a reward? But in this reward, what was the contribution of which agent? Imagine that four robots move to a heavy box. The team got a reward because it reached the box destination. But one robot gave direction, the other one pushed the box, the third one cleared the way and the fourth one was almost doing nothing.",
+      "events": [
+        {
+          "t_abs": 149.02,
+          "t_rel": 0.003,
+          "word": "credit assignment",
+          "visual": "Question chip TEAM REWARD: WHO CONTRIBUTED?"
+        },
+        {
+          "t_abs": 157.56,
+          "t_rel": 8.543,
+          "word": "four robots",
+          "visual": "Four robot nodes around a heavy box"
+        },
+        {
+          "t_abs": 161.44,
+          "t_rel": 12.423,
+          "word": "team got a reward",
+          "visual": "Box slides to destination flag, +R TEAM banner"
+        },
+        {
+          "t_abs": 165.1,
+          "t_rel": 16.083,
+          "word": "one gave direction",
+          "visual": "Robot A tag DIRECTION with arrow"
+        },
+        {
+          "t_abs": 169.0,
+          "t_rel": 19.983,
+          "word": "pushed the box",
+          "visual": "Robot B tag PUSH, box nudge"
+        },
+        {
+          "t_abs": 170.0,
+          "t_rel": 20.983,
+          "word": "cleared the way",
+          "visual": "Robot C tag CLEAR WAY"
+        },
+        {
+          "t_abs": 171.4,
+          "t_rel": 22.383,
+          "word": "doing nothing",
+          "visual": "Robot D dims with dotted idle ring"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "file": "scene_011.py",
+      "class_name": "Scene011",
+      "start": 173.33333333333334,
+      "end": 199.36666666666667,
+      "duration": 26.033333,
+      "title": "Reward Balance",
+      "concept": "Shared vs individual rewards",
+      "narration": "If everyone gets the same reward, then inactive robot can also learn successful behavior. If only the pushing robot gets the reward, then the contribution of the robot giving direction can be missed. That is why shared reward and individual reward can be both useful. Shared reward shows team success. Individual reward guides the local action of the agent. The balance of both the rewards is important. Otherwise, an agent can be selfish or he doesn't understand his role.",
+      "events": [
+        {
+          "t_abs": 173.34,
+          "t_rel": 0.007,
+          "word": "same reward",
+          "visual": "Panel SHARED: +R copies to all four, inactive glows too"
+        },
+        {
+          "t_abs": 178.6,
+          "t_rel": 5.267,
+          "word": "only the pushing robot",
+          "visual": "Panel INDIVIDUAL: +R to pusher only, direction tag greys"
+        },
+        {
+          "t_abs": 184.58,
+          "t_rel": 11.247,
+          "word": "both useful",
+          "visual": "Balance scale center: pans TEAM and LOCAL"
+        },
+        {
+          "t_abs": 188.92,
+          "t_rel": 15.587,
+          "word": "team success",
+          "visual": "TEAM pan dips, chip TEAM SUCCESS"
+        },
+        {
+          "t_abs": 191.4,
+          "t_rel": 18.067,
+          "word": "local action",
+          "visual": "LOCAL pan dips, chip LOCAL ACTION"
+        },
+        {
+          "t_abs": 196.84,
+          "t_rel": 23.507,
+          "word": "selfish",
+          "visual": "Two red mini states: SELFISH, LOST ROLE"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "file": "scene_012.py",
+      "class_name": "Scene012",
+      "start": 199.36666666666667,
+      "end": 217.26666666666668,
+      "duration": 17.9,
+      "title": "Delayed Reward",
+      "concept": "Temporal credit assignment",
+      "narration": "Another issue is the delayed reward. Sometimes action is taken now, but the result is very late. A drone chose a route first, then the team got a target after 10 minutes. Now the system has to understand which decision helped in success. This is called a temporal credit assignment. Human teams can give manager feedback.",
+      "events": [
+        {
+          "t_abs": 199.36,
+          "t_rel": -0.007,
+          "word": "action is taken now",
+          "visual": "Timeline bar, drone acts at NOW mark"
+        },
+        {
+          "t_abs": 206.06,
+          "t_rel": 6.693,
+          "word": "route first",
+          "visual": "Drone icon flies along timeline"
+        },
+        {
+          "t_abs": 208.6,
+          "t_rel": 9.233,
+          "word": "after 10 minutes",
+          "visual": "Target flag far right, +10 MIN bracket"
+        },
+        {
+          "t_abs": 210.36,
+          "t_rel": 10.993,
+          "word": "which decision helped",
+          "visual": "Question marks along the gap"
+        },
+        {
+          "t_abs": 214.54,
+          "t_rel": 15.173,
+          "word": "temporal credit",
+          "visual": "Chip TEMPORAL CREDIT, dashed back-arrow to NOW"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "file": "scene_013.py",
+      "class_name": "Scene013",
+      "start": 217.26666666666668,
+      "end": 239.61666666666667,
+      "duration": 22.35,
+      "title": "Feedback Gap",
+      "concept": "Human feedback vs reward signal",
+      "narration": "Human teams can give manager feedback. They can say that your planning was useful, your timing was good and your communication was weak. AI agents don't get such detailed feedback naturally. They have to estimate the contribution from the reward signal. If the reward is too late, the learning can be slow. That is why useful systems, intermediate signals and sub-goals are also used.",
+      "events": [
+        {
+          "t_abs": 217.26,
+          "t_rel": -0.007,
+          "word": "human teams",
+          "visual": "Manager figure left"
+        },
+        {
+          "t_abs": 219.78,
+          "t_rel": 2.513,
+          "word": "planning was useful",
+          "visual": "Bubbles GOOD PLAN, GOOD TIMING, WEAK COMMS"
+        },
+        {
+          "t_abs": 225.3,
+          "t_rel": 8.033,
+          "word": "don't get such feedback",
+          "visual": "Agent right gets only +1 -1 tokens"
+        },
+        {
+          "t_abs": 227.82,
+          "t_rel": 10.553,
+          "word": "estimate contribution",
+          "visual": "Gauge dial CONSEQUENCE?"
+        },
+        {
+          "t_abs": 231.68,
+          "t_rel": 14.413,
+          "word": "reward is too late",
+          "visual": "Slow sluggish arrow, chip SLOW LEARNING"
+        },
+        {
+          "t_abs": 235.16,
+          "t_rel": 17.893,
+          "word": "sub-goals",
+          "visual": "Milestone flags on path, chip SUB-GOALS"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "file": "scene_014.py",
+      "class_name": "Scene014",
+      "start": 239.61666666666667,
+      "end": 280.8333333333333,
+      "duration": 41.216667,
+      "title": "Partial Observability",
+      "concept": "Hidden info, memory, communication",
+      "narration": "Partial observability is also common in goods. Every agent can only see a part of the environment. A rescue robot can see its corridor, but not the other robot's corridor. If the robot wants to understand other people's actions, it will have to assume hidden information. You will have to think about it. Memory and communication can reduce this problem. One robot can tell you that the left corridor has already been searched. The other robot can use their time in a new area. Even without communication, cooperation is possible. Agents can observe other people's actions and guess their intentions. But learning from communication can be fast. It is not necessary to tell each agent everything. It is only necessary to share that information which improves the team's results.",
+      "events": [
+        {
+          "t_abs": 239.62,
+          "t_rel": 0.003,
+          "word": "part of the environment",
+          "visual": "Two corridor panels split by wall"
+        },
+        {
+          "t_abs": 245.2,
+          "t_rel": 5.583,
+          "word": "can see its corridor",
+          "visual": "View cones from each robot, fog on far side"
+        },
+        {
+          "t_abs": 252.94,
+          "t_rel": 13.323,
+          "word": "hidden information",
+          "visual": "Fog label HIDDEN"
+        },
+        {
+          "t_abs": 254.18,
+          "t_rel": 14.563,
+          "word": "memory and communication",
+          "visual": "Memory card + chat bubble icons"
+        },
+        {
+          "t_abs": 258.84,
+          "t_rel": 19.223,
+          "word": "already been searched",
+          "visual": "Bubble LEFT DONE with tick"
+        },
+        {
+          "t_abs": 262.54,
+          "t_rel": 22.923,
+          "word": "new area",
+          "visual": "Right robot moves to fresh corridor"
+        },
+        {
+          "t_abs": 268.72,
+          "t_rel": 29.103,
+          "word": "guess their intentions",
+          "visual": "Dashed observe arrow with ?"
+        },
+        {
+          "t_abs": 277.7,
+          "t_rel": 38.083,
+          "word": "improves the team's results",
+          "visual": "Funnel filter chip USEFUL INFO ONLY"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "file": "scene_015.py",
+      "class_name": "Scene015",
+      "start": 280.8333333333333,
+      "end": 304.6166666666667,
+      "duration": 23.783333,
+      "title": "Traffic Management",
+      "concept": "Coordinated traffic signals",
+      "narration": "It is only necessary to share that information which improves the team's results. multi-agent reinforcement learning can be used in the real world. First of all, traffic management. If traffic lights are understood by different agents, then every signal can observe its nearby traffic. But the best result will be when signals coordinate. If one signal only reduces the wait time of its road, then traffic can be jammed on the other road. The shared goal should be the smooth flow of the network.",
+      "events": [
+        {
+          "t_abs": 280.84,
+          "t_rel": 0.007,
+          "word": "traffic management",
+          "visual": "Road grid with three signal nodes"
+        },
+        {
+          "t_abs": 287.44,
+          "t_rel": 6.607,
+          "word": "different agents",
+          "visual": "Signals become agent dots"
+        },
+        {
+          "t_abs": 290.0,
+          "t_rel": 9.167,
+          "word": "observe its nearby traffic",
+          "visual": "View cones on each signal"
+        },
+        {
+          "t_abs": 292.8,
+          "t_rel": 11.967,
+          "word": "signals coordinate",
+          "visual": "Sync links between signals, green waves"
+        },
+        {
+          "t_abs": 296.48,
+          "t_rel": 15.647,
+          "word": "jammed on the other road",
+          "visual": "Red congestion cluster on cross road"
+        },
+        {
+          "t_abs": 301.62,
+          "t_rel": 20.787,
+          "word": "smooth flow of the network",
+          "visual": "Chip NETWORK FLOW, flow arrows turn green"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "file": "scene_016.py",
+      "class_name": "Scene016",
+      "start": 304.6166666666667,
+      "end": 325.98333333333335,
+      "duration": 21.366667,
+      "title": "Warehouse Robots",
+      "concept": "Pick, deliver, coordinate",
+      "narration": "Second example is the warehouse robots. Every robot picks and delivers packages. If robots learn routes, they can avoid busy aisles. With cooperation, robots divide tasks. With competition, there can be conflict for charging stations or short routes. To avoid collision, to meet deadlines and to save energy, one has to learn together. The third example is of drones.",
+      "events": [
+        {
+          "t_abs": 304.62,
+          "t_rel": 0.003,
+          "word": "warehouse robots",
+          "visual": "Rack rows, two robots, packages"
+        },
+        {
+          "t_abs": 307.18,
+          "t_rel": 2.563,
+          "word": "picks and delivers",
+          "visual": "Robot A carries package to dock"
+        },
+        {
+          "t_abs": 309.5,
+          "t_rel": 4.883,
+          "word": "avoid busy aisles",
+          "visual": "Busy aisle flashes, routes bend around it"
+        },
+        {
+          "t_abs": 313.64,
+          "t_rel": 9.023,
+          "word": "divide tasks",
+          "visual": "Packages split between robots, tick marks"
+        },
+        {
+          "t_abs": 316.34,
+          "t_rel": 11.723,
+          "word": "competition",
+          "visual": "Bolt conflict ping between two robots"
+        },
+        {
+          "t_abs": 320.26,
+          "t_rel": 15.643,
+          "word": "collision, deadlines, energy",
+          "visual": "Chips NO COLLISION, DEADLINES, ENERGY"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "file": "scene_017.py",
+      "class_name": "Scene017",
+      "start": 325.98333333333335,
+      "end": 347.9,
+      "duration": 21.916667,
+      "title": "Drone Coverage",
+      "concept": "Search area division",
+      "narration": "The third example is of drones. Many drones are searching for a large area. If every drone takes a random route, it can be scanned again and again. If the agents observe each other's routes observe and share information, then coverage can be better. If a drone detects an object, then it can be useful to send the remaining drones to that location.",
+      "events": [
+        {
+          "t_abs": 325.98,
+          "t_rel": -0.003,
+          "word": "drones",
+          "visual": "Large area frame, three drones"
+        },
+        {
+          "t_abs": 330.94,
+          "t_rel": 4.957,
+          "word": "random route",
+          "visual": "Overlapping dashed loops"
+        },
+        {
+          "t_abs": 333.12,
+          "t_rel": 7.137,
+          "word": "scanned again",
+          "visual": "Red RESCAN flashes on overlap"
+        },
+        {
+          "t_abs": 335.6,
+          "t_rel": 9.617,
+          "word": "observe and share",
+          "visual": "Grid partition colors per drone"
+        },
+        {
+          "t_abs": 337.56,
+          "t_rel": 11.577,
+          "word": "coverage can be better",
+          "visual": "Full grid tinted, chip COVERAGE UP"
+        },
+        {
+          "t_abs": 343.22,
+          "t_rel": 17.237,
+          "word": "detects an object",
+          "visual": "Target ping on cell, other drones converge"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "file": "scene_018.py",
+      "class_name": "Scene018",
+      "start": 347.9,
+      "end": 370.0,
+      "duration": 22.1,
+      "title": "CTDE",
+      "concept": "Centralized training, decentralized execution",
+      "narration": "In MARL, the idea of centralized training and decentralized execution is also used. During training, the system can see information of all the agents. It is easy to learn team coordination from this. But during actual operation, each agent only takes action from their local observations. action. For example, the entire map is available in the training room, but in the mission, every robot uses only its sensors.",
+      "events": [
+        {
+          "t_abs": 347.9,
+          "t_rel": 0.0,
+          "word": "centralized training",
+          "visual": "TRAINING panel: all agent nodes linked to GLOBAL INFO hub"
+        },
+        {
+          "t_abs": 353.38,
+          "t_rel": 5.48,
+          "word": "information of all the agents",
+          "visual": "Hub collects all arrows"
+        },
+        {
+          "t_abs": 361.58,
+          "t_rel": 13.68,
+          "word": "local observations",
+          "visual": "EXECUTION panel: agents standalone with sensor cones"
+        },
+        {
+          "t_abs": 364.38,
+          "t_rel": 16.48,
+          "word": "training room",
+          "visual": "Map icon in training panel"
+        },
+        {
+          "t_abs": 367.0,
+          "t_rel": 19.1,
+          "word": "uses only its sensors",
+          "visual": "Sensor icon in execution panel, arrow TRAINING then EXECUTION"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "file": "scene_019.py",
+      "class_name": "Scene019",
+      "start": 370.0,
+      "end": 392.9,
+      "duration": 22.9,
+      "title": "Sample Efficiency and Sim2Real",
+      "concept": "Trials, cost, reality gap",
+      "narration": "There are some important limitations of the route. The first limitation is sample efficiency. Agents may need a lot of trials to learn a useful strategy. With real robots, every trial can be expensive and risky. Agents can be fast trained in simulation, but there is a difference between simulation and reality. This difference is called SIM2 real gap. The second limitation is scalability.",
+      "events": [
+        {
+          "t_abs": 370.0,
+          "t_rel": 0.0,
+          "word": "limitations",
+          "visual": "Chip LIMIT 1"
+        },
+        {
+          "t_abs": 374.96,
+          "t_rel": 4.96,
+          "word": "lot of trials",
+          "visual": "Trial counter spins to x1000"
+        },
+        {
+          "t_abs": 379.34,
+          "t_rel": 9.34,
+          "word": "expensive and risky",
+          "visual": "Real robot with $ tag and warning"
+        },
+        {
+          "t_abs": 383.74,
+          "t_rel": 13.74,
+          "word": "simulation",
+          "visual": "SIM box with many fast robot ghosts"
+        },
+        {
+          "t_abs": 388.62,
+          "t_rel": 18.62,
+          "word": "SIM2 real gap",
+          "visual": "Chasm between SIM and REAL boxes, chip SIM2REAL GAP"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "file": "scene_020.py",
+      "class_name": "Scene020",
+      "start": 392.9,
+      "end": 405.4,
+      "duration": 12.5,
+      "title": "Scalability",
+      "concept": "Interaction explosion",
+      "narration": "If the number of agents increases, then the possible interactions become too much. In the case of 100 agents, each agent's second agents' behavior model can be difficult. Third limitation is reward design. If a delivery",
+      "events": [
+        {
+          "t_abs": 392.9,
+          "t_rel": 0.0,
+          "word": "scalability",
+          "visual": "Chip LIMIT 2"
+        },
+        {
+          "t_abs": 393.44,
+          "t_rel": 0.54,
+          "word": "agents increases",
+          "visual": "3 nodes mesh, then 10, then swarm"
+        },
+        {
+          "t_abs": 397.68,
+          "t_rel": 4.78,
+          "word": "100 agents",
+          "visual": "100 dots swarm, link counter climbs"
+        },
+        {
+          "t_abs": 400.0,
+          "t_rel": 7.1,
+          "word": "behavior model can be difficult",
+          "visual": "Chip INTERACTIONS EXPLODE, red mesh"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "file": "scene_021.py",
+      "class_name": "Scene021",
+      "start": 405.4,
+      "end": 412.51666666666665,
+      "duration": 7.116667,
+      "title": "Reward Design",
+      "concept": "Align reward with intent",
+      "narration": "robot is given a speed reward, then it can ignore safety. It is necessary to carefully align the reward with desired behavior.",
+      "events": [
+        {
+          "t_abs": 405.4,
+          "t_rel": 0.0,
+          "word": "reward design",
+          "visual": "Chip LIMIT 3, delivery robot with SPEED dial"
+        },
+        {
+          "t_abs": 406.4,
+          "t_rel": 1.0,
+          "word": "speed reward",
+          "visual": "Dial cranks, robot dashes forward"
+        },
+        {
+          "t_abs": 407.6,
+          "t_rel": 2.2,
+          "word": "ignore safety",
+          "visual": "Red warning SAFETY IGNORED"
+        },
+        {
+          "t_abs": 409.44,
+          "t_rel": 4.04,
+          "word": "align the reward",
+          "visual": "Dial rebalances, chips SPEED and SAFETY both lit"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "file": "scene_022.py",
+      "class_name": "Scene022",
+      "start": 412.51666666666665,
+      "end": 433.01666666666665,
+      "duration": 20.5,
+      "title": "Explainability",
+      "concept": "Understand why agents decide",
+      "narration": "Fourth limitation is explainability. Sometimes teams are successful, but we are not clear on which hidden pattern the agent has learned. In safety critical systems, there is not enough result. Engineers also have to understand why the decision was taken. So, communication rules, role-based policies and monitoring are important.",
+      "events": [
+        {
+          "t_abs": 412.52,
+          "t_rel": 0.003,
+          "word": "explainability",
+          "visual": "Chip LIMIT 4"
+        },
+        {
+          "t_abs": 413.5,
+          "t_rel": 0.983,
+          "word": "teams are successful",
+          "visual": "Green tick over agents"
+        },
+        {
+          "t_abs": 415.0,
+          "t_rel": 2.483,
+          "word": "hidden pattern",
+          "visual": "Black box between agents and outcome with ?"
+        },
+        {
+          "t_abs": 422.64,
+          "t_rel": 10.123,
+          "word": "safety critical",
+          "visual": "Shield icon, red edge"
+        },
+        {
+          "t_abs": 427.4,
+          "t_rel": 14.883,
+          "word": "why the decision",
+          "visual": "Decision path arrows out of the box to engineer figure"
+        },
+        {
+          "t_abs": 430.0,
+          "t_rel": 17.483,
+          "word": "monitoring",
+          "visual": "Chips COMMS RULES, ROLE POLICY, MONITORING"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "file": "scene_023.py",
+      "class_name": "Scene023",
+      "start": 433.01666666666665,
+      "end": 451.48333333333335,
+      "duration": 18.466667,
+      "title": "Safety Constraints",
+      "concept": "Safety before speed",
+      "narration": "The mall system should not only maximize reward, it should follow safety constraints. If many robots are in a narrow corridor, then before fast delivery, it is important to avoid collision. A good multi-agent system balances its actions with team goals, local information and safety rules. What is the core idea of multi-agent reinforcement learning?",
+      "events": [
+        {
+          "t_abs": 433.02,
+          "t_rel": 0.003,
+          "word": "safety constraints",
+          "visual": "Shield chip SAFETY FIRST"
+        },
+        {
+          "t_abs": 438.9,
+          "t_rel": 5.883,
+          "word": "narrow corridor",
+          "visual": "Corridor with two robots head-on"
+        },
+        {
+          "t_abs": 441.0,
+          "t_rel": 7.983,
+          "word": "collision",
+          "visual": "Red collision warning between them"
+        },
+        {
+          "t_abs": 442.82,
+          "t_rel": 9.803,
+          "word": "avoid collision",
+          "visual": "Robots slow and yield, path clears"
+        },
+        {
+          "t_abs": 444.56,
+          "t_rel": 11.543,
+          "word": "team goals, local information and safety",
+          "visual": "Three-pan balance GOALS, LOCAL, SAFETY"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "file": "scene_024.py",
+      "class_name": "Scene024",
+      "start": 451.48333333333335,
+      "end": 466.1,
+      "duration": 14.616667,
+      "title": "Core Idea Recap",
+      "concept": "The MARL loop in one frame",
+      "narration": "What is the core idea of multi-agent reinforcement learning? What is the core idea of single-agent learning? In a shared environment, many agents learn from observations, choose actions through policies, take feedback from rewards, and develop behavior through cooperation or competition.",
+      "events": [
+        {
+          "t_abs": 451.48,
+          "t_rel": -0.003,
+          "word": "core idea",
+          "visual": "Question chip CORE IDEA?"
+        },
+        {
+          "t_abs": 454.62,
+          "t_rel": 3.137,
+          "word": "learn from observations",
+          "visual": "Chain node OBSERVE with eye icon"
+        },
+        {
+          "t_abs": 458.86,
+          "t_rel": 7.377,
+          "word": "through policies",
+          "visual": "Node ACT with policy card"
+        },
+        {
+          "t_abs": 460.76,
+          "t_rel": 9.277,
+          "word": "feedback from rewards",
+          "visual": "Node REWARD with +R token"
+        },
+        {
+          "t_abs": 462.74,
+          "t_rel": 11.257,
+          "word": "cooperation or competition",
+          "visual": "Node BEHAVIOR splits into green and red links"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "file": "scene_025.py",
+      "class_name": "Scene025",
+      "start": 466.1,
+      "end": 487.6166666666667,
+      "duration": 21.516667,
+      "title": "Learning From Learners",
+      "concept": "Others are part of the environment",
+      "narration": "The most difficult part is that the connection between individual decisions and team outcome is understood. In single-agent learning, the system learns from its environment, but in multi-agent learning, the system also learns from other learners. The real world is not a collection of independent machines. Cars share roads, robots share warehouses, drones share information.",
+      "events": [
+        {
+          "t_abs": 466.1,
+          "t_rel": 0.0,
+          "word": "individual decisions and team outcome",
+          "visual": "Two chips linked both ways"
+        },
+        {
+          "t_abs": 471.56,
+          "t_rel": 5.46,
+          "word": "single-agent",
+          "visual": "Single loop diagram SELF-ENV"
+        },
+        {
+          "t_abs": 474.36,
+          "t_rel": 8.26,
+          "word": "other learners",
+          "visual": "Loop plus inter-agent arrows"
+        },
+        {
+          "t_abs": 478.84,
+          "t_rel": 12.74,
+          "word": "cars share roads",
+          "visual": "Icon pairs: cars, robots, drones on shared platforms"
+        },
+        {
+          "t_abs": 482.32,
+          "t_rel": 16.22,
+          "word": "share warehouses",
+          "visual": "Warehouse pair link"
+        },
+        {
+          "t_abs": 484.5,
+          "t_rel": 18.4,
+          "word": "drones share information",
+          "visual": "Drone pair link"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "file": "scene_026.py",
+      "class_name": "Scene026",
+      "start": 487.6166666666667,
+      "end": 505.6666666666667,
+      "duration": 18.05,
+      "title": "Intelligence or Coordination",
+      "concept": "Closing thought",
+      "narration": "Humans and AI systems take decisions in one environment. Finally, think about it. When many intelligent agents work together, then the most important thing is intelligence or better coordination. Perhaps the powerful systems of the future will be the ones that are not only individually smart but also co-operate responsibly with others. Let's take a detailed example of a team game.",
+      "events": [
+        {
+          "t_abs": 487.62,
+          "t_rel": 0.003,
+          "word": "humans and AI systems",
+          "visual": "Human + agent icons in ONE ENVIRONMENT circle"
+        },
+        {
+          "t_abs": 491.1,
+          "t_rel": 3.483,
+          "word": "intelligence or better coordination",
+          "visual": "Scale pans IQ vs COORDINATION"
+        },
+        {
+          "t_abs": 498.88,
+          "t_rel": 11.263,
+          "word": "smart but also cooperate",
+          "visual": "Chips SMART and RESPONSIBLE joined by plus"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "file": "scene_027.py",
+      "class_name": "Scene027",
+      "start": 505.6666666666667,
+      "end": 525.7333333333333,
+      "duration": 20.066667,
+      "title": "Team Game Roles",
+      "concept": "Three agents, three roles",
+      "narration": "Let's take a detailed example of a team game. Three agents are in a digital field. The first agent observes the opponent, the second finds a safe route, and the third completes the objective. If the three do their work independently, then duplication and confusion can be done. But if their policies are according to the role, then the team can be efficient.",
+      "events": [
+        {
+          "t_abs": 505.66,
+          "t_rel": -0.007,
+          "word": "team game",
+          "visual": "Digital field grid"
+        },
+        {
+          "t_abs": 508.5,
+          "t_rel": 2.833,
+          "word": "three agents",
+          "visual": "Nodes A, B, C spawn"
+        },
+        {
+          "t_abs": 510.76,
+          "t_rel": 5.093,
+          "word": "observes the opponent",
+          "visual": "A eye line to red opponent"
+        },
+        {
+          "t_abs": 512.88,
+          "t_rel": 7.213,
+          "word": "safe route",
+          "visual": "B dashed safe path"
+        },
+        {
+          "t_abs": 514.54,
+          "t_rel": 8.873,
+          "word": "completes the objective",
+          "visual": "C to flag"
+        },
+        {
+          "t_abs": 516.72,
+          "t_rel": 11.053,
+          "word": "independently",
+          "visual": "Paths overlap messy, red ? CONFUSION"
+        },
+        {
+          "t_abs": 521.44,
+          "t_rel": 15.773,
+          "word": "according to the role",
+          "visual": "Clean color-coded paths, chip ROLES OK"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "file": "scene_028.py",
+      "class_name": "Scene028",
+      "start": 525.7333333333333,
+      "end": 547.8666666666667,
+      "duration": 22.133333,
+      "title": "Roles and Rewards",
+      "concept": "Support roles, richer rewards",
+      "narration": "The first agent shares information, the second plans a route, and the third executes action. Here, cooperation doesn't just mean Not just one direction. Cooperation means that every agent should understand their roles and support the actions of other agents. In this example, rewards should not only be for the final objective. Sharing information, avoiding collisions, and useful feedback for the correct timing. There is a problem of learning stability in the moral.",
+      "events": [
+        {
+          "t_abs": 525.74,
+          "t_rel": 0.007,
+          "word": "shares information",
+          "visual": "Chip A: INFO with arrow to B"
+        },
+        {
+          "t_abs": 527.64,
+          "t_rel": 1.907,
+          "word": "plans a route",
+          "visual": "Chip B: PLAN with arrow to C"
+        },
+        {
+          "t_abs": 529.18,
+          "t_rel": 3.447,
+          "word": "executes action",
+          "visual": "Chip C: EXECUTE"
+        },
+        {
+          "t_abs": 530.9,
+          "t_rel": 5.167,
+          "word": "understand their roles",
+          "visual": "Role ring around trio"
+        },
+        {
+          "t_abs": 539.4,
+          "t_rel": 13.667,
+          "word": "not only the final objective",
+          "visual": "Extra reward chips INFO+, NO CRASH+, TIMING+"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "file": "scene_029.py",
+      "class_name": "Scene029",
+      "start": 547.8666666666667,
+      "end": 589.8833333333333,
+      "duration": 42.016667,
+      "title": "Learning Stability",
+      "concept": "Moving target problem",
+      "narration": "There is a problem of learning stability in the moral. One agent improves his policy, but other agents are also updating their policies. This is why behavior that was useful yesterday can fail today. Think that one driver chooses routes in traffic. If all drivers choose the same route, then that route will slow down. Then some drivers choose another route and traffic pattern will change again. Intelligent agents' decisions continuously change the environment. This is why agents should not learn fixed rules. They should learn to observe other's behavior, handle uncertainty and adapt to changing conditions. should learn to adapt. Opponent modeling and population-based training like ideas try to address this challenge. Communication can be the central part of moral, but unlimited communication is not practical.",
+      "events": [
+        {
+          "t_abs": 547.86,
+          "t_rel": -0.007,
+          "word": "learning stability",
+          "visual": "Wavy policy line, chip STABILITY"
+        },
+        {
+          "t_abs": 550.52,
+          "t_rel": 2.653,
+          "word": "other agents are also updating",
+          "visual": "Two policy cards rise alternately"
+        },
+        {
+          "t_abs": 555.0,
+          "t_rel": 7.133,
+          "word": "fail today",
+          "visual": "Yesterday card flips red"
+        },
+        {
+          "t_abs": 560.0,
+          "t_rel": 12.133,
+          "word": "driver chooses routes",
+          "visual": "Road net, driver dot picks route"
+        },
+        {
+          "t_abs": 562.68,
+          "t_rel": 14.813,
+          "word": "same route",
+          "visual": "All dots crowd one road, SLOW tag"
+        },
+        {
+          "t_abs": 566.36,
+          "t_rel": 18.493,
+          "word": "another route",
+          "visual": "Some dots shift, pattern changes"
+        },
+        {
+          "t_abs": 570.64,
+          "t_rel": 22.773,
+          "word": "continuously change the environment",
+          "visual": "Tiles flip in waves"
+        },
+        {
+          "t_abs": 577.92,
+          "t_rel": 30.053,
+          "word": "observe other's behavior",
+          "visual": "Chips OBSERVE, ADAPT"
+        },
+        {
+          "t_abs": 582.9,
+          "t_rel": 35.033,
+          "word": "opponent modeling",
+          "visual": "Chips OPPONENT MODEL, POPULATION TRAINING"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "file": "scene_030.py",
+      "class_name": "Scene030",
+      "start": 589.8833333333333,
+      "end": 629.8666666666667,
+      "duration": 39.983333,
+      "title": "Selective Communication",
+      "concept": "Right message, right time",
+      "narration": "Communication can be the central part of moral, but unlimited communication is not practical. If every agent shares every information, then the system can be noisy and slow. So, the agents have to learn when to send a message, which agent to send, and what to tell in the message. The warehouse robot can share its exact position, but not every sensor reading. The rescue drone can share target location and confidence. It can understand selective communication. The goal of communication is not to send too many messages, but to give useful information at the right time. If the message comes late, then the decision can be missed. If the message is wrong, the entire team's policy can be disturbed. That is why trust, message verification and communication cost can also be a part of learning.",
+      "events": [
+        {
+          "t_abs": 589.88,
+          "t_rel": -0.003,
+          "word": "central part",
+          "visual": "Chat hub between agents"
+        },
+        {
+          "t_abs": 595.36,
+          "t_rel": 5.477,
+          "word": "noisy and slow",
+          "visual": "All-to-all spaghetti links, red NOISY"
+        },
+        {
+          "t_abs": 600.0,
+          "t_rel": 10.117,
+          "word": "when, which agent, what",
+          "visual": "Chips WHEN, WHOM, WHAT"
+        },
+        {
+          "t_abs": 606.68,
+          "t_rel": 16.797,
+          "word": "exact position",
+          "visual": "Robot shares pin only, sensor stack dimmed"
+        },
+        {
+          "t_abs": 612.02,
+          "t_rel": 22.137,
+          "word": "target location and confidence",
+          "visual": "Drone bubble TARGET 90%"
+        },
+        {
+          "t_abs": 618.4,
+          "t_rel": 28.517,
+          "word": "right time",
+          "visual": "Envelope lands on timeline sweet spot"
+        },
+        {
+          "t_abs": 623.6,
+          "t_rel": 33.717,
+          "word": "message comes late",
+          "visual": "Late envelope, decision crossed red"
+        },
+        {
+          "t_abs": 625.64,
+          "t_rel": 35.757,
+          "word": "message is wrong",
+          "visual": "Corrupt envelope, policy card shakes"
+        },
+        {
+          "t_abs": 629.86,
+          "t_rel": 39.977,
+          "word": "trust, verification, cost",
+          "visual": "Chips TRUST, VERIFY, COST"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "file": "scene_031.py",
+      "class_name": "Scene031",
+      "start": 629.8666666666667,
+      "end": 678.3333333333334,
+      "duration": 48.466667,
+      "title": "Exploration and Safety",
+      "concept": "Explore safely, then deploy",
+      "narration": "That is why trust, message verification and communication cost can also be a part of learning. Every reinforcement learning system has to balance between exploration and exploitation. Exploration means trying a new action. Exploitation means using that action which has already been useful. Exploration becomes more difficult in multi-agent settings. If a robot tries a new route, its effect can affect other robots as well. If a player tests a new strategy in the game, the team's results can be temporarily weak. That's why safe exploration is important in real world marbles. Agents should not try every risky action freely. Through simulations, safety limits and human supervision, the system can be given a control learning environment. When the policy becomes stable, it is carefully deployed in the real environment.",
+      "events": [
+        {
+          "t_abs": 629.86,
+          "t_rel": -0.007,
+          "word": "balance",
+          "visual": "Two panels EXPLORE vs EXPLOIT"
+        },
+        {
+          "t_abs": 634.52,
+          "t_rel": 4.653,
+          "word": "exploration",
+          "visual": "Dotted new paths in explore panel"
+        },
+        {
+          "t_abs": 640.04,
+          "t_rel": 10.173,
+          "word": "already been useful",
+          "visual": "Solid known path in exploit panel"
+        },
+        {
+          "t_abs": 644.94,
+          "t_rel": 15.073,
+          "word": "more difficult",
+          "visual": "Ripple from robot A route hits robot B"
+        },
+        {
+          "t_abs": 655.86,
+          "t_rel": 25.993,
+          "word": "temporarily weak",
+          "visual": "Team meter dips"
+        },
+        {
+          "t_abs": 660.88,
+          "t_rel": 31.013,
+          "word": "safe exploration",
+          "visual": "Shield ring around trial robot"
+        },
+        {
+          "t_abs": 667.88,
+          "t_rel": 38.013,
+          "word": "safety limits and human supervision",
+          "visual": "Chips SIM, LIMITS, HUMAN"
+        },
+        {
+          "t_abs": 674.36,
+          "t_rel": 44.493,
+          "word": "carefully deployed",
+          "visual": "Arrow from SIM to REAL, chip DEPLOY"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "file": "scene_032.py",
+      "class_name": "Scene032",
+      "start": 678.3333333333334,
+      "end": 721.4666666666667,
+      "duration": 43.133333,
+      "title": "Evaluation",
+      "concept": "Beyond win and loss",
+      "narration": "When the policy becomes stable, it is carefully deployed in the real environment. Multi-agent system ko evaluate karne ke liye sirf final win ya loss dekhna enough nahi. Hame team reward, individual contribution, coordination quality aur safety bhi measure karni hoti hai. Traffic system me average speed ke saath waiting time aur emergency response bhi important hai. Warehouse robots me delivery speed ke saath collisions, energy use aur fairness bhi measure honi chahiye. Agar ek robot hamsha difficult tasks kare aur and other easy tasks, then the total reward can look good, but the team won't be fair. Evaluation made different numbers of agents, new environments and unexpected situations test is necessary. Robust policy is that which is not only in training scenarios but also in unseen conditions in reasonable decisions. In the future, multi-agent reinforcement learning use will not be limited to games or simulations.",
+      "events": [
+        {
+          "t_abs": 678.34,
+          "t_rel": 0.007,
+          "word": "evaluate",
+          "visual": "Big W/L tags dim, chip NOT ENOUGH"
+        },
+        {
+          "t_abs": 684.26,
+          "t_rel": 5.927,
+          "word": "team reward",
+          "visual": "Dashboard bars: TEAM, CONTRIBUTION"
+        },
+        {
+          "t_abs": 689.26,
+          "t_rel": 10.927,
+          "word": "coordination quality and safety",
+          "visual": "Bars COORDINATION, SAFETY"
+        },
+        {
+          "t_abs": 692.54,
+          "t_rel": 14.207,
+          "word": "waiting time",
+          "visual": "Traffic chips SPEED, WAITING, EMERGENCY"
+        },
+        {
+          "t_abs": 695.8,
+          "t_rel": 17.467,
+          "word": "collisions, energy",
+          "visual": "Warehouse chips CRASHES, ENERGY"
+        },
+        {
+          "t_abs": 704.44,
+          "t_rel": 26.107,
+          "word": "team won't be fair",
+          "visual": "One robot overloaded, others idle, chip FAIRNESS"
+        },
+        {
+          "t_abs": 709.3,
+          "t_rel": 30.967,
+          "word": "new environments",
+          "visual": "Shuffle icon NEW SETTINGS"
+        },
+        {
+          "t_abs": 715.74,
+          "t_rel": 37.407,
+          "word": "robust policy",
+          "visual": "Shield tick chip ROBUST"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "file": "scene_033.py",
+      "class_name": "Scene033",
+      "start": 721.4666666666667,
+      "end": 779.3666666666667,
+      "duration": 57.9,
+      "title": "Future and Responsibility",
+      "concept": "Where MARL goes next",
+      "narration": "In the future, multi-agent reinforcement learning use will not be limited to games or simulations. Smart factories, autonomous vehicles, healthcare coordination, disaster response and energy many AI agents can work together. But with powerful coordination, responsibility is also necessary. Agents need to respect privacy, safety, fairness, and human instructions. If the team's objective is wrong, then intelligent agents can work in a very efficient way. Therefore, with better policies, better goals, transparent feedback, and human oversight Marl tells us that intelligence is not just the name of individual decisions. When many decision makers interact in a shared world, coordination becomes an important part of intelligence itself. Finally, think about whether future AI systems should first be smart or learn to work responsibly with each other.",
+      "events": [
+        {
+          "t_abs": 721.46,
+          "t_rel": -0.007,
+          "word": "future",
+          "visual": "Arc of domain chips appears"
+        },
+        {
+          "t_abs": 727.56,
+          "t_rel": 6.093,
+          "word": "smart factories",
+          "visual": "Chip FACTORIES"
+        },
+        {
+          "t_abs": 728.5,
+          "t_rel": 7.033,
+          "word": "autonomous vehicles",
+          "visual": "Chip VEHICLES"
+        },
+        {
+          "t_abs": 729.5,
+          "t_rel": 8.033,
+          "word": "healthcare coordination",
+          "visual": "Chip HEALTHCARE"
+        },
+        {
+          "t_abs": 730.5,
+          "t_rel": 9.033,
+          "word": "disaster response",
+          "visual": "Chip DISASTER"
+        },
+        {
+          "t_abs": 731.5,
+          "t_rel": 10.033,
+          "word": "energy",
+          "visual": "Chip ENERGY"
+        },
+        {
+          "t_abs": 740.62,
+          "t_rel": 19.153,
+          "word": "responsibility",
+          "visual": "Shield center, orbit chips PRIVACY, SAFETY, FAIRNESS, HUMAN"
+        },
+        {
+          "t_abs": 746.84,
+          "t_rel": 25.373,
+          "word": "objective is wrong",
+          "visual": "Fast arrow into red X, chip WRONG GOAL"
+        },
+        {
+          "t_abs": 753.06,
+          "t_rel": 31.593,
+          "word": "better goals",
+          "visual": "Chips POLICIES, GOALS, FEEDBACK, OVERSIGHT"
+        },
+        {
+          "t_abs": 758.9,
+          "t_rel": 37.433,
+          "word": "coordination becomes part of intelligence",
+          "visual": "Circles INTELLIGENCE and COORDINATION merge"
+        },
+        {
+          "t_abs": 771.54,
+          "t_rel": 50.073,
+          "word": "smart or responsible",
+          "visual": "Final question chip, slow fade to black"
+        }
+      ]
+    }
+  ]
+}

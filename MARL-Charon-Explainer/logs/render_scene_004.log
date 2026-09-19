@@ -1,0 +1,196 @@
+/home/z/.venv/lib/python3.12/site-packages/pydub/utils.py:300: SyntaxWarning: invalid escape sequence '\('
+  m = re.match('([su]([0-9]{1,2})p?) \(([0-9]{1,2}) bit\)$', token)
+/home/z/.venv/lib/python3.12/site-packages/pydub/utils.py:301: SyntaxWarning: invalid escape sequence '\('
+  m2 = re.match('([su]([0-9]{1,2})p?)( \(default\))?$', token)
+/home/z/.venv/lib/python3.12/site-packages/pydub/utils.py:310: SyntaxWarning: invalid escape sequence '\('
+  elif re.match('(flt)p?( \(default\))?$', token):
+/home/z/.venv/lib/python3.12/site-packages/pydub/utils.py:314: SyntaxWarning: invalid escape sequence '\('
+  elif re.match('(dbl)p?( \(default\))?$', token):
+Manim Community v0.18.1
+
+Animation 0: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/42 [00:00<?, ?it/s]Animation 0: FadeIn(VGroup of 3 submobjects), etc.:  10%|▉         | 4/42 [00:00<00:01, 33.40it/s]Animation 0: FadeIn(VGroup of 3 submobjects), etc.:  24%|██▍       | 10/42 [00:00<00:00, 47.31it/s]Animation 0: FadeIn(VGroup of 3 submobjects), etc.:  40%|████      | 17/42 [00:00<00:00, 53.99it/s]Animation 0: FadeIn(VGroup of 3 submobjects), etc.:  55%|█████▍    | 23/42 [00:00<00:00, 53.60it/s]Animation 0: FadeIn(VGroup of 3 submobjects), etc.:  69%|██████▉   | 29/42 [00:00<00:00, 54.73it/s]Animation 0: FadeIn(VGroup of 3 submobjects), etc.:  83%|████████▎ | 35/42 [00:00<00:00, 50.75it/s]Animation 0: FadeIn(VGroup of 3 submobjects), etc.:  98%|█████████▊| 41/42 [00:00<00:00, 50.82it/s]                                                                                                   [09/19/26 09:42:12] INFO     Animation 0 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/1143172051_27140                         
+                             06380_223132457.mp4'                               
+[timing] overlap: event scheduled 0.350 starts at 0.700 (+0.350s late)
+Animation 1: FadeIn(VGroup of 2 submobjects):   0%|          | 0/21 [00:00<?, ?it/s]Animation 1: FadeIn(VGroup of 2 submobjects):   5%|▍         | 1/21 [00:00<00:02,  6.87it/s]Animation 1: FadeIn(VGroup of 2 submobjects):  29%|██▊       | 6/21 [00:00<00:00, 27.74it/s]Animation 1: FadeIn(VGroup of 2 submobjects):  48%|████▊     | 10/21 [00:00<00:00, 27.88it/s]Animation 1: FadeIn(VGroup of 2 submobjects):  71%|███████▏  | 15/21 [00:00<00:00, 35.23it/s]Animation 1: FadeIn(VGroup of 2 submobjects): 100%|██████████| 21/21 [00:00<00:00, 41.70it/s]                                                                                             [09/19/26 09:42:13] INFO     Animation 1 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_14483                         
+                             86072_3416082843.mp4'                              
+[09/19/26 09:42:15] INFO     Animation 2 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_39897                         
+                             35995_3020219331.mp4'                              
+Animation 3: MoveAlongPath(VGroup of 2 submobjects):   0%|          | 0/36 [00:00<?, ?it/s]Animation 3: MoveAlongPath(VGroup of 2 submobjects):   3%|▎         | 1/36 [00:00<00:05,  6.47it/s]Animation 3: MoveAlongPath(VGroup of 2 submobjects):   8%|▊         | 3/36 [00:00<00:03, 10.65it/s]Animation 3: MoveAlongPath(VGroup of 2 submobjects):  19%|█▉        | 7/36 [00:00<00:01, 18.26it/s]Animation 3: MoveAlongPath(VGroup of 2 submobjects):  25%|██▌       | 9/36 [00:00<00:01, 17.85it/s]Animation 3: MoveAlongPath(VGroup of 2 submobjects):  31%|███       | 11/36 [00:00<00:01, 17.02it/s]Animation 3: MoveAlongPath(VGroup of 2 submobjects):  39%|███▉      | 14/36 [00:00<00:01, 19.30it/s]Animation 3: MoveAlongPath(VGroup of 2 submobjects):  47%|████▋     | 17/36 [00:00<00:00, 21.96it/s]Animation 3: MoveAlongPath(VGroup of 2 submobjects):  56%|█████▌    | 20/36 [00:01<00:00, 22.78it/s]Animation 3: MoveAlongPath(VGroup of 2 submobjects):  64%|██████▍   | 23/36 [00:01<00:00, 21.83it/s]Animation 3: MoveAlongPath(VGroup of 2 submobjects):  75%|███████▌  | 27/36 [00:01<00:00, 23.83it/s]Animation 3: MoveAlongPath(VGroup of 2 submobjects):  83%|████████▎ | 30/36 [00:01<00:00, 25.12it/s]Animation 3: MoveAlongPath(VGroup of 2 submobjects):  94%|█████████▍| 34/36 [00:01<00:00, 28.48it/s]                                                                                                    [09/19/26 09:42:18] INFO     Animation 3 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_49916                         
+                             9314_3697005381.mp4'                               
+[09/19/26 09:42:20] INFO     Animation 4 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_35522                         
+                             78086_2444488850.mp4'                              
+Animation 5: FadeIn(Rectangle):   0%|          | 0/12 [00:00<?, ?it/s]Animation 5: FadeIn(Rectangle):   8%|▊         | 1/12 [00:00<00:01,  9.76it/s]Animation 5: FadeIn(Rectangle):  58%|█████▊    | 7/12 [00:00<00:00, 38.38it/s]                                                                              [09/19/26 09:42:21] INFO     Animation 5 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_34517                         
+                             90878_633892262.mp4'                               
+Animation 6: FadeOut(Rectangle), etc.:   0%|          | 0/27 [00:00<?, ?it/s]Animation 6: FadeOut(Rectangle), etc.:   7%|▋         | 2/27 [00:00<00:01, 18.78it/s]Animation 6: FadeOut(Rectangle), etc.:  26%|██▌       | 7/27 [00:00<00:00, 33.44it/s]Animation 6: FadeOut(Rectangle), etc.:  44%|████▍     | 12/27 [00:00<00:00, 38.88it/s]Animation 6: FadeOut(Rectangle), etc.:  63%|██████▎   | 17/27 [00:00<00:00, 39.59it/s]Animation 6: FadeOut(Rectangle), etc.:  93%|█████████▎| 25/27 [00:00<00:00, 50.85it/s]                                                                                      [09/19/26 09:42:22] INFO     Animation 6 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_40142                         
+                             04062_3992925909.mp4'                              
+[09/19/26 09:42:23] INFO     Animation 7 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_18865                         
+                             55524_2774265381.mp4'                              
+Animation 8: FadeOut(VGroup of 2 submobjects):   0%|          | 0/18 [00:00<?, ?it/s]Animation 8: FadeOut(VGroup of 2 submobjects):   6%|▌         | 1/18 [00:00<00:02,  6.92it/s]Animation 8: FadeOut(VGroup of 2 submobjects):  17%|█▋        | 3/18 [00:00<00:01, 10.68it/s]Animation 8: FadeOut(VGroup of 2 submobjects):  33%|███▎      | 6/18 [00:00<00:00, 16.62it/s]Animation 8: FadeOut(VGroup of 2 submobjects):  44%|████▍     | 8/18 [00:00<00:00, 17.69it/s]Animation 8: FadeOut(VGroup of 2 submobjects):  72%|███████▏  | 13/18 [00:00<00:00, 27.02it/s]Animation 8: FadeOut(VGroup of 2 submobjects):  89%|████████▉ | 16/18 [00:00<00:00, 22.75it/s]                                                                                              [09/19/26 09:42:24] INFO     Animation 8 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_22629                         
+                             50873_12224088.mp4'                                
+Animation 9: MoveAlongPath(VGroup of 2 submobjects):   0%|          | 0/27 [00:00<?, ?it/s]Animation 9: MoveAlongPath(VGroup of 2 submobjects):   4%|▎         | 1/27 [00:00<00:06,  4.09it/s]Animation 9: MoveAlongPath(VGroup of 2 submobjects):  19%|█▊        | 5/27 [00:00<00:01, 14.15it/s]Animation 9: MoveAlongPath(VGroup of 2 submobjects):  30%|██▉       | 8/27 [00:00<00:01, 18.66it/s]Animation 9: MoveAlongPath(VGroup of 2 submobjects):  44%|████▍     | 12/27 [00:00<00:00, 21.67it/s]Animation 9: MoveAlongPath(VGroup of 2 submobjects):  59%|█████▉    | 16/27 [00:00<00:00, 25.87it/s]Animation 9: MoveAlongPath(VGroup of 2 submobjects):  74%|███████▍  | 20/27 [00:00<00:00, 27.65it/s]Animation 9: MoveAlongPath(VGroup of 2 submobjects):  85%|████████▌ | 23/27 [00:01<00:00, 26.75it/s]                                                                                                    [09/19/26 09:42:26] INFO     Animation 9 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_55330                         
+                             974_2362465463.mp4'                                
+Animation 10: MoveAlongPath(VGroup of 2 submobjects):   0%|          | 0/27 [00:00<?, ?it/s]Animation 10: MoveAlongPath(VGroup of 2 submobjects):  11%|█         | 3/27 [00:00<00:00, 28.11it/s]Animation 10: MoveAlongPath(VGroup of 2 submobjects):  37%|███▋      | 10/27 [00:00<00:00, 51.47it/s]Animation 10: MoveAlongPath(VGroup of 2 submobjects):  67%|██████▋   | 18/27 [00:00<00:00, 63.93it/s]Animation 10: MoveAlongPath(VGroup of 2 submobjects): 100%|██████████| 27/27 [00:00<00:00, 72.65it/s]                                                                                                     [09/19/26 09:42:27] INFO     Animation 10 : Partial     scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_16583                         
+                             79098_2362465463.mp4'                              
+Animation 11: MoveAlongPath(VGroup of 2 submobjects):   0%|          | 0/27 [00:00<?, ?it/s]Animation 11: MoveAlongPath(VGroup of 2 submobjects):   4%|▎         | 1/27 [00:00<00:04,  6.42it/s]Animation 11: MoveAlongPath(VGroup of 2 submobjects):  15%|█▍        | 4/27 [00:00<00:01, 14.02it/s]Animation 11: MoveAlongPath(VGroup of 2 submobjects):  33%|███▎      | 9/27 [00:00<00:00, 25.47it/s]Animation 11: MoveAlongPath(VGroup of 2 submobjects):  52%|█████▏    | 14/27 [00:00<00:00, 32.93it/s]Animation 11: MoveAlongPath(VGroup of 2 submobjects):  67%|██████▋   | 18/27 [00:00<00:00, 34.81it/s]Animation 11: MoveAlongPath(VGroup of 2 submobjects):  85%|████████▌ | 23/27 [00:00<00:00, 38.84it/s]                                                                                                     [09/19/26 09:42:28] INFO     Animation 11 : Partial     scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_17414                         
+                             861_2362465463.mp4'                                
+Animation 12: MoveAlongPath(VGroup of 2 submobjects):   0%|          | 0/60 [00:00<?, ?it/s]Animation 12: MoveAlongPath(VGroup of 2 submobjects):   2%|▏         | 1/60 [00:00<00:07,  8.10it/s]Animation 12: MoveAlongPath(VGroup of 2 submobjects):  12%|█▏        | 7/60 [00:00<00:01, 34.07it/s]Animation 12: MoveAlongPath(VGroup of 2 submobjects):  18%|█▊        | 11/60 [00:00<00:01, 29.30it/s]Animation 12: MoveAlongPath(VGroup of 2 submobjects):  27%|██▋       | 16/60 [00:00<00:01, 34.65it/s]Animation 12: MoveAlongPath(VGroup of 2 submobjects):  35%|███▌      | 21/60 [00:00<00:01, 38.59it/s]Animation 12: MoveAlongPath(VGroup of 2 submobjects):  43%|████▎     | 26/60 [00:00<00:00, 41.06it/s]Animation 12: MoveAlongPath(VGroup of 2 submobjects):  52%|█████▏    | 31/60 [00:00<00:00, 43.48it/s]Animation 12: MoveAlongPath(VGroup of 2 submobjects):  60%|██████    | 36/60 [00:00<00:00, 44.53it/s]Animation 12: MoveAlongPath(VGroup of 2 submobjects):  68%|██████▊   | 41/60 [00:01<00:00, 40.28it/s]Animation 12: MoveAlongPath(VGroup of 2 submobjects):  77%|███████▋  | 46/60 [00:01<00:00, 37.48it/s]Animation 12: MoveAlongPath(VGroup of 2 submobjects):  85%|████████▌ | 51/60 [00:01<00:00, 40.46it/s]Animation 12: MoveAlongPath(VGroup of 2 submobjects):  93%|█████████▎| 56/60 [00:01<00:00, 31.84it/s]Animation 12: MoveAlongPath(VGroup of 2 submobjects): 100%|██████████| 60/60 [00:01<00:00, 31.74it/s]                                                                                                     [09/19/26 09:42:31] INFO     Animation 12 : Partial     scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_38882                         
+                             05228_2362465463.mp4'                              
+                    INFO     Animation 13 : Partial     scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_35809                         
+                             71384_550146587.mp4'                               
+Animation 14: FadeIn(VGroup of 2 submobjects):   0%|          | 0/27 [00:00<?, ?it/s]Animation 14: FadeIn(VGroup of 2 submobjects):   4%|▎         | 1/27 [00:00<00:03,  7.11it/s]Animation 14: FadeIn(VGroup of 2 submobjects):  26%|██▌       | 7/27 [00:00<00:00, 33.29it/s]Animation 14: FadeIn(VGroup of 2 submobjects):  48%|████▊     | 13/27 [00:00<00:00, 37.56it/s]Animation 14: FadeIn(VGroup of 2 submobjects):  67%|██████▋   | 18/27 [00:00<00:00, 41.16it/s]Animation 14: FadeIn(VGroup of 2 submobjects):  85%|████████▌ | 23/27 [00:00<00:00, 40.98it/s]                                                                                              [09/19/26 09:42:32] INFO     Animation 14 : Partial     scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_20888                         
+                             46940_1484243936.mp4'                              
+[timing] overlap: event scheduled 2.550 starts at 8.300 (+5.750s late)
+Animation 15: FadeIn(VGroup of 2 submobjects):   0%|          | 0/24 [00:00<?, ?it/s]Animation 15: FadeIn(VGroup of 2 submobjects):   4%|▍         | 1/24 [00:00<00:04,  5.53it/s]Animation 15: FadeIn(VGroup of 2 submobjects):  21%|██        | 5/24 [00:00<00:01, 17.37it/s]Animation 15: FadeIn(VGroup of 2 submobjects):  42%|████▏     | 10/24 [00:00<00:00, 27.26it/s]Animation 15: FadeIn(VGroup of 2 submobjects):  58%|█████▊    | 14/24 [00:00<00:00, 25.04it/s]Animation 15: FadeIn(VGroup of 2 submobjects):  75%|███████▌  | 18/24 [00:00<00:00, 28.94it/s]Animation 15: FadeIn(VGroup of 2 submobjects):  96%|█████████▌| 23/24 [00:00<00:00, 34.29it/s]                                                                                              [09/19/26 09:42:34] INFO     Animation 15 : Partial     scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_98727                         
+                             5177_1557919736.mp4'                               
+[timing] overlap: event scheduled 4.550 starts at 8.700 (+4.150s late)
+Animation 16: FadeIn(VGroup of 2 submobjects):   0%|          | 0/24 [00:00<?, ?it/s]Animation 16: FadeIn(VGroup of 2 submobjects):  17%|█▋        | 4/24 [00:00<00:00, 36.62it/s]Animation 16: FadeIn(VGroup of 2 submobjects):  38%|███▊      | 9/24 [00:00<00:00, 40.94it/s]Animation 16: FadeIn(VGroup of 2 submobjects):  58%|█████▊    | 14/24 [00:00<00:00, 37.54it/s]Animation 16: FadeIn(VGroup of 2 submobjects):  79%|███████▉  | 19/24 [00:00<00:00, 40.41it/s]Animation 16: FadeIn(VGroup of 2 submobjects): 100%|██████████| 24/24 [00:00<00:00, 42.78it/s]                                                                                              [09/19/26 09:42:35] INFO     Animation 16 : Partial     scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_32250                         
+                             63357_3290431100.mp4'                              
+[timing] overlap: event scheduled 5.867 starts at 9.100 (+3.233s late)
+Animation 17: FadeIn(VGroup of 2 submobjects):   0%|          | 0/27 [00:00<?, ?it/s]Animation 17: FadeIn(VGroup of 2 submobjects):   7%|▋         | 2/27 [00:00<00:01, 19.96it/s]Animation 17: FadeIn(VGroup of 2 submobjects):  22%|██▏       | 6/27 [00:00<00:00, 30.52it/s]Animation 17: FadeIn(VGroup of 2 submobjects):  48%|████▊     | 13/27 [00:00<00:00, 47.46it/s]Animation 17: FadeIn(VGroup of 2 submobjects):  81%|████████▏ | 22/27 [00:00<00:00, 62.18it/s]                                                                                              [09/19/26 09:42:36] INFO     Animation 17 : Partial     scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_17524                         
+                             72152_1211616111.mp4'                              
+[timing] overlap: event scheduled 6.167 starts at 9.550 (+3.383s late)
+Animation 18: FadeIn(VGroup of 2 submobjects):   0%|          | 0/27 [00:00<?, ?it/s]Animation 18: FadeIn(VGroup of 2 submobjects):   7%|▋         | 2/27 [00:00<00:01, 19.70it/s]Animation 18: FadeIn(VGroup of 2 submobjects):  30%|██▉       | 8/27 [00:00<00:00, 40.29it/s]Animation 18: FadeIn(VGroup of 2 submobjects):  56%|█████▌    | 15/27 [00:00<00:00, 51.17it/s]Animation 18: FadeIn(VGroup of 2 submobjects):  78%|███████▊  | 21/27 [00:00<00:00, 43.47it/s]Animation 18: FadeIn(VGroup of 2 submobjects):  96%|█████████▋| 26/27 [00:00<00:00, 39.28it/s]                                                                                              [09/19/26 09:42:37] INFO     Animation 18 : Partial     scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_14253                         
+                             33541_2368324882.mp4'                              
+[timing] overlap: event scheduled 8.867 starts at 10.000 (+1.133s late)
+Animation 19: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/33 [00:00<?, ?it/s]Animation 19: FadeIn(VGroup of 2 submobjects), etc.:   9%|▉         | 3/33 [00:00<00:01, 28.85it/s]Animation 19: FadeIn(VGroup of 2 submobjects), etc.:  21%|██        | 7/33 [00:00<00:01, 25.24it/s]Animation 19: FadeIn(VGroup of 2 submobjects), etc.:  30%|███       | 10/33 [00:00<00:01, 21.71it/s]Animation 19: FadeIn(VGroup of 2 submobjects), etc.:  39%|███▉      | 13/33 [00:00<00:00, 22.68it/s]Animation 19: FadeIn(VGroup of 2 submobjects), etc.:  48%|████▊     | 16/33 [00:00<00:00, 23.36it/s]Animation 19: FadeIn(VGroup of 2 submobjects), etc.:  61%|██████    | 20/33 [00:00<00:00, 27.78it/s]Animation 19: FadeIn(VGroup of 2 submobjects), etc.:  73%|███████▎  | 24/33 [00:00<00:00, 31.16it/s]Animation 19: FadeIn(VGroup of 2 submobjects), etc.:  88%|████████▊ | 29/33 [00:00<00:00, 35.30it/s]Animation 19: FadeIn(VGroup of 2 submobjects), etc.: 100%|██████████| 33/33 [00:01<00:00, 30.51it/s]                                                                                                    [09/19/26 09:42:39] INFO     Animation 19 : Partial     scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_10445                         
+                             91037_4106731592.mp4'                              
+[timing] overlap: event scheduled 9.450 starts at 10.550 (+1.100s late)
+Animation 20: Create(DashedLine), etc.:   0%|          | 0/48 [00:00<?, ?it/s]Animation 20: Create(DashedLine), etc.:   4%|▍         | 2/48 [00:00<00:02, 19.95it/s]Animation 20: Create(DashedLine), etc.:  10%|█         | 5/48 [00:00<00:01, 25.66it/s]Animation 20: Create(DashedLine), etc.:  17%|█▋        | 8/48 [00:00<00:01, 23.12it/s]Animation 20: Create(DashedLine), etc.:  25%|██▌       | 12/48 [00:00<00:01, 27.55it/s]Animation 20: Create(DashedLine), etc.:  33%|███▎      | 16/48 [00:00<00:01, 30.53it/s]Animation 20: Create(DashedLine), etc.:  42%|████▏     | 20/48 [00:00<00:00, 32.01it/s]Animation 20: Create(DashedLine), etc.:  52%|█████▏    | 25/48 [00:00<00:00, 36.70it/s]Animation 20: Create(DashedLine), etc.:  62%|██████▎   | 30/48 [00:00<00:00, 38.99it/s]Animation 20: Create(DashedLine), etc.:  71%|███████   | 34/48 [00:01<00:00, 39.09it/s]Animation 20: Create(DashedLine), etc.:  81%|████████▏ | 39/48 [00:01<00:00, 37.96it/s]Animation 20: Create(DashedLine), etc.:  94%|█████████▍| 45/48 [00:01<00:00, 43.34it/s]                                                                                       [09/19/26 09:42:41] INFO     Animation 20 : Partial     scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_11939                         
+                             75635_3796526263.mp4'                              
+[09/19/26 09:42:43] INFO     Animation 21 : Partial     scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_15822                         
+                             10094_1066257043.mp4'                              
+Animation 22: FadeOut(VGroup of 3 submobjects), etc.:   0%|          | 0/33 [00:00<?, ?it/s]Animation 22: FadeOut(VGroup of 3 submobjects), etc.:  12%|█▏        | 4/33 [00:00<00:00, 36.32it/s]Animation 22: FadeOut(VGroup of 3 submobjects), etc.:  24%|██▍       | 8/33 [00:00<00:00, 33.97it/s]Animation 22: FadeOut(VGroup of 3 submobjects), etc.:  36%|███▋      | 12/33 [00:00<00:00, 34.33it/s]Animation 22: FadeOut(VGroup of 3 submobjects), etc.:  48%|████▊     | 16/33 [00:00<00:00, 27.89it/s]Animation 22: FadeOut(VGroup of 3 submobjects), etc.:  58%|█████▊    | 19/33 [00:00<00:00, 28.39it/s]Animation 22: FadeOut(VGroup of 3 submobjects), etc.:  70%|██████▉   | 23/33 [00:00<00:00, 29.91it/s]Animation 22: FadeOut(VGroup of 3 submobjects), etc.:  82%|████████▏ | 27/33 [00:00<00:00, 29.35it/s]Animation 22: FadeOut(VGroup of 3 submobjects), etc.:  94%|█████████▍| 31/33 [00:01<00:00, 30.32it/s]                                                                                                     [09/19/26 09:42:45] INFO     Animation 22 : Partial     scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_32945                         
+                             67586_1586947225.mp4'                              
+                    INFO     Animation 23 : Partial     scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/partial_movie_files                         
+                             /Scene004/2109476311_19484                         
+                             11056_2718691004.mp4'                              
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+[09/19/26 09:42:46] INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_004/1                         
+                             080p60/Scene004.mp4'                               
+                                                                                
+                    INFO     Rendered Scene004                      scene.py:247
+                             Played 24 animations                               
+You are using manim version v0.18.1, but version v0.21.0 is available.
+You should consider upgrading via pip install -U manim

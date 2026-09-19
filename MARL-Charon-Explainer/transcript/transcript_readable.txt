@@ -1,0 +1,223 @@
+[   0.00-   1.32] So this is a football match.
+[   1.82-   3.74] The ground is one, the rules are the same.
+[   4.18-   5.70] But there are 20 players on the ground.
+[   6.20-   7.66] Every player has to take the decision to look at their position,
+[   8.06-   9.80] teammates and opponents' moves.
+[  11.26-  13.60] If players understand each other, pass,
+[  14.14-  16.14] cover positions and attack at the right time,
+[  17.04-  18.62] then the entire team's result can be better.
+[  19.50-  22.32] Now imagine that these are the players' computer programs.
+[  22.64-  25.84] With this idea, multi-agent reinforcement learning begins.
+[  25.84-  30.86] In reinforcement learning, an agent is the system that takes action in the environment.
+[  31.40-  35.04] The environment is the world or the situation where the agent is working.
+[  35.74-  38.30] The agent gets information, then he chooses action.
+[  39.32-  41.24] After action, he gets reward or penalty.
+[  42.10-  45.90] Gradually, the agent learns which action is useful in which situation.
+[  46.22-  52.08] A robot is in the maze. If he goes near the exit, he gets reward and if he hits the wall, then penalty.
+[  52.08-  54.76] Now, place a lot of agents instead of an agent.
+[  55.08-  58.40] From here, multi-agent reinforcement learning or killing comes.
+[  58.90-  62.80] Every agent understands the world from their observations and takes action according to their policy.
+[  64.32-  68.06] Policy is a rule or strategy that tells what I should do in this situation.
+[  69.18-  71.82] In the multi-agent system, other agents are also taking actions.
+[  72.30-  74.08] That is why the environment is changing every time.
+[  74.82-  77.14] Agent is not only giving the response of walls, roads or rewards.
+[  78.58-  80.50] He is also giving the response of other intelligent agents' decisions.
+[  80.50-  81.26] The response of agents is also giving.
+[  81.84-  85.88] Shared environment means that agents share only space, resources or rules.
+[  86.64-  88.58] In the warehouse, robots use only one isle.
+[  89.62-  90.84] Cars walk on the same roads in traffic.
+[  91.68-  93.72] If two robots want to go to the same charging station,
+[  94.40-  95.20] then competition is born.
+[  95.88-  97.90] If both choose different routes and complete deliveries,
+[  98.52-  99.40] then cooperation is seen.
+[ 100.14- 101.96] In cooperation, agents have a common goal.
+[ 102.60- 104.20] The goal of rescue drones can be covered by more areas.
+[ 105.40- 106.54] Every drone chooses its own route,
+[ 107.12- 108.46] but the final objective is of the team.
+[ 108.46- 111.24] In competition, the goal of agents is often the opposite.
+[ 111.76- 113.92] In chess, one player wins and the other loses.
+[ 114.40- 117.58] In strategy games, two teams compete for the same resources and territory.
+[ 118.84- 121.48] The competition agent teaches to predict the behavior of the opponent.
+[ 122.50- 127.24] If you only learn your best moves and ignore the opponent, then the policy can fail quickly.
+[ 127.90- 130.64] In multi-agent setting, the environment looks non-stationary.
+[ 131.22- 135.54] This means that the strategy against which the agent was learning is also changing.
+[ 135.54- 138.80] If one player improves defense, the other will change attack.
+[ 139.64- 141.12] Every agent makes others better.
+[ 141.88- 144.70] In some problems, cooperation and competition are both the same.
+[ 145.26- 148.06] Team mates cooperate in the game and compete against opposing team.
+[ 149.02- 150.28] Now let's come to the credit assignment.
+[ 151.00- 153.70] The question of credit assignment is, did the team get a reward?
+[ 154.22- 157.20] But in this reward, what was the contribution of which agent?
+[ 157.56- 160.60] Imagine that four robots move to a heavy box.
+[ 161.44- 165.10] The team got a reward because it reached the box destination.
+[ 165.10- 170.00] But one robot gave direction, the other one pushed the box, the third one cleared the way
+[ 170.77- 172.42] and the fourth one was almost doing nothing.
+[ 173.34- 177.66] If everyone gets the same reward, then inactive robot can also learn successful behavior.
+[ 178.60- 183.46] If only the pushing robot gets the reward, then the contribution of the robot giving direction
+[ 183.46- 183.72] can be missed.
+[ 184.58- 188.04] That is why shared reward and individual reward can be both useful.
+[ 188.92- 190.66] Shared reward shows team success.
+[ 191.40- 194.32] Individual reward guides the local action of the agent.
+[ 194.32- 196.44] The balance of both the rewards is important.
+[ 196.84- 199.36] Otherwise, an agent can be selfish or he doesn't understand his role.
+[ 200.00- 205.30] Another issue is the delayed reward. Sometimes action is taken now, but the result is very late.
+[ 206.06- 210.08] A drone chose a route first, then the team got a target after 10 minutes.
+[ 210.36- 213.66] Now the system has to understand which decision helped in success.
+[ 214.54- 216.50] This is called a temporal credit assignment.
+[ 217.26- 219.00] Human teams can give manager feedback.
+[ 219.78- 224.72] They can say that your planning was useful, your timing was good and your communication was weak.
+[ 225.30- 227.82] AI agents don't get such detailed feedback naturally.
+[ 227.82- 230.96] They have to estimate the contribution from the reward signal.
+[ 231.68- 234.28] If the reward is too late, the learning can be slow.
+[ 235.16- 238.78] That is why useful systems, intermediate signals and sub-goals are also used.
+[ 239.62- 241.52] Partial observability is also common in goods.
+[ 241.90- 244.66] Every agent can only see a part of the environment.
+[ 245.20- 249.58] A rescue robot can see its corridor, but not the other robot's corridor.
+[ 250.20- 251.96] If the robot wants to understand other people's actions,
+[ 252.94- 254.18] it will have to assume hidden information.
+[ 254.18- 257.46] You will have to think about it. Memory and communication can reduce this problem.
+[ 258.84- 261.78] One robot can tell you that the left corridor has already been searched.
+[ 262.54- 264.68] The other robot can use their time in a new area.
+[ 265.66- 268.16] Even without communication, cooperation is possible.
+[ 268.72- 271.50] Agents can observe other people's actions and guess their intentions.
+[ 272.52- 274.50] But learning from communication can be fast.
+[ 275.42- 276.50] It is not necessary to tell each agent everything.
+[ 277.70- 280.84] It is only necessary to share that information which improves the team's results.
+[ 280.84- 283.84] multi-agent reinforcement learning can be used in the real world.
+[ 285.16- 286.94] First of all, traffic management.
+[ 287.44- 289.24] If traffic lights are understood by different agents,
+[ 290.00- 291.78] then every signal can observe its nearby traffic.
+[ 292.80- 295.84] But the best result will be when signals coordinate.
+[ 296.48- 299.08] If one signal only reduces the wait time of its road,
+[ 299.20- 300.84] then traffic can be jammed on the other road.
+[ 301.62- 304.20] The shared goal should be the smooth flow of the network.
+[ 304.62- 306.66] Second example is the warehouse robots.
+[ 307.18- 309.50] Every robot picks and delivers packages.
+[ 309.50- 312.46] If robots learn routes, they can avoid busy aisles.
+[ 313.64- 315.72] With cooperation, robots divide tasks.
+[ 316.34- 318.86] With competition, there can be conflict for charging stations or short routes.
+[ 320.26- 324.22] To avoid collision, to meet deadlines and to save energy,
+[ 324.96- 325.74] one has to learn together.
+[ 325.98- 327.18] The third example is of drones.
+[ 328.12- 329.78] Many drones are searching for a large area.
+[ 330.94- 332.70] If every drone takes a random route,
+[ 333.12- 335.02] it can be scanned again and again.
+[ 335.60- 337.56] If the agents observe each other's routes
+[ 337.56- 343.22] observe and share information, then coverage can be better. If a drone detects an object,
+[ 344.20- 345.90] then it can be useful to send the remaining drones to that location.
+[ 347.90- 352.68] In MARL, the idea of centralized training and decentralized execution is also used.
+[ 353.38- 355.48] During training, the system can see information of all the agents.
+[ 356.92- 360.94] It is easy to learn team coordination from this. But during actual operation,
+[ 361.58- 363.66] each agent only takes action from their local observations.
+[ 363.66- 363.94] action.
+[ 364.38- 368.32] For example, the entire map is available in the training room, but in the mission, every
+[ 368.32- 369.58] robot uses only its sensors.
+[ 370.00- 372.12] There are some important limitations of the route.
+[ 372.46- 374.36] The first limitation is sample efficiency.
+[ 374.96- 378.78] Agents may need a lot of trials to learn a useful strategy.
+[ 379.34- 382.26] With real robots, every trial can be expensive and risky.
+[ 383.74- 386.40] Agents can be fast trained in simulation, but there is a difference between simulation
+[ 386.40- 387.28] and reality.
+[ 388.62- 390.40] This difference is called SIM2 real gap.
+[ 390.40- 392.90] The second limitation is scalability.
+[ 393.44- 397.08] If the number of agents increases, then the possible interactions become too much.
+[ 397.68- 399.88] In the case of 100 agents, each agent's second
+[ 400.00- 405.40] agents' behavior model can be difficult. Third limitation is reward design. If a delivery
+[ 405.40- 409.44] robot is given a speed reward, then it can ignore safety. It is necessary to carefully align
+[ 409.44- 410.72] the reward with desired behavior.
+[ 412.52- 417.62] Fourth limitation is explainability. Sometimes teams are successful, but we are not clear
+[ 417.62- 422.50] on which hidden pattern the agent has learned. In safety critical systems,
+[ 422.64- 427.40] there is not enough result. Engineers also have to understand why the decision was taken.
+[ 427.40- 432.44] So, communication rules, role-based policies and monitoring are important.
+[ 433.02- 437.72] The mall system should not only maximize reward, it should follow safety constraints.
+[ 438.90- 442.36] If many robots are in a narrow corridor, then before fast delivery,
+[ 442.82- 443.74] it is important to avoid collision.
+[ 444.56- 449.24] A good multi-agent system balances its actions with team goals, local information
+[ 449.24- 450.38] and safety rules.
+[ 451.48- 453.24] What is the core idea of multi-agent reinforcement learning?
+[ 453.24- 454.08] What is the core idea of single-agent learning?
+[ 454.62- 457.84] In a shared environment, many agents learn from observations,
+[ 458.86- 460.58] choose actions through policies,
+[ 460.76- 461.78] take feedback from rewards,
+[ 462.74- 464.18] and develop behavior through cooperation or competition.
+[ 466.10- 467.60] The most difficult part is that
+[ 467.60- 471.12] the connection between individual decisions and team outcome is understood.
+[ 471.56- 473.80] In single-agent learning, the system learns from its environment,
+[ 474.36- 478.84] but in multi-agent learning, the system also learns from other learners.
+[ 478.84- 481.30] The real world is not a collection of independent machines.
+[ 482.32- 486.78] Cars share roads, robots share warehouses, drones share information.
+[ 487.62- 489.84] Humans and AI systems take decisions in one environment.
+[ 491.10- 494.76] Finally, think about it. When many intelligent agents work together,
+[ 495.02- 498.66] then the most important thing is intelligence or better coordination.
+[ 498.88- 501.86] Perhaps the powerful systems of the future will be the ones that are not only
+[ 501.86- 505.66] individually smart but also co-operate responsibly with others.
+[ 505.66- 508.30] Let's take a detailed example of a team game.
+[ 508.50- 510.10] Three agents are in a digital field.
+[ 510.76- 512.06] The first agent observes the opponent,
+[ 512.88- 513.92] the second finds a safe route,
+[ 514.54- 515.64] and the third completes the objective.
+[ 516.72- 518.44] If the three do their work independently,
+[ 519.16- 520.98] then duplication and confusion can be done.
+[ 521.44- 523.08] But if their policies are according to the role,
+[ 523.98- 524.86] then the team can be efficient.
+[ 525.74- 527.02] The first agent shares information,
+[ 527.64- 528.32] the second plans a route,
+[ 529.18- 530.46] and the third executes action.
+[ 530.90- 532.40] Here, cooperation doesn't just mean
+[ 532.40- 537.92] Not just one direction. Cooperation means that every agent should understand their roles and support the actions of other agents.
+[ 539.40- 541.54] In this example, rewards should not only be for the final objective.
+[ 542.74- 546.32] Sharing information, avoiding collisions, and useful feedback for the correct timing.
+[ 547.86- 549.72] There is a problem of learning stability in the moral.
+[ 550.52- 555.00] One agent improves his policy, but other agents are also updating their policies.
+[ 555.00- 559.28] This is why behavior that was useful yesterday can fail today.
+[ 560.00- 562.00] Think that one driver chooses routes in traffic.
+[ 562.68- 566.02] If all drivers choose the same route, then that route will slow down.
+[ 566.36- 569.94] Then some drivers choose another route and traffic pattern will change again.
+[ 570.64- 573.40] Intelligent agents' decisions continuously change the environment.
+[ 574.76- 576.86] This is why agents should not learn fixed rules.
+[ 577.92- 579.18] They should learn to observe other's behavior,
+[ 580.34- 582.90] handle uncertainty and adapt to changing conditions.
+[ 582.90- 587.78] should learn to adapt. Opponent modeling and population-based training like ideas
+[ 587.78- 588.52] try to address this challenge.
+[ 589.88- 594.56] Communication can be the central part of moral, but unlimited communication is not practical.
+[ 595.36- 599.60] If every agent shares every information, then the system can be noisy and slow.
+[ 600.00- 606.20] So, the agents have to learn when to send a message, which agent to send, and what to tell in the message.
+[ 606.68- 611.42] The warehouse robot can share its exact position, but not every sensor reading.
+[ 612.02- 614.52] The rescue drone can share target location and confidence.
+[ 615.66- 617.34] It can understand selective communication.
+[ 618.40- 623.04] The goal of communication is not to send too many messages, but to give useful information at the right time.
+[ 623.60- 625.64] If the message comes late, then the decision can be missed.
+[ 625.64- 628.96] If the message is wrong, the entire team's policy can be disturbed.
+[ 629.86- 633.64] That is why trust, message verification and communication cost can also be a part of learning.
+[ 634.52- 638.28] Every reinforcement learning system has to balance between exploration and exploitation.
+[ 640.04- 644.94] Exploration means trying a new action. Exploitation means using that action
+[ 644.94- 650.60] which has already been useful. Exploration becomes more difficult in multi-agent settings.
+[ 650.60- 655.56] If a robot tries a new route, its effect can affect other robots as well.
+[ 655.86- 660.16] If a player tests a new strategy in the game, the team's results can be temporarily weak.
+[ 660.88- 664.22] That's why safe exploration is important in real world marbles.
+[ 664.60- 666.72] Agents should not try every risky action freely.
+[ 667.88- 671.04] Through simulations, safety limits and human supervision,
+[ 671.44- 673.52] the system can be given a control learning environment.
+[ 674.36- 678.34] When the policy becomes stable, it is carefully deployed in the real environment.
+[ 678.34- 683.84] Multi-agent system ko evaluate karne ke liye sirf final win ya loss dekhna enough nahi.
+[ 684.26- 689.26] Hame team reward, individual contribution, coordination quality aur safety bhi measure
+[ 689.26- 692.54] karni hoti hai. Traffic system me average speed ke saath
+[ 692.54- 695.34] waiting time aur emergency response bhi important hai.
+[ 695.80- 700.64] Warehouse robots me delivery speed ke saath collisions, energy use aur fairness bhi
+[ 700.64- 704.44] measure honi chahiye. Agar ek robot hamsha difficult tasks kare aur
+[ 704.44- 708.46] and other easy tasks, then the total reward can look good, but the team won't be fair.
+[ 709.30- 714.06] Evaluation made different numbers of agents, new environments and unexpected situations
+[ 714.06- 715.10] test is necessary.
+[ 715.74- 720.24] Robust policy is that which is not only in training scenarios but also in unseen conditions
+[ 720.24- 721.28] in reasonable decisions.
+[ 721.46- 726.08] In the future, multi-agent reinforcement learning use will not be limited to games or simulations.
+[ 727.56- 733.90] Smart factories, autonomous vehicles, healthcare coordination, disaster response and energy
+[ 733.90- 740.62] many AI agents can work together. But with powerful coordination, responsibility is
+[ 740.62- 745.68] also necessary. Agents need to respect privacy, safety, fairness, and human instructions.
+[ 746.84- 752.76] If the team's objective is wrong, then intelligent agents can work in a very efficient way.
+[ 753.06- 758.90] Therefore, with better policies, better goals, transparent feedback, and human oversight
+[ 758.90- 763.70] Marl tells us that intelligence is not just the name of individual decisions.
+[ 764.56- 769.00] When many decision makers interact in a shared world, coordination becomes
+[ 769.00- 770.72] an important part of intelligence itself.
+[ 771.54- 775.68] Finally, think about whether future AI systems should first be smart
+[ 775.68- 778.58] or learn to work responsibly with each other.

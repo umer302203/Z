@@ -1,0 +1,77 @@
+/home/z/.venv/lib/python3.12/site-packages/pydub/utils.py:300: SyntaxWarning: invalid escape sequence '\('
+  m = re.match('([su]([0-9]{1,2})p?) \(([0-9]{1,2}) bit\)$', token)
+/home/z/.venv/lib/python3.12/site-packages/pydub/utils.py:301: SyntaxWarning: invalid escape sequence '\('
+  m2 = re.match('([su]([0-9]{1,2})p?)( \(default\))?$', token)
+/home/z/.venv/lib/python3.12/site-packages/pydub/utils.py:310: SyntaxWarning: invalid escape sequence '\('
+  elif re.match('(flt)p?( \(default\))?$', token):
+/home/z/.venv/lib/python3.12/site-packages/pydub/utils.py:314: SyntaxWarning: invalid escape sequence '\('
+  elif re.match('(dbl)p?( \(default\))?$', token):
+Manim Community v0.18.1
+
+Animation 0: LaggedStart(Group):   0%|          | 0/42 [00:00<?, ?it/s]Animation 0: LaggedStart(Group):  17%|█▋        | 7/42 [00:00<00:00, 63.84it/s]Animation 0: LaggedStart(Group):  33%|███▎      | 14/42 [00:00<00:00, 65.36it/s]Animation 0: LaggedStart(Group):  50%|█████     | 21/42 [00:00<00:00, 63.46it/s]Animation 0: LaggedStart(Group):  67%|██████▋   | 28/42 [00:00<00:00, 65.85it/s]Animation 0: LaggedStart(Group):  88%|████████▊ | 37/42 [00:00<00:00, 73.02it/s]                                                                                [09/19/26 09:05:01] INFO     Animation 0 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_009/1                         
+                             080p60/partial_movie_files                         
+                             /Scene009/1143172051_30860                         
+                             44565_2358810818.mp4'                              
+[09/19/26 09:05:03] INFO     Animation 1 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_009/1                         
+                             080p60/partial_movie_files                         
+                             /Scene009/2109476311_41638                         
+                             25736_3597059692.mp4'                              
+Animation 2: Create(Line), etc.:   0%|          | 0/36 [00:00<?, ?it/s]Animation 2: Create(Line), etc.:  17%|█▋        | 6/36 [00:00<00:00, 50.02it/s]Animation 2: Create(Line), etc.:  36%|███▌      | 13/36 [00:00<00:00, 60.13it/s]Animation 2: Create(Line), etc.:  56%|█████▌    | 20/36 [00:00<00:00, 64.28it/s]Animation 2: Create(Line), etc.:  75%|███████▌  | 27/36 [00:00<00:00, 66.24it/s]Animation 2: Create(Line), etc.:  94%|█████████▍| 34/36 [00:00<00:00, 66.72it/s]                                                                                [09/19/26 09:05:04] INFO     Animation 2 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_009/1                         
+                             080p60/partial_movie_files                         
+                             /Scene009/2109476311_34919                         
+                             92202_2477408411.mp4'                              
+[09/19/26 09:05:05] INFO     Animation 3 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_009/1                         
+                             080p60/partial_movie_files                         
+                             /Scene009/2109476311_11959                         
+                             30719_3601537693.mp4'                              
+Animation 4: Create(VGroup of 3 submobjects), etc.:   0%|          | 0/36 [00:00<?, ?it/s]Animation 4: Create(VGroup of 3 submobjects), etc.:  17%|█▋        | 6/36 [00:00<00:00, 53.24it/s]Animation 4: Create(VGroup of 3 submobjects), etc.:  39%|███▉      | 14/36 [00:00<00:00, 63.44it/s]Animation 4: Create(VGroup of 3 submobjects), etc.:  61%|██████    | 22/36 [00:00<00:00, 69.06it/s]Animation 4: Create(VGroup of 3 submobjects), etc.:  81%|████████  | 29/36 [00:00<00:00, 68.40it/s]                                                                                                   [09/19/26 09:05:06] INFO     Animation 4 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_009/1                         
+                             080p60/partial_movie_files                         
+                             /Scene009/2109476311_40086                         
+                             28593_3857773552.mp4'                              
+[09/19/26 09:05:07] INFO     Animation 5 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_009/1                         
+                             080p60/partial_movie_files                         
+                             /Scene009/2109476311_40951                         
+                             17026_4028549656.mp4'                              
+Animation 6: FadeOut(VGroup of 4 submobjects), etc.:   0%|          | 0/30 [00:00<?, ?it/s]Animation 6: FadeOut(VGroup of 4 submobjects), etc.:  17%|█▋        | 5/30 [00:00<00:00, 49.21it/s]Animation 6: FadeOut(VGroup of 4 submobjects), etc.:  37%|███▋      | 11/30 [00:00<00:00, 55.09it/s]Animation 6: FadeOut(VGroup of 4 submobjects), etc.:  57%|█████▋    | 17/30 [00:00<00:00, 57.07it/s]Animation 6: FadeOut(VGroup of 4 submobjects), etc.:  80%|████████  | 24/30 [00:00<00:00, 59.18it/s]                                                                                                    [09/19/26 09:05:08] INFO     Animation 6 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_009/1                         
+                             080p60/partial_movie_files                         
+                             /Scene009/2109476311_28085                         
+                             53161_3681414651.mp4'                              
+                    INFO     Animation 7 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_009/1                         
+                             080p60/partial_movie_files                         
+                             /Scene009/2109476311_34137                         
+                             46105_1566926038.mp4'                              
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             '/home/z/my-project/projec                         
+                             t/media/videos/scene_009/1                         
+                             080p60/Scene009.mp4'                               
+                                                                                
+                    INFO     Rendered Scene009                      scene.py:247
+                             Played 8 animations                                
+You are using manim version v0.18.1, but version v0.21.0 is available.
+You should consider upgrading via pip install -U manim

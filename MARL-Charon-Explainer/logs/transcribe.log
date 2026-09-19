@@ -1,0 +1,29 @@
+[     0.0s] Loading model small (int8, cpu)
+[    18.4s] Model loaded, starting transcription
+[    20.8s] Audio duration per whisper: 779.36s
+[    25.8s] seg   0 [    0.00 ->     1.32] So this is a football match.
+[    25.8s] seg   1 [    1.84 ->     3.74] Ground is one, rules are one.
+[    25.8s] seg   2 [    4.18 ->     5.70] But there are 20 players on the ground.
+[    25.8s] seg   3 [    6.20 ->     7.66] Every player has to take the decision of their position,
+[    25.8s] seg   4 [    8.02 ->     9.80] teammates and opponents' moves.
+[    25.8s] seg   5 [   11.10 ->    13.60] If players understand each other, pass,
+[    25.8s] seg   6 [   14.16 ->    16.14] cover positions and attack at the right time,
+[    25.8s] seg   7 [   17.14 ->    18.62] then the result of the whole team can be better.
+[    25.8s] seg   8 [   19.50 ->    22.32] Now imagine that these are the players' computer programs.
+[    25.8s] seg   9 [   22.82 ->    25.84] With this idea, multi-agent reinforcement learning begins.
+[    32.5s] seg  10 [   25.84 ->    28.84] In reinforcement learning, an agent is the system
+[    32.5s] seg  11 [   28.84 ->    30.86] that takes action in the environment.
+[    32.5s] seg  12 [   31.40 ->    35.00] The environment is the world or situation where the agent is working.
+[    32.5s] seg  13 [   35.74 ->    38.30] The agent gets information, then he chooses action.
+[    32.5s] seg  14 [   39.32 ->    41.24] After action, he gets reward or penalty.
+[    32.5s] seg  15 [   42.10 ->    45.90] Gradually, the agent learns which action is useful in which situation.
+[     0.0s] Loading model small (int8, cpu)
+[     1.8s] Model loaded, starting transcription
+[     3.6s] Audio duration per whisper: 779.36s
+[   5724.3] Total duration 779.36s, resuming from 0.00s
+[   5726.0] Model loaded
+[   5763.9] chunk 0: [0.00 -> 200.00] +62 segs (total 62)
+[   5797.8] chunk 1: [200.00 -> 400.00] +62 segs (total 124)
+[   5833.0] chunk 2: [400.00 -> 600.00] +59 segs (total 183)
+[   5862.1] chunk 3: [600.00 -> 779.36] +40 segs (total 223)
+[   5862.1] DONE: 223 segments, 2218 words -> /home/z/my-project/project/transcript/transcript_timestamps.json
