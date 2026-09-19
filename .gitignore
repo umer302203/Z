@@ -1,2 +1,17 @@
-skills/
-node_modules/
+# MULTI-TENANT REPO RULE: only agi_video/** is tracked.
+# Everything else ignored — nothing of this project outside agi_video/ in repo Z.
+/*
+!/agi_video/
+/agi_video/agivideo_tmp/
+/agi_video/renders/
+/agi_video/tmp/
+/agi_video/audio/alt_*.wav
+/agi_video/*.blend
+/agi_video/*.blend1
+/agi_video/**/*.log
+/agi_video/**/*.pyc
+/agi_video/__pycache__/
+/agi_video/scripts/__pycache__/
+.env
+.gh_token
+.gh_user
